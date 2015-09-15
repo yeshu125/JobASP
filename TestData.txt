@@ -1,0 +1,294 @@
+192.168.1.17
+
+
+
+  string filename = Path.GetFileName(fileuploadimages.PostedFile.FileName);
+            fileuploadimages.SaveAs(Server.MapPath("~/" + filename));
+            con.Open();
+            // SqlCommand cmd = new SqlCommand("insert into Image2(Name,path)values(@Name,@path)", con);
+            SqlCommand cmd = new SqlCommand("insert into PizzaItems values(@item,@ItemName,@Price,@Stock)", con);
+            cmd.Parameters.AddWithValue("@Item", "~/" + filename);
+            cmd.Parameters.AddWithValue("@ItemName", txtItemName.Text);
+
+
+
+  <%--<ajax:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server"></ajax:ToolkitScriptManager>
+        <asp:WebPartManager runat="server"></asp:WebPartManager>
+
+
+
+        <asp:Wizard ID="Wizard1" runat="server">
+            <WizardSteps>
+                <asp:WizardStep ID="WizardStep1" runat="server" Title="Personal"></asp:WizardStep>
+                <asp:WizardStep ID="WizardStep2" runat="server" Title="Professional"></asp:WizardStep>
+                <asp:WizardStep ID="WizardStep3" runat="server" Title="Educational"></asp:WizardStep>
+            </WizardSteps>
+        </asp:Wizard>--%>
+
+        <%--   <asp:Button Text="BUTTON" ID="btnDemo" runat="server" />
+        <%-- <asp:ListView ID="ListView1" runat="server" DataKeyNames="SkillID">
+            <EmptyDataTemplate>
+                <table runat="server" style="">
+                    <tr>
+                        <td>No data was returned.</td>
+                    </tr>
+                </table>
+            </EmptyDataTemplate>
+            <InsertItemTemplate>
+                <tr style="">
+                    <td>
+                        <asp:Button ID="InsertButton" runat="server" CommandName="Insert" Text="Insert" ValidationGroup="Insert" />
+                        <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Clear" />
+                    </td>
+                    <td>&nbsp;</td>
+                 
+                    <td>
+                        <asp:DynamicControl runat="server" DataField="Skill" Mode="Insert" ValidationGroup="Insert" />
+                    </td>
+                    <td>
+                        <asp:DynamicControl runat="server" DataField="SkillID" Mode="Insert" ValidationGroup="Insert" />
+                    </td>
+                </tr>
+            </InsertItemTemplate>
+            <ItemTemplate>
+                <tr style="">
+                   
+                    <td>
+                        <asp:DynamicControl runat="server" DataField="Skill" Mode="ReadOnly" />
+                    </td>
+                    <td>
+                        <asp:DynamicControl runat="server" DataField="SkillID" Mode="ReadOnly" />
+                    </td>
+                </tr>
+            </ItemTemplate>
+            <AlternatingItemTemplate>
+                <tr style="">
+                    
+                    <td>
+                        <asp:DynamicControl runat="server" DataField="Skill" Mode="ReadOnly" />
+                    </td>
+                    <td>
+                        <asp:DynamicControl runat="server" DataField="SkillID" Mode="ReadOnly" />
+                    </td>
+                </tr>
+            </AlternatingItemTemplate>
+            <EditItemTemplate>
+                <tr style="">
+                    <td>
+                        <asp:Button ID="UpdateButton" runat="server" CommandName="Update" Text="Update" />
+                        <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Cancel" />
+                    </td>
+                    <td>
+                        <asp:DynamicControl runat="server" DataField="Skill" Mode="Edit" />
+                    </td>
+                    <td>
+                        <asp:DynamicControl runat="server" DataField="SkillID" Mode="Edit" />
+                    </td>
+                </tr>
+            </EditItemTemplate>
+            <LayoutTemplate>
+                <table runat="server">
+                    <tr runat="server">
+                        <td runat="server">
+                            <table id="itemPlaceholderContainer" runat="server" border="0" style="">
+                                <tr runat="server" style="">
+                                   
+                                    <th runat="server">Skill</th>
+                                    <th runat="server">SkillID</th>
+                                </tr>
+                                <tr id="itemPlaceholder" runat="server">
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr runat="server">
+                        <td runat="server" style="">
+                            <asp:DataPager ID="DataPager1" runat="server">
+                                <Fields>
+                                    <asp:NextPreviousPagerField ButtonType="Button" ShowFirstPageButton="True" ShowLastPageButton="True" />
+                                </Fields>
+                            </asp:DataPager>
+                        </td>
+                    </tr>
+                </table>
+            </LayoutTemplate>
+            <SelectedItemTemplate>
+                <tr style="">
+                    <td>
+                        <asp:DynamicControl runat="server" DataField="Skill" Mode="ReadOnly" />
+                    </td>
+                    <td>
+                        <asp:DynamicControl runat="server" DataField="SkillID" Mode="ReadOnly" />
+                    </td>
+                </tr>
+            </SelectedItemTemplate>
+        </asp:ListView>--%>
+
+        <%-- <asp:DetailsView ID="DetailsView1" runat="server" Height="50px" Width="125px" OnPageIndexChanging="DetailsView1_PageIndexChanging" AutoGenerateRows="true" AllowPaging="True" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical">
+            <AlternatingRowStyle BackColor="#DCDCDC" />
+            <EditRowStyle BackColor="#008A8C" Font-Bold="True" ForeColor="White" />
+            <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
+            <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+            <RowStyle BackColor="#EEEEEE" ForeColor="Black" />
+        </asp:DetailsView>
+        <asp:DataList ID="DataList1" runat="server" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical" RepeatDirection="Horizontal" DataKeyField="SkillID" DataSourceID="SqlDataSource1">
+            <AlternatingItemStyle BackColor="#DCDCDC" />
+            <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
+            <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />
+            <ItemStyle BackColor="#EEEEEE" ForeColor="Black" />
+            <ItemTemplate>
+                SkillID:
+                <asp:Label ID="SkillIDLabel" runat="server" Text='<%# Eval("SkillID") %>' />
+                <br />
+                Skill:
+                <asp:Label ID="SkillLabel" runat="server" Text='<%# Eval("Skill") %>' />
+                <br />
+                <br />
+            </ItemTemplate>
+            <SelectedItemStyle BackColor="#008A8C" Font-Bold="True" ForeColor="White" />
+        </asp:DataList>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:JobASPContext %>" SelectCommand="SELECT * FROM [SkillSets]"></asp:SqlDataSource>
+        <%--    <asp:DataPager ID="DataPager1" runat="server" PagedControlID="btnDemo">
+            <Fields>
+                <asp:TemplatePagerField>
+                    <PagerTemplate>
+                        <asp:Label Text="DemoDataPager" runat="server" />
+                    </PagerTemplate>
+                </asp:TemplatePagerField>
+            </Fields>
+        </asp:DataPager>--%>
+
+        <%--  <asp:FormView ID="FormView1" runat="server" BorderWidth="1px" AllowPaging="True" BackColor="White" OnPageIndexChanging="FormView1_PageIndexChanging" BorderColor="#999999" BorderStyle="None" CellPadding="3" GridLines="Vertical" DataKeyNames="SkillID" DataSourceID="SqlDataSource1">
+            <EditItemTemplate>
+                SkillID:
+                <asp:Label ID="SkillIDLabel1" runat="server" Text='<%# Eval("SkillID") %>' />
+                <br />
+                Skill:
+                <asp:TextBox ID="SkillTextBox" runat="server" Text='<%# Bind("Skill") %>' />
+                <br />
+                <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
+                &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
+            </EditItemTemplate>
+            <EditRowStyle BackColor="#008A8C" Font-Bold="True" ForeColor="White" />
+            <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
+            <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />
+            <InsertItemTemplate>
+                Skill:
+                <asp:TextBox ID="SkillTextBox" runat="server" Text='<%# Bind("Skill") %>' />
+                <br />
+                <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
+                &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
+            </InsertItemTemplate>
+            <ItemTemplate>
+                SkillID:
+                <asp:Label ID="SkillIDLabel" runat="server" Text='<%# Eval("SkillID") %>' />
+                <br />
+                Skill:
+                <asp:Label ID="SkillLabel" runat="server" Text='<%# Bind("Skill") %>' />
+                <br />
+            </ItemTemplate>
+            <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+            <RowStyle BackColor="#EEEEEE" ForeColor="Black" />
+        </asp:FormView>
+
+        <asp:AdRotator ID="Adrotator1" runat="server" AlternateTextField="Ads" />
+
+        <asp:CheckBoxList ID="CheckBoxList1" runat="server" />
+        <asp:ListBox ID="ListBox1" runat="server" DataTextField="Skill" />
+        <asp:Substitution ID="Substitution1" runat="server" />
+        <asp:MultiView ActiveViewIndex="0" runat="server">
+            <asp:View runat="server"></asp:View>
+            <asp:View ID="View2" runat="server">
+                <ajax:AccordionPane ID="AccordionPane1" runat="server">
+                    <Content>
+                        <ajax:Accordion ID="Accordion1" runat="server" SuppressHeaderPostbacks="false">
+                            <Panes>
+                                <ajax:AccordionPane ID="AccordionPane2" runat="server">
+                                    <Content>
+                                        <asp:Label ID="Label1" Text="Demo" runat="server" />
+                                    </Content>
+                                </ajax:AccordionPane>
+                            </Panes>
+                        </ajax:Accordion>
+                    </Content>
+                </ajax:AccordionPane>
+            </asp:View>
+        </asp:MultiView>
+
+        <asp:Wizard ID="Wizard1" runat="server">
+            <WizardSteps>
+                <asp:WizardStep ID="WizardStep1" runat="server" Title="Step 1" StepType="Start">
+                    <%--<ajax:AutoCompleteExtender runat="server" CompletionInterval="1" CompletionSetCount="3" DelimiterCharacters=" " EnableCaching="true">s</ajax:AutoCompleteExtender>--%>
+        <%--</asp:WizardStep>--%>
+        <%--    <asp:WizardStep ID="WizardStep2" runat="server" Title="Step 2"></asp:WizardStep>
+            </WizardSteps>
+        </asp:Wizard>
+
+
+
+        <ajax:Accordion runat="server" ID="Accord2" FadeTransitions="true" SelectedTab="1">
+            <ContentTemplate>
+                <%--   <ajax:AsyncFileUpload runat="server" PersistedStoreType="Session--%>
+        <%-- </ContentTemplate>
+            <Panes>
+                <ajax:AccordionPane runat="server" TabIndex="1" BorderWidth="1">
+                    <Header>
+                        Ajax1
+                    </Header>
+                    <Content>
+                        <asp:TextBox runat="server" placeholder="Test" />
+                    </Content>
+                </ajax:AccordionPane>
+                <ajax:AccordionPane ID="AccordionPane3" runat="server" ContentCssClass="" HeaderCssClass="">
+                    <Header>
+                        Ajax2
+
+                    </Header>
+                    <Content>
+                        <asp:TextBox ID="TextBox1" runat="server" placeholder="Test" />
+                    </Content>
+                </ajax:AccordionPane>
+                <ajax:AccordionPane ID="AccordionPane4" runat="server" ContentCssClass="" HeaderCssClass="">
+                    <Header>
+                        Ajax3
+                    </Header>
+                    <Content>
+                        <asp:WebPartZone runat="server" ID="WebPart">
+                            <ZoneTemplate>
+                            </ZoneTemplate>
+                        </asp:WebPartZone>
+                        <asp:EditorZone ID="EditorZone1" runat="server">
+                            <EditUIStyle BackColor="YellowGreen" />
+                        </asp:EditorZone>
+                        <asp:TextBox ID="TextBox2" runat="server" placeholder="Test" />
+                    </Content>
+                </ajax:AccordionPane>
+                <ajax:AccordionPane ID="AccordionPane5" runat="server" ContentCssClass="" HeaderCssClass="">
+                    <Header>
+                        Ajax4
+                    </Header>
+                    <Content>
+                        <asp:TextBox ID="TextBox3" runat="server" placeholder="Test" />
+                    </Content>
+                </ajax:AccordionPane>
+            </Panes>
+        </ajax:Accordion>
+        <asp:CheckBoxList runat="server" ID="Chk2">
+            <asp:ListItem Text="text1" />
+            <asp:ListItem Text="text2" />
+        </asp:CheckBoxList>
+        <ajax:DropDownExtender ID="Chk2_DropDownExtender" runat="server" Enabled="True" TargetControlID="btnDemo" DropDownControlID="Chk2">
+        </ajax:DropDownExtender>--%>
+        <%-- <ajax:AccordionContentPanel runat="server"></ajax:AccordionContentPanel>--%>
+        <%--<table>
+            <tr>
+                <td>
+                    <asp:Label ID="Label2" Text="text" runat="server" />
+                </td>
+                <td>
+                    <asp:Label ID="Label3" Text="text" runat="server" />
+                </td>
+            </tr>
+                <asp:CheckBox ID="CheckBox1" Text="text" runat="server" />
+            </table>--%>

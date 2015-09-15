@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+
+  <siteMapNode url="#"  DisplayInSiteMap="false" title="Home" description="Home Page">
+    
+    <siteMapNode url="~/Account/Login.aspx" title="Login"  description="Login Page" />
+    <siteMapNode url="~/Account/Register.aspx" title="Register"  description="Registration Page" />
+    <siteMapNode url="~/Account/RegSeeker.aspx" title="RegSeeker" description="Seeker Registration"/>
+    <siteMapNode url="~/Account/FindJob.aspx" title="FindJob" description="Find Job"/>  
+  
+    <siteMapNode url="~/Account/ProfileEmployer.aspx" title="Employer Home" description="Home Page">
+     <siteMapNode url="~/Account/SearchCV.aspx" title="SearchSeekers" description="Search Seekers" />      
+    </siteMapNode>
+
+    <siteMapNode url="~/Account/ProfileSeeker.aspx" title="Seeker Home" description="Home Page">
+      
+    </siteMapNode>
+
+  </siteMapNode>
+  
+</siteMap>
+

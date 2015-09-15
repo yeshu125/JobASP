@@ -1,0 +1,6 @@
+E:\UsersProfiles\kkothagundu\Documents\Visual Studio 2012\Projects\JobASP\MailingService\bin\Debug\MailingService.exe.config
+E:\UsersProfiles\kkothagundu\Documents\Visual Studio 2012\Projects\JobASP\MailingService\bin\Debug\MailingService.exe
+E:\UsersProfiles\kkothagundu\Documents\Visual Studio 2012\Projects\JobASP\MailingService\bin\Debug\MailingService.pdb
+E:\UsersProfiles\kkothagundu\Documents\Visual Studio 2012\Projects\JobASP\MailingService\obj\Debug\MailingService.csprojResolveAssemblyReference.cache
+E:\UsersProfiles\kkothagundu\Documents\Visual Studio 2012\Projects\JobASP\MailingService\obj\Debug\MailingService.exe
+E:\UsersProfiles\kkothagundu\Documents\Visual Studio 2012\Projects\JobASP\MailingService\obj\Debug\MailingService.pdb

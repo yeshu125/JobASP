@@ -1,0 +1,1401 @@
+﻿
+<!DOCTYPE>
+<html>
+    <head>
+    <title>Job Portal</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <META NAME="Description" CONTENT="Submit your Resume for a better Jobs.Job Portal">
+     <META NAME="Keywords" CONTENT="Upload Resume, Submit resume, resume Submit, Resume upload, Resume,sign up for Job Portal, Jobs Website, Registration, Register, Registration Form">
+     <meta name="robots" content="index, follow">
+    <link href="../Content/header.css" rel="stylesheet">
+    <link href="../Content/jqueryui.css" rel="stylesheet" />
+    <link href="../Content/registration.css?123" rel="stylesheet"/>
+	<link href="../Content/dropdown.css" rel="stylesheet" type="text/css"/>
+<script>var Mons = {}; var MJS = {}; Mons.BASE_SERVER = 'monsterindia.com'; Mons.ALLIANCE_R2O = ''; Mons.LANG = 'en'; Mons.LANG_MEDIA_PATH = ''; Mons.EN_RIGHT_AR_LEFT = 'right'; Mons.EN_LEFT_AR_RIGHT = 'left'; Mons.S_CID = '1'; try { document.execCommand("BackgroundImageCache", false, true); } catch (err) { }</script> 
+<script>
+    var tp = new Object();
+    var subtp = new Array();
+
+
+    var fburl = 'http://www.facebook.com/dialog/oauth?client_id=341858292547097&redirect_uri=http://my.monsterindia.com/oauth2callback.html&display=popup&scope=email';
+    var glassdoor = 0;
+    var gm_auth_url = 'https://accounts.google.com/o/oauth2/auth?state=%2Fgmprofile&redirect_uri=http%3A%2F%2Fmy.monsterindia.com%2Foauth2callback.html&response_type=code&client_id=467585797877.apps.googleusercontent.com&approval_prompt=auto&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile';
+    var yahoo_auth_url = 'https://open.login.yahooapis.com/openid/op/auth?openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.realm=http%3A%2F%2Fmy.monsterindia.com%2F&openid.return_to=http%3A%2F%2Fmy.monsterindia.com%2Foauth2callback.html&openid.ns.oauth=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Foauth%2F1.0&openid.oauth.consumer=dj0yJmk9NWFlaWhzQ21lT2lvJmQ9WVdrOU0yaFlkMHBJTnpJbWNHbzlNVEkyTURBeE1qTTJNZy0tJnM9Y29uc3VtZXJzZWNyZXQmeD1iNA--&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns.alias4=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fui%2F1.0&openid.alias4.mode=popup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns.alias5=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.alias5.if_available=alias1%2Calias2%2Calias3%2Calias4%2Calias5%2Calias6%2Calias7%2Calias8&openid.alias5.mode=fetch_request&openid.alias5.type.alias1=http%3A%2F%2Faxschema.org%2FnamePerson&openid.alias5.count.alias1=1&openid.alias5.type.alias2=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.alias5.count.alias2=1&openid.alias5.type.alias3=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.alias5.count.alias3=1&openid.alias5.type.alias4=http%3A%2F%2Faxschema.org%2Fcontact%2Fcity%2Fhome&openid.alias5.count.alias4=1&openid.alias5.type.alias5=http%3A%2F%2Faxschema.org%2Fcontact%2Fstate%2Fhome&openid.alias5.count.alias5=1&openid.alias5.type.alias6=http%3A%2F%2Faxschema.org%2Fcontact%2FpostalCode%2Fhome&openid.alias5.count.alias6=1&openid.alias5.type.alias7=http%3A%2F%2Faxschema.org%2Fcontact%2Fcountry%2Fhome&openid.alias5.count.alias7=1&openid.alias5.type.alias8=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.alias5.count.alias8=1';
+    var indus = '';
+    var jobcat = '';
+    var uid = '';
+    var scid = '1';
+    var otherIDs = '198,197';
+    var itCategory = '22';
+    var mailmsg = '';
+    var validemail = '';
+    var other_international = '197';
+    var other_india = '198';
+    var emailList = ["a-vikas-agarwal@xyz.com", "a_vikas_agarwal@gmail.com", "a_vikas_agarwal@xyz.com", "a_vikas_agarwal@yahoo.com", "abc@abc.com", "abc@gmail.com", "abc@hotmail.com", "ABC@rediffmail.com", "abc@xyz.com", "abc@yahoo.co.in", "abc@yahoo.com", "abcd@gmail.com", "abcd@yahoo.com", "none@", "noreply@", "@chail.com", "@gmai.com", "@gmil.com", "@xyz.com", "@ajoob.com", "@rtrtr.com", "@rmqkr.net"];
+    var domainlist = ["@gmail.com", "@yahoo", "@GMAIL.COM", "@YAHOO", "@live.com", "@rocketmail.com", "@in.com", "@aol.com", "@aol.in", "@live.in", "@rediffmail.com", "@indiatimes.com"];
+    var cid = '1';
+    var currentloc = '';
+    var nation = '';
+    var prval = '';
+    var lang_mediapath = '';
+    var nationstr = "GL:Greenland|DJ:Djibouti|JM:Jamaica|PG:Papua New Guinea|AT:Austria|KI:Kiribati|SZ:Swaziland|YT:Mayotte|BN:Brunei Darussalam|ZM:Zambia|CD:Congo, the Democratic Republic of the|BW:Botswana|AO:Angola|ZW:Zimbabwe|VC:Saint Vincent and the Grenadines|PR:Puerto Rico|JP:Japan|NA:Namibia|SH:Saint Helena|TJ:Tajikistan|LC:Saint Lucia|MA:Morocco|VU:Vanuatu|MT:Malta|SV:El Salvador|MN:Mongolia|MP:Northern Mariana Islands|IT:Italy|RE:Reunion|WS:Samoa|FR:France|EG:Egypt|UZ:Uzbekistan|PW:Palau|TK:Tokelau|LR:Liberia|RW:Rwanda|UM:United States Minor Outlying Islands|TN:Tunisia|BE:Belgium|EE:Estonia|CK:Cook Islands|BY:Belarus|SA:Saudi Arabia|NO:Norway|LS:Lesotho|KR:Korea, Republic of|ZA:South Africa|PT:Portugal|BF:Burkina Faso|CA:Canada|AM:Armenia|CM:Cameroon|SR:Suriname|MG:Madagascar|NP:Nepal|BT:Bhutan|PL:Poland|TM:Turkmenistan|GA:Gabon|CF:Central African Republic|AE:United Arab Emirates|BA:Bosnia and Herzegovina|TH:Thailand|KY:Cayman Islands|LA:Lao People's Democratic Republic|PH:Philippines|CC:Cocos (Keeling) Islands|NI:Nicaragua|NC:New Caledonia|GU:Guam|TF:French Southern Territories|KZ:Kazakhstan|SJ:Svalbard and Jan Mayen|MM:Myanmar|NR:Nauru|NE:Niger|DM:Dominica|TO:Tonga|MR:Mauritania|AD:Andorra|SE:Sweden|AZ:Azerbaijan|AF:Afghanistan|GS:South Georgia and the South Sandwich Islands|NG:Nigeria|KE:Kenya|BJ:Benin|OM:Oman|VG:Virgin Islands, British|VN:Viet Nam|YE:Yemen|DZ:Algeria|CI:Cote D'Ivoire|LK:Sri Lanka|ID:Indonesia|FM:Micronesia, Federated States of|GE:Georgia|GM:Gambia|CX:Christmas Island|LV:Latvia|RU:Russian Federation|LB:Lebanon|FK:Falkland Islands (Malvinas)|DE:Germany|FI:Finland|MV:Maldives|LU:Luxembourg|VE:Venezuela|PN:Pitcairn|BH:Bahrain|GI:Gibraltar|WF:Wallis and Futuna|RO:Romania|VI:Virgin Islands, U.s.|TV:Tuvalu|IN:India|GP:Guadeloupe|AR:Argentina|CS:Serbia and Montenegro|SN:Senegal|MX:Mexico|FO:Faroe Islands|AW:Aruba|MC:Monaco|HN:Honduras|BR:Brazil|IL:Israel|SB:Solomon Islands|PS:Palestinian Territory, Occupied|NZ:New Zealand|HU:Hungary|DO:Dominican Republic|UG:Uganda|KH:Cambodia|GB:United Kingdom|TG:Togo|BB:Barbados|HT:Haiti|DK:Denmark|PA:Panama|QA:Qatar|CV:Cape Verde|GD:Grenada|GF:French Guiana|MO:Macao|KM:Comoros|HR:Croatia|KW:Kuwait|TC:Turks and Caicos Islands|MQ:Martinique|CZ:Czech Republic|ES:Spain|MZ:Mozambique|BO:Bolivia|ST:Sao Tome and Principe|AU:Australia|AL:Albania|IR:Iran, Islamic Republic of|CG:Congo|TR:Turkey|MD:Moldova, Republic of|BI:Burundi|GN:Guinea|GW:Guinea-Bissau|MK:Macedonia, the Former Yugoslav Republic of|GR:Greece|AG:Antigua and Barbuda|SI:Slovenia|CO:Colombia|AI:Anguilla|AQ:Antarctica|AN:Netherlands Antilles|JO:Jordan|SM:San Marino|UA:Ukraine|EH:Western Sahara|CL:Chile|CU:Cuba|KN:Saint Kitts and Nevis|ML:Mali|SC:Seychelles|ET:Ethiopia|IS:Iceland|NL:Netherlands|MS:Montserrat|EC:Ecuador|HK:Hong Kong|MY:Malaysia|CR:Costa Rica|VA:Holy See (Vatican City State)|IO:British Indian Ocean Territory|SD:Sudan|CN:China|MH:Marshall Islands|BG:Bulgaria|UY:Uruguay|PY:Paraguay|BS:Bahamas|TL:Timor-Leste|MU:Mauritius|CH:Switzerland|LI:Liechtenstein|GH:Ghana|KG:Kyrgyzstan|NU:Niue|US:United States|PE:Peru|SL:Sierra Leone|BZ:Belize|CY:Cyprus|FJ:Fiji|IE:Ireland|TW:Taiwan|KP:Korea, Democratic People's Republic of|PF:French Polynesia|ER:Eritrea|IQ:Iraq|AS:American Samoa|TZ:Tanzania, United Republic of|MW:Malawi|LY:Libyan Arab Jamahiriya|GT:Guatemala|GY:Guyana|BM:Bermuda|PK:Pakistan|GQ:Equatorial Guinea|BV:Bouvet Island|LT:Lithuania|SG:Singapore|PM:Saint Pierre and Miquelon|TT:Trinidad and Tobago|NF:Norfolk Island|SO:Somalia|TD:Chad|SY:Syrian Arab Republic|SK:Slovakia|BD:Bangladesh|HM:Heard Island and Mcdonald Islands";
+    var countrystr = '{"559":{"203":"India"},"127":{"203":"India"},"32":{"203":"India"},"90":{"203":"India"},"118":{"203":"India"},"71":{"203":"India"},"102":{"203":"India"},"565":{"203":"India"},"520":{"203":"India"},"560":{"203":"India"},"580":{"203":"India"},"532":{"203":"India"},"16":{"203":"India"},"55":{"203":"India"},"84":{"203":"India"},"512":{"203":"India"},"194":{"194":"Yemen"},"57":{"203":"India"},"517":{"203":"India"},"89":{"203":"India"},"175":{"175":"Nepal"},"611":{"203":"India"},"584":{"203":"India"},"31":{"203":"India"},"578":{"203":"India"},"35":{"203":"India"},"11":{"203":"India"},"492":{"203":"India"},"511":{"203":"India"},"93":{"203":"India"},"29":{"203":"India"},"572":{"203":"India"},"114":{"203":"India"},"540":{"203":"India"},"58":{"203":"India"},"153":{"203":"India"},"15":{"203":"India"},"527":{"203":"India"},"101":{"203":"India"},"73":{"203":"India"},"76":{"203":"India"},"62":{"203":"India"},"571":{"203":"India"},"67":{"203":"India"},"198":{"203":"India"},"139":{"203":"India"},"129":{"203":"India"},"585":{"203":"India"},"548":{"203":"India"},"249":{"249":"Philippines"},"168":{"168":"Ireland"},"184":{"720":"Africa"},"135":{"203":"India"},"14":{"203":"India"},"145":{"203":"India"},"49":{"203":"India"},"178":{"178":"Oman"},"24":{"203":"India"},"140":{"203":"India"},"124":{"203":"India"},"104":{"203":"India"},"131":{"203":"India"},"181":{"181":"Russia"},"594":{"203":"India"},"502":{"203":"India"},"154":{"203":"India"},"23":{"203":"India"},"96":{"203":"India"},"159":{"159":"Belgium"},"479":{"203":"India"},"553":{"203":"India"},"486":{"486":"Iraq"},"160":{"160":"Canada"},"509":{"203":"India"},"569":{"203":"India"},"555":{"203":"India"},"47":{"203":"India"},"8":{"203":"India"},"98":{"203":"India"},"37":{"203":"India"},"43":{"203":"India"},"195":{"720":"Africa"},"485":{"485":"Afghanistan"},"5":{"203":"India"},"538":{"203":"India"},"21":{"203":"India"},"524":{"203":"India"},"554":{"203":"India"},"523":{"203":"India"},"552":{"203":"India"},"193":{"193":"US"},"119":{"203":"India"},"180":{"180":"Qatar"},"586":{"203":"India"},"521":{"203":"India"},"598":{"203":"India"},"595":{"203":"India"},"74":{"203":"India"},"61":{"203":"India"},"115":{"203":"India"},"103":{"203":"India"},"602":{"203":"India"},"536":{"203":"India"},"113":{"203":"India"},"152":{"203":"India"},"189":{"189":"Switzerland"},"612":{"203":"India"},"579":{"203":"India"},"91":{"203":"India"},"480":{"203":"India"},"107":{"203":"India"},"535":{"203":"India"},"87":{"203":"India"},"174":{"174":"Mexico"},"481":{"203":"India"},"77":{"203":"India"},"474":{"203":"India"},"508":{"203":"India"},"541":{"203":"India"},"564":{"203":"India"},"563":{"203":"India"},"39":{"203":"India"},"64":{"203":"India"},"97":{"203":"India"},"558":{"203":"India"},"12":{"203":"India"},"41":{"203":"India"},"52":{"203":"India"},"45":{"203":"India"},"507":{"203":"India"},"573":{"203":"India"},"237":{"237":"Lebanon"},"503":{"203":"India"},"593":{"203":"India"},"188":{"188":"Sweden"},"68":{"203":"India"},"567":{"203":"India"},"1":{"203":"India"},"136":{"203":"India"},"116":{"203":"India"},"506":{"203":"India"},"144":{"203":"India"},"576":{"203":"India"},"100":{"203":"India"},"616":{"203":"India"},"25":{"203":"India"},"120":{"203":"India"},"83":{"203":"India"},"484":{"203":"India"},"581":{"203":"India"},"254":{"254":"Vietnam"},"544":{"203":"India"},"177":{"177":"New Zealand"},"605":{"203":"India"},"122":{"203":"India"},"143":{"203":"India"},"158":{"158":"Bahrain"},"22":{"203":"India"},"42":{"203":"India"},"46":{"203":"India"},"6":{"203":"India"},"562":{"203":"India"},"36":{"203":"India"},"183":{"183":"Singapore"},"94":{"203":"India"},"518":{"203":"India"},"568":{"203":"India"},"608":{"203":"India"},"169":{"169":"Japan"},"132":{"203":"India"},"171":{"171":"Malaysia"},"493":{"203":"India"},"478":{"203":"India"},"546":{"203":"India"},"537":{"203":"India"},"18":{"203":"India"},"522":{"203":"India"},"125":{"203":"India"},"525":{"203":"India"},"44":{"203":"India"},"599":{"203":"India"},"609":{"203":"India"},"587":{"203":"India"},"27":{"203":"India"},"190":{"190":"Thailand"},"161":{"161":"China"},"95":{"203":"India"},"582":{"203":"India"},"534":{"203":"India"},"20":{"203":"India"},"601":{"203":"India"},"109":{"203":"India"},"551":{"203":"India"},"151":{"203":"India"},"529":{"203":"India"},"148":{"203":"India"},"504":{"203":"India"},"557":{"203":"India"},"475":{"203":"India"},"78":{"203":"India"},"106":{"203":"India"},"157":{"157":"Bangladesh"},"65":{"203":"India"},"515":{"203":"India"},"197":{"197":"Other International"},"138":{"203":"India"},"606":{"203":"India"},"81":{"203":"India"},"137":{"203":"India"},"60":{"203":"India"},"86":{"203":"India"},"204":{"204":"Gulf"},"165":{"165":"Germany"},"17":{"203":"India"},"2":{"203":"India"},"186":{"186":"Spain"},"82":{"203":"India"},"110":{"203":"India"},"147":{"203":"India"},"590":{"203":"India"},"531":{"203":"India"},"69":{"203":"India"},"112":{"203":"India"},"191":{"191":"UK"},"172":{"172":"Maldives"},"545":{"203":"India"},"596":{"203":"India"},"187":{"187":"SriLanka"},"721":{"721":"Turkmenistan"},"613":{"203":"India"},"516":{"203":"India"},"588":{"203":"India"},"79":{"203":"India"},"121":{"203":"India"},"126":{"203":"India"},"238":{"238":"Jordan"},"542":{"203":"India"},"577":{"203":"India"},"253":{"253":"Taiwan"},"561":{"203":"India"},"176":{"176":"Netherlands"},"483":{"203":"India"},"117":{"203":"India"},"574":{"203":"India"},"170":{"170":"Kuwait"},"33":{"203":"India"},"63":{"203":"India"},"7":{"203":"India"},"26":{"203":"India"},"80":{"203":"India"},"600":{"203":"India"},"99":{"203":"India"},"179":{"179":"Pakistan"},"72":{"203":"India"},"526":{"203":"India"},"566":{"203":"India"},"500":{"203":"India"},"533":{"203":"India"},"182":{"182":"Saudi Arabia"},"108":{"203":"India"},"604":{"203":"India"},"92":{"203":"India"},"556":{"203":"India"},"10":{"203":"India"},"477":{"203":"India"},"550":{"203":"India"},"142":{"203":"India"},"167":{"167":"Indonesia"},"48":{"203":"India"},"505":{"203":"India"},"610":{"203":"India"},"514":{"203":"India"},"133":{"203":"India"},"513":{"203":"India"},"149":{"203":"India"},"123":{"203":"India"},"592":{"203":"India"},"50":{"203":"India"},"476":{"203":"India"},"547":{"203":"India"},"482":{"203":"India"},"173":{"720":"Africa"},"510":{"203":"India"},"56":{"203":"India"},"530":{"203":"India"},"66":{"203":"India"},"19":{"203":"India"},"54":{"203":"India"},"549":{"203":"India"},"70":{"203":"India"},"166":{"166":"Hongkong"},"88":{"203":"India"},"575":{"203":"India"},"30":{"203":"India"},"141":{"203":"India"},"570":{"203":"India"},"128":{"203":"India"},"252":{"252":"Macau"},"28":{"203":"India"},"156":{"156":"Australia"},"75":{"203":"India"},"40":{"203":"India"},"134":{"203":"India"},"192":{"192":"United Arab Emirates"},"250":{"250":"Egypt"},"589":{"203":"India"},"614":{"203":"India"},"59":{"203":"India"},"501":{"203":"India"},"150":{"203":"India"},"155":{"203":"India"},"130":{"203":"India"},"53":{"203":"India"},"543":{"203":"India"},"491":{"203":"India"},"583":{"203":"India"},"13":{"203":"India"},"105":{"203":"India"},"85":{"203":"India"},"185":{"185":"South Korea"},"3":{"203":"India"},"597":{"203":"India"},"146":{"203":"India"},"9":{"203":"India"},"111":{"203":"India"},"38":{"203":"India"},"4":{"203":"India"},"591":{"203":"India"},"34":{"203":"India"},"528":{"203":"India"},"164":{"164":"France"},"539":{"203":"India"},"603":{"203":"India"}}';
+    var jsonstr = '{"1":{"166":"Hongkong","183":"Singapore","249":"Philipines","171":"Malaysia"},"3":{"237":"Lebanon","238":"Jordan","170":"Kuwait","182":"Saudi Arabia","250":"Egypt","192":"United Arab Emirates","158":"Bahrain","180":"Qatar","178":"Oman"},"2":{"254":"Vietnam","190":"Thailand","203":"India","167":"Indonesia"}}';
+    var loc_codes = '491:22:91;492:22:91;1:79:91;2:80:91;3:44:91;4:11:91;5:124:91;6:40:91;7:33:91;8:22:91;9:120:91;10:22:91;11:381:91;12:562:91;13:241:91;14:389:91;15:145:91;500:0:91;474:477:91;16:571:91;17:532:91;501:0:91;18:171:91;19:183:91;502:0:91;20:2692:91;503:0:91;504:0:91;21:2646:91;22:341:91;23:2432:91;483:1795:91;24:641:91;505:0:91;506:0:91;507:0:91;508:0:91;25:581:91;26:7531:91;509:0:91;27:831:91;28:8392:91;510:0:91;29:2642:91;511:0:91;30:164:91;31:278:91;32:7792:91;512:0:91;513:0:91;33:775:91;34:674:91;35:2832:91;36:8482:91;514:0:91;515:0:91;37:7752:91;38:6542:91;516:0:91;517:0:91;518:0:91;40:172:91;520:0:91;521:0:91;522:0:91;523:0:91;524:0:91;87:484:91;41:422:91;525:0:91;42:671:91;43:0:91;44:0:91;526:0:91;527:0:91;45:135:91;528:0:91;46:326:91;47:0:91;48:0:91;529:0:91;530:0:91;531:0:91;49:0:91;532:0:91;50:343:91;52:424:91;53:5278:91;54:129:91;533:0:91;534:0:91;535:0:91;55:2712:91;536:0:91;56:3592:91;537:0:91;57:120:91;538:0:91;539:0:91;58:0:91;540:0:91;59:551:91;60:8472:91;541:0:91;61:863:91;542:0:91;62:361:91;63:751:91;64:3224:91;543:0:91;544:0:91;545:0:91;546:0:91;65:1662:91;547:0:91;548:0:91;66:4334:91;549:0:91;67:836:91;475:4863:91;68:385:91;69:731:91;70:360:91;71:761:91;72:141:91;73:2991:91;74:181:91;75:257:91;550:0:91;76:191:91;77:288:91;78:657:91;551:0:91;552:0:91;553:0:91;79:291:91;554:0:91;555:0:91;80:884:91;556:0:91;81:0:91;82:0:91;83:512:91;557:0:91;558:0:91;84:184:91;559:0:91;476:499:91;560:0:91;85:0:91;86:3222:91;88:370:91;89:8152:91;90:231:91;91:0:91;561:0:91;92:2958:91;93:481:91;39:495:91;94:0:91;95:8518:91;96:1744:91;562:0:91;563:0:91;97:522:91;98:161:91;564:0:91;565:0:91;99:452:91;566:0:91;567:0:91;477:483:91;568:0:91;100:824:91;101:565:91;102:121:91;569:0:91;103:0:91;570:0:91;104:591:91;571:0:91;572:0:91;573:0:91;105:821:91;574:0:91;106:4652:91;107:712:91;575:0:91;576:0:91;108:253:91;109:861:91;110:8462:91;577:0:91;111:423:91;578:0:91;579:0:91;112:491:91;484:172:91;113:180:91;580:0:91;114:6722:91;478:468:91;115:186:91;116:175:91;117:612:91;118:413:91;119:286:91;120:3192:91;121:6752:91;122:474:91;581:0:91;582:0:91;123:771:91;124:883:91;125:281:91;583:0:91;126:651:91;584:0:91;585:0:91;586:0:91;587:0:91;127:1262:91;128:1332:91;588:0:91;129:661:91;589:0:91;590:0:91;591:0:91;130:472:91;592:0:91;593:0:91;594:0:91;595:0:91;596:0:91;597:0:91;131:364:91;132:177:91;482:8182:91;133:217:91;598:0:91;134:3842:91;135:353:91;136:0:91;599:0:91;600:0:91;601:0:91;480:130:91;137:194:91;602:0:91;138:261:91;603:0:91;139:4362:91;140:487:91;604:0:91;143:471:91;141:462:91;142:877:91;605:0:91;144:431:91;606:0:91;145:461:91;493:22:91;146:1594:91;608:0:91;147:734:91;609:0:91;148:265:91;149:2632:91;150:260:91;151:542:91;610:0:91;152:416:91;611:0:91;153:866:91;612:0:91;613:0:91;154:891:91;155:870:91;614:0:91;479:4936:91;481:1732:91;616:0:91;198:0:91;485::93;156:0:61;158:0:973;157:0:880;159:0:32;160:0:1;161:0:86;250:0:20;164:0:33;165:0:49;204:0:0;166:0:852;167:0:62;486::964;168:0:353;169:0:81;238:0:962;170:0:965;237:0:961;252::853;171:0:60;172:0:960;173:0:230;174:0:52;175:0:977;176:0:31;177:0:64;178:0:968;179:0:92;249:0:63;180:0:974;181:0:7;182:0:966;183:0:65;184:0:27;185:0:82;186:0:34;187:0:94;188:0:46;189:0:41;253::886;190:0:66;721::;191:0:44;192:0:971;193:0:1;254::84;194:0:967;195:0:263;197:0:0';
+    var baseserver = 'Google.com';
+    var jobtype = '';
+    var highest_specialization = 0;
+    var contract_channel = 1;
+    var HIGHEST_DEGREE = 0;
+    var HIGHEST_SPEC = 0;
+    var HIGHEST_YEARPASS = 0;
+    var INSTITUTE = '';
+    var workAuthData = { "1": [{ "1": "Permanent Resident" }, { "2": "Work Visa" }], "3": [{ "8": "Dependent Visa (Husband/ Father)" }, { "5": "Employment Visa (NOC attached)" }, { "6": "Employment Visa (NOC not attached)" }, { "7": "Employment Visa Free Zone" }, { "9": "Investors Visa" }, { "3": "None Of the Above" }, { "11": "Transferable Iquama" }, { "12": "Visit Visa" }], "2": [{ "4": "No" }, { "2": "Work Visa" }] };
+
+    var COMBO_DATA = new Array();
+    COMBO_DATA['SCID'] = 1;
+    COMBO_DATA['NATIONAITY'] = [{ "values": "Afghan", "id": "AF" }, { "values": "Albania", "id": "AL" }, { "values": "Algerian", "id": "DZ" }, { "values": "American Samoa", "id": "AS" }, { "values": "Andorra", "id": "AD" }, { "values": "Angola", "id": "AO" }, { "values": "Anguilla", "id": "AI" }, { "values": "Antarctica", "id": "AQ" }, { "values": "Antigua and Barbuda", "id": "AG" }, { "values": "Argentina", "id": "AR" }, { "values": "Armenia", "id": "AM" }, { "values": "Aruba", "id": "AW" }, { "values": "Australian", "id": "AU" }, { "values": "Austria", "id": "AT" }, { "values": "Azerbaijan", "id": "AZ" }, { "values": "Bahamas", "id": "BS" }, { "values": "Bahraini", "id": "BH" }, { "values": "Bangladeshi", "id": "BD" }, { "values": "Barbados", "id": "BB" }, { "values": "Belarus", "id": "BY" }, { "values": "Belgium", "id": "BE" }, { "values": "Belize", "id": "BZ" }, { "values": "Benin", "id": "BJ" }, { "values": "Bermuda", "id": "BM" }, { "values": "Bhutan", "id": "BT" }, { "values": "Bolivia", "id": "BO" }, { "values": "Bosnia and Herzegovina", "id": "BA" }, { "values": "Botswana", "id": "BW" }, { "values": "Bouvet Island", "id": "BV" }, { "values": "Brazil", "id": "BR" }, { "values": "British Indian Ocean Territory", "id": "IO" }, { "values": "Brunei Darussalam", "id": "BN" }, { "values": "Bulgaria", "id": "BG" }, { "values": "Burkina Faso", "id": "BF" }, { "values": "Burundi", "id": "BI" }, { "values": "Cambodia", "id": "KH" }, { "values": "Cameroon", "id": "CM" }, { "values": "Canadian", "id": "CA" }, { "values": "Cape Verde", "id": "CV" }, { "values": "Cayman Islands", "id": "KY" }, { "values": "Central African Republic", "id": "CF" }, { "values": "Chad", "id": "TD" }, { "values": "Chile", "id": "CL" }, { "values": "Chinese", "id": "CN" }, { "values": "Christmas Island", "id": "CX" }, { "values": "Cocos (Keeling) Islands", "id": "CC" }, { "values": "Colombia", "id": "CO" }, { "values": "Comoros", "id": "KM" }, { "values": "Congo", "id": "CG" }, { "values": "Congo, the Democratic Republic of the", "id": "CD" }, { "values": "Cook Islands", "id": "CK" }, { "values": "Costa Rica", "id": "CR" }, { "values": "Cote D'Ivoire", "id": "CI" }, { "values": "Croatia", "id": "HR" }, { "values": "Cuba", "id": "CU" }, { "values": "Cyprus", "id": "CY" }, { "values": "Czech Republic", "id": "CZ" }, { "values": "Denmark", "id": "DK" }, { "values": "Djibouti", "id": "DJ" }, { "values": "Dominica", "id": "DM" }, { "values": "Dominican Republic", "id": "DO" }, { "values": "Ecuador", "id": "EC" }, { "values": "Egyptian", "id": "EG" }, { "values": "El Salvador", "id": "SV" }, { "values": "Emirati/UAE", "id": "AE" }, { "values": "Equatorial Guinea", "id": "GQ" }, { "values": "Eritrea", "id": "ER" }, { "values": "Estonia", "id": "EE" }, { "values": "Ethiopia", "id": "ET" }, { "values": "Falkland Islands (Malvinas)", "id": "FK" }, { "values": "Faroe Islands", "id": "FO" }, { "values": "Fiji", "id": "FJ" }, { "values": "Philippines/Filipino", "id": "PH" }, { "values": "Finland", "id": "FI" }, { "values": "French", "id": "FR" }, { "values": "French Guiana", "id": "GF" }, { "values": "French Polynesia", "id": "PF" }, { "values": "French Southern Territories", "id": "TF" }, { "values": "Gabon", "id": "GA" }, { "values": "Gambia", "id": "GM" }, { "values": "Georgia", "id": "GE" }, { "values": "German", "id": "DE" }, { "values": "Ghana", "id": "GH" }, { "values": "Gibraltar", "id": "GI" }, { "values": "Greece", "id": "GR" }, { "values": "Greenland", "id": "GL" }, { "values": "Grenada", "id": "GD" }, { "values": "Guadeloupe", "id": "GP" }, { "values": "Guam", "id": "GU" }, { "values": "Guatemala", "id": "GT" }, { "values": "Guinea", "id": "GN" }, { "values": "Guinea-Bissau", "id": "GW" }, { "values": "Guyana", "id": "GY" }, { "values": "Haiti", "id": "HT" }, { "values": "Heard Island and Mcdonald Islands", "id": "HM" }, { "values": "Holy See (Vatican City State)", "id": "VA" }, { "values": "Honduras", "id": "HN" }, { "values": "Hong Kong", "id": "HK" }, { "values": "Hungary", "id": "HU" }, { "values": "Iceland", "id": "IS" }, { "values": "Indian", "id": "IN" }, { "values": "Indonesian", "id": "ID" }, { "values": "Iranian", "id": "IR" }, { "values": "Iraqi", "id": "IQ" }, { "values": "Ireland", "id": "IE" }, { "values": "Israel", "id": "IL" }, { "values": "Italian", "id": "IT" }, { "values": "Jamaica", "id": "JM" }, { "values": "Japan", "id": "JP" }, { "values": "Jordanian", "id": "JO" }, { "values": "Kazakhstan", "id": "KZ" }, { "values": "Kenyan", "id": "KE" }, { "values": "Kiribati", "id": "KI" }, { "values": "Korea, Democratic People's Republic of", "id": "KP" }, { "values": "Korea, Republic of", "id": "KR" }, { "values": "Kuwaiti", "id": "KW" }, { "values": "Kyrgyzstan", "id": "KG" }, { "values": "Lao People's Democratic Republic", "id": "LA" }, { "values": "Latvia", "id": "LV" }, { "values": "Lebanese", "id": "LB" }, { "values": "Lesotho", "id": "LS" }, { "values": "Liberia", "id": "LR" }, { "values": "Libyan Arab Jamahiriya", "id": "LY" }, { "values": "Liechtenstein", "id": "LI" }, { "values": "Lithuania", "id": "LT" }, { "values": "Luxembourg", "id": "LU" }, { "values": "Macao", "id": "MO" }, { "values": "Macedonia, the Former Yugoslav Republic of", "id": "MK" }, { "values": "Madagascar", "id": "MG" }, { "values": "Malawi", "id": "MW" }, { "values": "Malaysian", "id": "MY" }, { "values": "Maldives", "id": "MV" }, { "values": "Mali", "id": "ML" }, { "values": "Malta", "id": "MT" }, { "values": "Marshall Islands", "id": "MH" }, { "values": "Martinique", "id": "MQ" }, { "values": "Mauritania", "id": "MR" }, { "values": "Mauritius", "id": "MU" }, { "values": "Mayotte", "id": "YT" }, { "values": "Mexico", "id": "MX" }, { "values": "Micronesia, Federated States of", "id": "FM" }, { "values": "Moldova, Republic of", "id": "MD" }, { "values": "Monaco", "id": "MC" }, { "values": "Mongolia", "id": "MN" }, { "values": "Montserrat", "id": "MS" }, { "values": "Moroccan", "id": "MA" }, { "values": "Mozambique", "id": "MZ" }, { "values": "Myanmar", "id": "MM" }, { "values": "Namibia", "id": "NA" }, { "values": "Nauru", "id": "NR" }, { "values": "Nepalese", "id": "NP" }, { "values": "Netherlands", "id": "NL" }, { "values": "Netherlands Antilles", "id": "AN" }, { "values": "New Caledonia", "id": "NC" }, { "values": "New Zealand", "id": "NZ" }, { "values": "Nicaragua", "id": "NI" }, { "values": "Niger", "id": "NE" }, { "values": "Nigerian", "id": "NG" }, { "values": "Niue", "id": "NU" }, { "values": "Norfolk Island", "id": "NF" }, { "values": "Northern Mariana Islands", "id": "MP" }, { "values": "Norway", "id": "NO" }, { "values": "Omani", "id": "OM" }, { "values": "Pakistani", "id": "PK" }, { "values": "Palau", "id": "PW" }, { "values": "Palestinian Territory, Occupied", "id": "PS" }, { "values": "Panama", "id": "PA" }, { "values": "Papua New Guinea", "id": "PG" }, { "values": "Paraguay", "id": "PY" }, { "values": "Peru", "id": "PE" }, { "values": "Pitcairn", "id": "PN" }, { "values": "Poland", "id": "PL" }, { "values": "Portugal", "id": "PT" }, { "values": "Puerto Rico", "id": "PR" }, { "values": "Qatari", "id": "QA" }, { "values": "Reunion", "id": "RE" }, { "values": "Romania", "id": "RO" }, { "values": "Russian", "id": "RU" }, { "values": "Rwanda", "id": "RW" }, { "values": "Saint Helena", "id": "SH" }, { "values": "Saint Kitts and Nevis", "id": "KN" }, { "values": "Saint Lucia", "id": "LC" }, { "values": "Saint Pierre and Miquelon", "id": "PM" }, { "values": "Saint Vincent and the Grenadines", "id": "VC" }, { "values": "Samoa", "id": "WS" }, { "values": "San Marino", "id": "SM" }, { "values": "Sao Tome and Principe", "id": "ST" }, { "values": "Saudi", "id": "SA" }, { "values": "Senegal", "id": "SN" }, { "values": "Serbia and Montenegro", "id": "CS" }, { "values": "Seychelles", "id": "SC" }, { "values": "Sierra Leone", "id": "SL" }, { "values": "Singaporean", "id": "SG" }, { "values": "Slovakia", "id": "SK" }, { "values": "Slovenia", "id": "SI" }, { "values": "Solomon Islands", "id": "SB" }, { "values": "Somalia", "id": "SO" }, { "values": "South African", "id": "ZA" }, { "values": "South Georgia and the South Sandwich Islands", "id": "GS" }, { "values": "Spanish", "id": "ES" }, { "values": "Sri Lankan", "id": "LK" }, { "values": "Sudanese", "id": "SD" }, { "values": "Suriname", "id": "SR" }, { "values": "Svalbard and Jan Mayen", "id": "SJ" }, { "values": "Swaziland", "id": "SZ" }, { "values": "Sweden", "id": "SE" }, { "values": "Switzerland", "id": "CH" }, { "values": "Syrian", "id": "SY" }, { "values": "Taiwanese", "id": "TW" }, { "values": "Tajikistan", "id": "TJ" }, { "values": "Tanzania, United Republic of", "id": "TZ" }, { "values": "Thai", "id": "TH" }, { "values": "Timor-Leste", "id": "TL" }, { "values": "Togo", "id": "TG" }, { "values": "Tokelau", "id": "TK" }, { "values": "Tonga", "id": "TO" }, { "values": "Trinidad and Tobago", "id": "TT" }, { "values": "Tunisia", "id": "TN" }, { "values": "Turkey", "id": "TR" }, { "values": "Turkmenistan", "id": "TM" }, { "values": "Turks and Caicos Islands", "id": "TC" }, { "values": "Tuvalu", "id": "TV" }, { "values": "Uganda", "id": "UG" }, { "values": "Ukraine", "id": "UA" }, { "values": "United Kingdom", "id": "GB" }, { "values": "United States", "id": "US" }, { "values": "United States Minor Outlying Islands", "id": "UM" }, { "values": "Uruguay", "id": "UY" }, { "values": "Uzbekistan", "id": "UZ" }, { "values": "Vanuatu", "id": "VU" }, { "values": "Venezuela", "id": "VE" }, { "values": "Vietnamese", "id": "VN" }, { "values": "Virgin Islands, British", "id": "VG" }, { "values": "Virgin Islands, U.s.", "id": "VI" }, { "values": "Wallis and Futuna", "id": "WF" }, { "values": "Western Sahara", "id": "EH" }, { "values": "Yemeni", "id": "YE" }, { "values": "Zambia", "id": "ZM" }, { "values": "Zimbabwe", "id": "ZW" }];
+    COMBO_DATA['NATIONALITY_VAL'] = '';
+    COMBO_DATA['CURLOCATION'] = [{ "values": "Ahmedabad", "id": "1" }, { "values": "Bengaluru / Bangalore", "id": "2" }, { "values": "Chennai", "id": "3" }, { "values": "Delhi", "id": "4" }, { "values": "Gurgaon", "id": "5" }, { "values": "Hyderabad / Secunderabad", "id": "6" }, { "values": "Kolkata", "id": "7" }, { "values": "Mumbai", "id": "8" }, { "values": "&nbsp;&nbsp;-&nbsp;Mumbai City", "id": "491" }, { "values": "&nbsp;&nbsp;-&nbsp;Navi Mumbai", "id": "492" }, { "values": "&nbsp;&nbsp;-&nbsp;Thane", "id": "493" }, { "values": "Noida", "id": "9" }, { "values": "Pune", "id": "10" }, { "values": "Agartala", "id": "11" }, { "values": "Agra", "id": "12" }, { "values": "Ahmednagar", "id": "13" }, { "values": "Aizawal", "id": "14" }, { "values": "Ajmer", "id": "15" }, { "values": "Akola", "id": "500" }, { "values": "Alappuzha / Alleppey", "id": "474" }, { "values": "Aligarh", "id": "16" }, { "values": "Allahabad", "id": "17" }, { "values": "Alwar", "id": "501" }, { "values": "Ambala", "id": "18" }, { "values": "Amritsar", "id": "19" }, { "values": "Amravati", "id": "502" }, { "values": "Anand", "id": "20" }, { "values": "Anantapur", "id": "503" }, { "values": "Anantnag", "id": "504" }, { "values": "Ankleshwar", "id": "21" }, { "values": "Asansol", "id": "22" }, { "values": "Aurangabad", "id": "23" }, { "values": "Baddi", "id": "483" }, { "values": "Bhagalpur", "id": "24" }, { "values": "Balasore", "id": "505" }, { "values": "Ballia", "id": "506" }, { "values": "Baramati", "id": "507" }, { "values": "Baramulla", "id": "508" }, { "values": "Bareilly", "id": "25" }, { "values": "Baroda / Vadodara", "id": "26" }, { "values": "Barpeta", "id": "509" }, { "values": "Belgaum", "id": "27" }, { "values": "Bellary", "id": "28" }, { "values": "Berhampur", "id": "510" }, { "values": "Bharuch", "id": "29" }, { "values": "Bharatpur", "id": "511" }, { "values": "Bhatinda", "id": "30" }, { "values": "Bhavnagar", "id": "31" }, { "values": "Bhilaigarh", "id": "32" }, { "values": "Bhilwara", "id": "512" }, { "values": "Bhiwani", "id": "513" }, { "values": "Bhopal", "id": "33" }, { "values": "Bhubaneshwar", "id": "34" }, { "values": "Bhuj", "id": "35" }, { "values": "Bidar", "id": "36" }, { "values": "Bijapur", "id": "514" }, { "values": "Bikaner", "id": "515" }, { "values": "Bilaspur", "id": "37" }, { "values": "Bokaro", "id": "38" }, { "values": "Bulandshahr", "id": "516" }, { "values": "Burdwan", "id": "517" }, { "values": "Chamba", "id": "518" }, { "values": "Chandigarh", "id": "40" }, { "values": "Chandrapur", "id": "520" }, { "values": "Chhapra", "id": "521" }, { "values": "Chhindwara", "id": "522" }, { "values": "Chittoor", "id": "523" }, { "values": "Chittorgarh", "id": "524" }, { "values": "Cochin / Kochi / Ernakulam", "id": "87" }, { "values": "Coimbatore", "id": "41" }, { "values": "Cuddalore", "id": "525" }, { "values": "Cuttack", "id": "42" }, { "values": "Dalhousie", "id": "43" }, { "values": "Daman", "id": "44" }, { "values": "Darjeeling", "id": "526" }, { "values": "Davangere", "id": "527" }, { "values": "Dehradun", "id": "45" }, { "values": "Deoria", "id": "528" }, { "values": "Dhanbad", "id": "46" }, { "values": "Dharamsala", "id": "47" }, { "values": "Dharwad", "id": "48" }, { "values": "Dhubri", "id": "529" }, { "values": "Dhule/Dhulia", "id": "530" }, { "values": "Dibrugarh", "id": "531" }, { "values": "Dispur", "id": "49" }, { "values": "Durg", "id": "532" }, { "values": "Durgapur", "id": "50" }, { "values": "Erode", "id": "52" }, { "values": "Faizabad", "id": "53" }, { "values": "Faridabad", "id": "54" }, { "values": "Fatehgarh Sahib", "id": "533" }, { "values": "Ferozepur", "id": "534" }, { "values": "Gandhidham", "id": "535" }, { "values": "Gandhinagar", "id": "55" }, { "values": "Ganganagar", "id": "536" }, { "values": "Gangtok", "id": "56" }, { "values": "Gaya", "id": "537" }, { "values": "Ghaziabad", "id": "57" }, { "values": "Gir", "id": "538" }, { "values": "Giridih", "id": "539" }, { "values": "Goa", "id": "58" }, { "values": "Godhra", "id": "540" }, { "values": "Gorakhpur", "id": "59" }, { "values": "Gulbarga", "id": "60" }, { "values": "Guntakal", "id": "541" }, { "values": "Guntur", "id": "61" }, { "values": "Gurdaspur", "id": "542" }, { "values": "Guwahati", "id": "62" }, { "values": "Gwalior", "id": "63" }, { "values": "Haldia", "id": "64" }, { "values": "Haldwani", "id": "543" }, { "values": "Haridwar", "id": "544" }, { "values": "Hazaribag", "id": "545" }, { "values": "Himatnagar", "id": "546" }, { "values": "Hisar", "id": "65" }, { "values": "Hooghly", "id": "547" }, { "values": "Hoshiarpur", "id": "548" }, { "values": "Hosur", "id": "66" }, { "values": "Howrah", "id": "549" }, { "values": "Hubli", "id": "67" }, { "values": "Idukki", "id": "475" }, { "values": "Imphal", "id": "68" }, { "values": "Indore", "id": "69" }, { "values": "Itanagar", "id": "70" }, { "values": "Jabalpur", "id": "71" }, { "values": "Jaipur", "id": "72" }, { "values": "Jaisalmer", "id": "73" }, { "values": "Jalandhar", "id": "74" }, { "values": "Jalgaon", "id": "75" }, { "values": "Jalna", "id": "550" }, { "values": "Jammu", "id": "76" }, { "values": "Jamnagar", "id": "77" }, { "values": "Jamshedpur", "id": "78" }, { "values": "Jaunpur", "id": "551" }, { "values": "Jhansi", "id": "552" }, { "values": "Jharsuguda", "id": "553" }, { "values": "Jodhpur", "id": "79" }, { "values": "Junagadh", "id": "554" }, { "values": "Kadapa", "id": "555" }, { "values": "Kakinada", "id": "80" }, { "values": "Kanchipuram", "id": "556" }, { "values": "Kandla", "id": "81" }, { "values": "Kannur", "id": "82" }, { "values": "Kanpur", "id": "83" }, { "values": "Kapurthala", "id": "557" }, { "values": "Karimnagar", "id": "558" }, { "values": "Karnal", "id": "84" }, { "values": "Karur", "id": "559" }, { "values": "Kasargod", "id": "476" }, { "values": "Kashipur", "id": "560" }, { "values": "Kavaratti", "id": "85" }, { "values": "Kharagpur", "id": "86" }, { "values": "Kohima", "id": "88" }, { "values": "Kolar", "id": "89" }, { "values": "Kolhapur", "id": "90" }, { "values": "Kollam", "id": "91" }, { "values": "Korba", "id": "561" }, { "values": "Kota", "id": "92" }, { "values": "Kottayam", "id": "93" }, { "values": "Kozhikode / Calicut", "id": "39" }, { "values": "Kulu/Manali", "id": "94" }, { "values": "Kurnool", "id": "95" }, { "values": "Kurukshetra", "id": "96" }, { "values": "Ladakh", "id": "562" }, { "values": "Latur", "id": "563" }, { "values": "Lucknow", "id": "97" }, { "values": "Ludhiana", "id": "98" }, { "values": "Machilipatnam", "id": "564" }, { "values": "Madhubani", "id": "565" }, { "values": "Madurai", "id": "99" }, { "values": "Mahbubnagar", "id": "566" }, { "values": "Malacca/Car Nicobar", "id": "567" }, { "values": "Malappuram", "id": "477" }, { "values": "Mandi", "id": "568" }, { "values": "Mangalore", "id": "100" }, { "values": "Mathura", "id": "101" }, { "values": "Meerut", "id": "102" }, { "values": "Mehsana", "id": "569" }, { "values": "Mohali", "id": "103" }, { "values": "Moga", "id": "570" }, { "values": "Moradabad", "id": "104" }, { "values": "Motihari", "id": "571" }, { "values": "Muzaffarnagar", "id": "572" }, { "values": "Muzaffarpur", "id": "573" }, { "values": "Mysore", "id": "105" }, { "values": "Nagaon", "id": "574" }, { "values": "Nagercoil", "id": "106" }, { "values": "Nagpur", "id": "107" }, { "values": "Nainital", "id": "575" }, { "values": "Nanded", "id": "576" }, { "values": "Nasik", "id": "108" }, { "values": "Nellore", "id": "109" }, { "values": "Nizamabad", "id": "110" }, { "values": "Ongole", "id": "577" }, { "values": "Ooty", "id": "111" }, { "values": "Palanpur", "id": "578" }, { "values": "Palghat", "id": "579" }, { "values": "Pallakad", "id": "112" }, { "values": "Panchkula", "id": "484" }, { "values": "Panipat", "id": "113" }, { "values": "Panjim / Panaji", "id": "580" }, { "values": "Paradeep", "id": "114" }, { "values": "Pathanamthitta", "id": "478" }, { "values": "Pathankot", "id": "115" }, { "values": "Patiala", "id": "116" }, { "values": "Patna", "id": "117" }, { "values": "Pondicherry", "id": "118" }, { "values": "Porbandar", "id": "119" }, { "values": "Port Blair", "id": "120" }, { "values": "Puri", "id": "121" }, { "values": "Quilon", "id": "122" }, { "values": "Raichur", "id": "581" }, { "values": "Raigarh", "id": "582" }, { "values": "Raipur", "id": "123" }, { "values": "Rajamundry", "id": "124" }, { "values": "Rajkot", "id": "125" }, { "values": "Rampur", "id": "583" }, { "values": "Ranchi", "id": "126" }, { "values": "Ratlam", "id": "584" }, { "values": "Ratnagiri", "id": "585" }, { "values": "Rewa", "id": "586" }, { "values": "Rewari", "id": "587" }, { "values": "Rohtak", "id": "127" }, { "values": "Roorkee", "id": "128" }, { "values": "Ropar", "id": "588" }, { "values": "Rourkela", "id": "129" }, { "values": "Rudrapur", "id": "589" }, { "values": "Sagar", "id": "590" }, { "values": "Saharanpur", "id": "591" }, { "values": "Salem", "id": "130" }, { "values": "Samastipur", "id": "592" }, { "values": "Sambalpur", "id": "593" }, { "values": "Sangli", "id": "594" }, { "values": "Sangrur", "id": "595" }, { "values": "Satara", "id": "596" }, { "values": "Satna", "id": "597" }, { "values": "Shillong", "id": "131" }, { "values": "Shimla", "id": "132" }, { "values": "Shimoga", "id": "482" }, { "values": "Sholapur", "id": "133" }, { "values": "Sikar", "id": "598" }, { "values": "Silchar", "id": "134" }, { "values": "Siliguri", "id": "135" }, { "values": "Silvassa", "id": "136" }, { "values": "Sirsa", "id": "599" }, { "values": "Sitapur", "id": "600" }, { "values": "Solan", "id": "601" }, { "values": "Sonipat / Sonepat", "id": "480" }, { "values": "Srinagar", "id": "137" }, { "values": "Sultanpur", "id": "602" }, { "values": "Surat", "id": "138" }, { "values": "Tarapur", "id": "603" }, { "values": "Thanjavur", "id": "139" }, { "values": "Thrissur / Trissur", "id": "140" }, { "values": "Thiruvallur", "id": "604" }, { "values": "Thiruvananthapuram / Trivandrum", "id": "143" }, { "values": "Tirunalveli", "id": "141" }, { "values": "Tirupati", "id": "142" }, { "values": "Tirupur", "id": "605" }, { "values": "Trichy", "id": "144" }, { "values": "Tumkur", "id": "606" }, { "values": "Tuticorin", "id": "145" }, { "values": "Udaipur", "id": "146" }, { "values": "Udupi", "id": "608" }, { "values": "Ujjain", "id": "147" }, { "values": "Unnao", "id": "609" }, { "values": "Valsad", "id": "149" }, { "values": "Vapi", "id": "150" }, { "values": "Varanasi", "id": "151" }, { "values": "Vasco Da Gama", "id": "610" }, { "values": "Vellore", "id": "152" }, { "values": "Vidisha", "id": "611" }, { "values": "Vijayawada", "id": "153" }, { "values": "Villupuram", "id": "612" }, { "values": "Virudhunagar", "id": "613" }, { "values": "Visakhapatnam", "id": "154" }, { "values": "Warangal", "id": "155" }, { "values": "Wardha", "id": "614" }, { "values": "Wayanad", "id": "479" }, { "values": "Yamunanagar", "id": "481" }, { "values": "Yavatmal", "id": "616" }, { "values": "Other India", "id": "198" }, { "values": "Afghanistan", "id": "485" }, { "values": "Australia", "id": "156" }, { "values": "Bahrain", "id": "158" }, { "values": "Bangladesh", "id": "157" }, { "values": "Belgium", "id": "159" }, { "values": "Canada", "id": "160" }, { "values": "China", "id": "161" }, { "values": "Egypt", "id": "250" }, { "values": "France", "id": "164" }, { "values": "Germany", "id": "165" }, { "values": "Gulf", "id": "204" }, { "values": "Hongkong", "id": "166" }, { "values": "Indonesia", "id": "167" }, { "values": "Iraq", "id": "486" }, { "values": "Ireland", "id": "168" }, { "values": "Japan", "id": "169" }, { "values": "Jordan", "id": "238" }, { "values": "Kuwait", "id": "170" }, { "values": "Lebanon", "id": "237" }, { "values": "Macau", "id": "252" }, { "values": "Malaysia", "id": "171" }, { "values": "Maldives", "id": "172" }, { "values": "Mauritius", "id": "173" }, { "values": "Mexico", "id": "174" }, { "values": "Nepal", "id": "175" }, { "values": "Netherlands", "id": "176" }, { "values": "New Zealand", "id": "177" }, { "values": "Oman", "id": "178" }, { "values": "Pakistan", "id": "179" }, { "values": "Philippines", "id": "249" }, { "values": "Qatar", "id": "180" }, { "values": "Russia", "id": "181" }, { "values": "Saudi Arabia", "id": "182" }, { "values": "Singapore", "id": "183" }, { "values": "South Africa", "id": "184" }, { "values": "South Korea", "id": "185" }, { "values": "Spain", "id": "186" }, { "values": "SriLanka", "id": "187" }, { "values": "Sweden", "id": "188" }, { "values": "Switzerland", "id": "189" }, { "values": "Taiwan", "id": "253" }, { "values": "Thailand", "id": "190" }, { "values": "Turkmenistan", "id": "721" }, { "values": "UK", "id": "191" }, { "values": "United Arab Emirates", "id": "192" }, { "values": "US", "id": "193" }, { "values": "Vietnam", "id": "254" }, { "values": "Yemen", "id": "194" }, { "values": "Zimbabwe", "id": "195" }, { "values": "Other International", "id": "197" }];
+    COMBO_DATA['CURLOCATION_VAL'] = '';
+    COMBO_DATA['JOBTYPE'] = [{ "values": "Permanent Full Time", "id": "full" }, { "values": "Permanent Part Time", "id": "part" }, { "values": "Contract", "id": "cont" }];
+    COMBO_DATA['JOBTYPE_VAl'] = '';
+    COMBO_DATA['INDUSTRY_VAl'] = '';
+    COMBO_DATA['CATEGORY_VAl'] = '';
+    COMBO_DATA['EXP'] = '';
+    var collegeFlg = 0;
+    //Hint msgs
+    var MSG = new Array();
+    MSG['EMAIL'] = 'Please give your complete email ID i.e. myemailid@xyz.com';
+    MSG['EXP_FNAME'] = 'Maximum 50 characters';
+    MSG['EXP_UNAME'] = 'e.g. pardeep_shandilya, faisal.aqil.<br>Please do not include spaces in your username.';
+    MSG['EXP_PASS'] = 'Minimum 4 characters';
+    MSG['EXP_CUR_LOC'] = 'If your location is not listed here, please select the appropriate <b>Other</b> country option in the drop down, and then type your location in the box below.';
+    MSG['EXP_PHONE'] = 'Country code, area code, phone number';
+    MSG['EXP_PHONE'] = 'Country code, area code, phone number';
+    MSG['COUNTRY_CODE'] = 'Country code';
+    MSG['AREA_CODE'] = 'Area code';
+    MSG['PHON_NUM'] = 'Phone number';
+    MSG['EXP_MOBILE'] = 'Please fill Mobile number.';
+    MSG['EXP_JOB_IND'] = 'You can select maximum 2 industries.';
+    MSG['EXP_JOB_CAT'] = 'You can select maximum 2 functions.';
+    MSG['EXP_KEY_SKILLS'] = '&bull; List your work-related skills / competency areas to provide a quick overview of your abilities.<br />&bull; Enter Skills separated by a comma (,).'
+    MSG['TITLE'] = 'Provide a Title that describes your work experience.<br><br><span class=txt_grey small> Example:<br>MBA / Engineer with 2 yrs experience in the Automobile Industry</span>';
+    MSG['WRESUME'] = "To Attach your resume: Click 'Browse'  and find your resume in Microsoft Word format on your computer.";
+    MSG['DRESUME'] = '<span class=txt_grey bold>Type in or copy your resume</span>';
+    MSG['ERR_EMAIL'] = 'Please fill Email Address.';
+    MSG['ERR_EMAIL1'] = 'Please check the given Email Address.<br/>It is an invalid one.';
+    MSG['ERR_EMAIL2'] = 'Please check the given Email Address.<br/>It is an invalid one.';
+    MSG['ERR_FNAME'] = 'Please fill First Name.';
+    MSG['ERR_FNAME1'] = 'Please fill First Name.'
+    MSG['ERR_FNAME2'] = 'The given First Name is too large. Please ensure that maximum 50 characters are given.';
+    MSG['ERR_UNAME'] = 'Please fill a valid Username.';
+    MSG['ERR_UNAME1'] = 'The given Username is too short. Please ensure that atleast 4 characters are given.';
+    MSG['ERR_PSSWD'] = 'You have not keyed in the Password. Please do so to proceed.';
+    MSG['ERR_PSSWD1'] = 'The given Password is too short. <br/>Please ensure that atleast 4 characters are given.';
+    MSG['ERR_PSSWD2'] = 'The given Password is too long. Please ensure that atmost 32 characters are given'
+    MSG['ERR_PSSWD3'] = 'Password can not start or end with space';
+    MSG['ERR_PASSWDTEMP'] = 'You have not keyed in the Confirm Password. Please do so to proceed.';
+    MSG['ERR_PASSWDTEMP1'] = 'Confirm Password does not match the Password given earlier.';
+    MSG['ERR_PHONE'] = 'Please fill your Mobile number or Landline number.';
+    MSG['ERR_PHONE1'] = 'Please enter valid Mobile number.';
+    MSG['ERR_JOBTYPE'] = 'Please select Desired Job Type';
+    MSG['ERR_DOB'] = 'Please enter your birthday';
+    MSG['ERR_DOB1'] = 'Please enter your correct birthday';
+    MSG['ERR_LOC'] = 'Please select Current Location.';
+    MSG['ERR_OTHERLLOC'] = 'Please specify "Other" Current Location.'
+    MSG['ERR_NATIONALITY'] = 'Please select your Nationality.';
+    MSG['ERR_GENDER'] = 'Please select your gender.'
+    MSG['ERR_EXPMONTH'] = 'Please select Working Experience.';
+    MSG['ERR_INDUSTRY'] = 'Please select at least one Industry.';
+    MSG['ERR_INDUSTRY1'] = 'You can select only a maximum of two Industries.';
+    MSG['ERR_CAT'] = 'Please select at least one Function.';
+    MSG['ERR_SKILL'] = 'Please fill Key Skills.';
+    MSG['ERR_TITLE'] = 'Please specify an appropriate Resume Title.';
+    MSG['ERR_WRESUME'] = 'Please ensure that the file you upload is a word document or a .txt file.'
+    MSG['ERR_DRESUME'] = 'The detailed resume needs to be either uploaded or copied and pasted.'
+    MSG['ERR_DRESUME1'] = 'The length of the resume, you have pasted here seems to be too short, please include more information.';
+    MSG['ERR_PRSTATUS'] = 'Please select Work Authorization Status';
+    MSG['ERR_PRIVACY'] = 'Please read & agree to Job&#39;s privacy statement and terms & condition.';
+    MSG['INDUSTRY'] = 'Industry';
+    MSG['JOB_TYPE'] = 'Job Type';
+    MSG['TOTAL_EXP'] = 'Total experience';
+    MSG['NATIONALITY'] = 'Nationality';
+    MSG['CUR_LOC'] = 'Current location';
+    MSG['SELECT'] = 'Select';
+    MSG['FUNCTION'] = 'Choose from All Functions';
+    MSG['MAIL_EXTST'] = '';
+    var TAGMSG = new Array();
+    TAGMSG['firstName'] = 'First name';
+    TAGMSG['email'] = 'Email address';
+    TAGMSG['lastName'] = 'Last name';
+    TAGMSG['passwd'] = 'Choose a password';
+    TAGMSG['other_currentloc'] = 'Other Location';
+    TAGMSG['mobile'] = 'Mobile number';
+    TAGMSG['phone'] = 'Landline number';
+    TAGMSG['resume_title'] = 'Resume title';
+    TAGMSG['keySkills'] = 'Key skills';
+    TAGMSG['birthday'] = 'Date of Birth';
+    TAGMSG['certificate'] = 'Certificate no.';
+    TAGMSG['issued_by'] = 'Issued by';
+    TAGMSG['other_sub_type'] = 'Describe your disability';
+</script>
+ 
+
+
+<link href="../Content/jquery-ui.css" rel="stylesheet" type="text/css" />
+<script src="../Scripts/topIndCatRole_1-min_v20.js"></script>
+<style>
+
+.unchecked_small
+{
+        overflow:hidden;
+        width:8px;
+        height:8px;
+        _width:10px;
+        _height:10px;
+        float:left;
+        background-color: #ffffff;
+        border:solid thin #b1adbc;
+        margin-right:5px;
+        margin-top:2px;
+        border-width:1px;
+}
+
+.checked_small
+{
+                background:url(images/img_icons_4.gif) no-repeat -172px -14px;
+                overflow:hidden;
+                height:10px;
+                width:10px;
+                float:left;
+                margin-right:5px;
+                margin-top:2px;
+}
+.small{font-size:9px;}
+.close {
+    background-image: url("images/img_icons_4.gif");
+    background-position: -104px -4px;
+    background-repeat: no-repeat;
+    height: 13px;
+    width: 13px;
+}
+.close_small {
+                background-image: url(images/img_icons_4.gif);
+                height:11px;
+                width:11px;
+                background-position:-183px -4px;
+                background-repeat:no-repeat;
+}
+.blank{}
+.border_gray{border:1px solid #BFBFBF;}
+.bg_purple2 {
+    background-color: #F6F3FD;
+}
+.bold{font-weight:bold;}
+
+.dropdown_smaller_wrapper {
+border: 1px #bfbfbf solid;
+width: 254px;
+outline: 0;
+font-size: 12px;
+height: 31px;
+cursor: pointer;
+background: #ffffff;
+}
+body {font-family:arial; font-size:13px; color:#666666;}
+.select2-container .select2-choice
+{
+ 
+ background-image:none
+ border: 1px solid #bfbfbf;
+    border-radius: 0;
+}
+
+.select2-container .select2-choice
+{
+height: 31px;
+}
+
+.select2-container .select2-choice .select2-arrow 
+{
+        background:  #f2f2f2;
+}
+
+
+.select2-container .select2-choice .select2-arrow 
+
+{ 
+width: 25px;
+}
+
+
+.select2-container .select2-choice .select2-arrow b 
+{
+        background: url("images/dropdown_ar_small.gif") no-repeat 0 -0px rgba(0, 0, 0, 0);
+}
+.select2-container .select2-choice {
+background-image: none;
+}
+</style>
+<style>
+.radiolabel:focus{
+  border: thin dotted black; 
+}
+
+.submit_btn:focus{
+  border: thin dotted black; 
+}
+.collapsed:focus{
+  border: thin dotted black; 
+}
+.single_select ul.options li a:hover, .single_hover {
+    background: none repeat scroll 0 0 #dedede;
+    color: #000000;
+}
+.copresume_btn:focus{
+  border: thin dotted black; 
+}
+</style>
+
+
+  </head>
+    <body onLoad="initJS();">
+   <!-- header -->
+	<script>var xml = { "PAGE_CONTENT": { "CONTACT": "Contact Us", "JOBS_BY_LOCATION": "Jobs By Location", "CONTRACT_JOBS": "Contract Jobs", "GUEST": "Guest", "CAREER_ASTRO": "Career Astrology", "BRANDINGTREND": "Employer Branding Trends 2012 ", "NEWS_LETTER": "Newsletter", "COMPLETE_PROFILE": "Complete Profile", "AT": "at", "KEYWORD": "Keyword", "XPRESS_RESUME": "XpressResume+", "EMPLOYER": "Employer", "EMPLOYERS": "Employers", "SEARCH_RESUME": "Search Resumes", "RES_CENTER": "Resume Center", "BROWSE_JOBS": "Browse Jobs", "JOBS_BY_INDUSTRY": "Jobs By Industry", "EMPLOYMENT_INDEX": "Monster Employment Index", "CAREER_ADVICE": "Career Advice", "SELF_IMPROVEMENT_TIPS": "Self Improvement Tips", "RES_HIGHLIGHT": "Resume Highlighter", "MY_RESUME": "My Resume", "FEEDBACK": "FEEDBACK", "SEEKER_SERVICES": "Seeker Services", "FOLLOW": "Follow", "SIGN_OUT": "Sign Out", "LEARNING_CENTER": "Learning Center", "ADVANCE_JOB_SEARCH": "Advanced Job Search", "NETWORK": "NETWORK", "ABOUT_XPRESSRES_PLUS": "About XpressResume+", "INTERVIEW_CENTER_ARTICLES": "Interview Center Articles", "UPCOMING_JOB_TRENDS": "Upcoming Job Trends", "CAREER_BOOSTER": "Career Booster", "JOBS_BY_FUNCTION": "Jobs By Function", "LIFE_AT_WORK": "Life At Work", "MY_PROFILE": "My Profile", "CEO_CTO_STUDIES": "CEO-CTO Studies", "I_M_LOOKING_FOR": "I'm looking for...", "VSKILLS_CERT": " VSkills Certifications", "JOIN_US": "Join Us", "RIGHT_RESUME": "Right Resume", "MY_APPLICATION": "My Applications", "HAVEGOT": "We have got", "SAL_CENTER": "Salary Center", "PSYCHMETRIC_TEST": "Psychometric Test", "COMPANY_MAY_FOLLOWING": "Companies you may like to follow", "MY_ACTIVITY_SCORE": "My Activity Score", "COMPANIES": "Companies", "SUBMIT_RESUME": "Submit Resume", "NEW_CAREER_OPTIONS": "New Career Options", "MY_MONSTER": "My Monster", "LEARNING_ACADEMY": "Learning Academy", "SUBSCRIPTIONS": "Subscriptions", "MY_SAVED_JOBS": "My Saved Jobs", "GOVT_JOBS": "Government Jobs", "MY_PUBLIC_PROFILE": "My Public Profile", "REGISTER": "Register", "PRIVACY_PLUS": "Privacy Plus", "PROFILE_VIEWS": "Profile Views", "SWITCH_ARABIC": "التحول الى العربية", "LAST_UPDATED": "Last Updated", "FIND_BETTER": "Find Better", "PLACEMENT_CONSULTANTS": "Placement Consultants", "LAST_LOGIN": "Last Login", "UPDATE_RESUME": "Update Your Resume ", "COMPANY_FOLLOWING": "Companies you are following", "RECRUITER_FOLLOWING": "Recruiters you are following", "LOOKING_HIRE": "Looking to hire", "LOOK_HIRE": "Looking to Hire?", "EXPERTS_ADVICE": "Expert's Advice", "RECRUITER_UPDATE": "Recruiter Updates", "ANALYTICS": "Analytics", "SWITCH_ENGLISH": "Switch to English", "FIND_COMPANIES": "Find Companies", "LOGIN_HERE": "Login here", "SEARCH_JOB": "Search Jobs", "HI": "Hi", "SECURITY": "Security", "INTERNATIONAL_JOBS": "International Jobs", "ADVANCED_SEARCH": "Advanced Search", "UNFOLLOW": "UnFollow", "SIGN_IN": "Sign In", "SUBMIT_RES": "Submit Resume", "RECENT_SEARCHES": "Recent Searches", "CLICK_HERE": "Click here", "RESEARCH": "Research", "FIND_RECRUITERS": "Find Recruiters", "SEARCH_JOBS": "Search Jobs", "OR": "or", "LOGOUT": "Logout", "HOME": "Home", "COLLEGE": "Monster College", "TWENTY4SEVEN": " AMCAT Certification ", "CAREER_SERVICES": "Career Services", "EDIT_VIEW_RESUME": "Edit/View Resume", "BUY_ONLINE": "Buy Online", "MONSTER_ON_MOBILE": "Monster on Mobile", "LOGIN": "Login", "JOB_AGENT": "Job Agent", "HELP": "Help", "SECURITY_CENTER": "Security Center", "CAREER_CENTER": "Career Center", "NOT_VERIFIED": "Not Verified", "COMPANIES_UPDATE": "Companies Updates", "VERIFIED": "Verified", "WALKINS_JOBS": "Walkin Jobs", "SWITCH_TO_ARABIC": "Switch To Arabic", "JOBS": "Jobs", "MANAGE_SETTINGS": "Manage Settings", "INTERVIEW_CENTER": "Interview Center", "INBOX": "INBOX", "SPECIAL_ABILITY": "Special Ability Jobs", "LOCATION": "Location", "RECRUITER_MAY_FOLLOWING": "Recruiters you may like to follow", "POST_JOB": "Post Jobs", "ALT_EMAIL": "Alternate email", "INSIGHTS": "Insights", "IN": "In", "VSKILLS_CERT_EXAM": "Put Your Career in Gear with Job Portal Career Services", "TIPS": "Tips", "SALARY_INDEX": "Monster Salary Index", "JOB_SEARCH_MOBILE": "Job Search on Mobile", "SEARCH_TIP": "Search Tips", "EXPERIENCE": "Exp (yrs)", "JOBS_BY_COMPANY": "Jobs By Company", "NOTIFICATIONS": "NOTIFICATIONS", "ACTIVITY_SCORE": "Activity Score" }, "META_KEYWORDS": " http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" ", "GENERAL": { "BASESERVERNAME": "" } };</script><script>	    var langtype = 'en';</script><script>	    var langswitch = '';</script><script>	    var BASESERVERNAME; BASESERVERNAME = "JobPortal.com";</script>    <script src="../Scripts/jquery.js"></script><script type="text/javascript" src="../Scripts/dashboard_social.js?5454545677"></script><script type='text/javascript' src="../Scripts/seeker_header.js?3535435577"></script><link href="../Content/header_social.css?56345435876766" rel="stylesheet"/><script src="../Scripts/mouse_scroll.js"></script><script src="../Scripts/custom_scroll.js"></script><div class="ds_header " style="text-align:left;"><div id="header_id"></div></div><script>	    displayheader({ "IMG_ST": null, "NAME": null, "IMG_PATH": null, "HEADERTOPBANNER_WRAPUP": "", "MOBILE": "", "ALT_EMAIL": "", "EMAIL": "", "FEEDBACKLINK":"", "CHANNELINK": { "SUBLINK_VSKILLS": { "6": 0, "11": 0, "3": 0, "7": 0, "9": 0, "2": 0, "8": 0, "1": 1, "10": 0, "5": 0 }, "CAREER_CENTER_LINK": { "6": 1, "11": 1, "3": 1, "7": 1, "9": 1, "2": 1, "8": 1, "1": 1, "10": 1, "5": 1 }, "SECURITY_LINK": { "6": 1, "11": 1, "3": 0, "7": 1, "9": 1, "2": 1, "8": 1, "1": 1, "10": 1, "5": 0 }, "SUBLINK_INSIGHTS_MEI": { "6": 1, "11": 0, "3": 0, "7": 0, "9": 0, "2": 1, "8": 0, "1": 1, "10": 0, "5": 0 }, "SUBLINK_BRANDING_URL": { "6": 0, "11": 0, "3": 0, "7": 0, "9": 0, "2": 0, "8": 0, "1": 1, "10": 0, "5": 0 }, "SUBLINK_SEEKER_SERVICES": { "6": 1, "11": 0, "3": 0, "7": 0, "9": 0, "2": 1, "8": 0, "1": 1, "10": 0, "5": 0 }, "SUBLINK_RES_HIGHLIGHT": { "6": 1, "11": 0, "3": 0, "7": 1, "9": 0, "2": 1, "8": 0, "1": 1, "10": 0, "5": 0 }, "PA_LINK": { "6": 1, "11": 1, "3": 0, "7": 0, "9": 0, "2": 1, "8": 0, "1": 1, "10": 0, "5": 1 }, "SUBLINK_24x7": { "6": 0, "11": 0, "3": 0, "7": 0, "9": 0, "2": 0, "8": 0, "1": 1, "10": 0, "5": 0 }, "SUBLINK_CEO_CTO_STUDIES": { "6": 0, "11": 0, "3": 0, "7": 0, "9": 0, "2": 0, "8": 0, "1": 1, "10": 0, "5": 0 }, "SUBLINK_SELF_IMPROVEMENT_TIPS": { "6": 1, "11": 1, "3": 0, "7": 1, "9": 1, "2": 1, "8": 1, "1": 1, "10": 1, "5": 0 }, "SUBLINK_NEW_CAREER_OPTIONS": { "6": 1, "11": 1, "3": 0, "7": 1, "9": 1, "2": 1, "8": 1, "1": 1, "10": 1, "5": 0 }, "SEEKER_SERVICES_LINK": { "6": 1, "11": 1, "3": 1, "7": 1, "9": 0, "2": 1, "8": 0, "1": 1, "10": 0, "5": 0 }, "SUBLINK_UPCOMING_JOB_TRENDS": { "6": 1, "11": 1, "3": 0, "7": 1, "9": 1, "2": 1, "8": 1, "1": 1, "10": 1, "5": 0 }, "SUBLINK_COLLEGE_JOBS": { "6": 1, "11": 1, "3": 0, "7": 0, "9": 0, "2": 1, "8": 0, "1": 1, "10": 0, "5": 0 }, "SUBLINK_EXPERTS_ADVICE": { "6": 1, "11": 1, "3": 0, "7": 1, "9": 1, "2": 1, "8": 1, "1": 1, "10": 1, "5": 0 }, "SUBLINK_JOBS_BY_LOCATION": { "6": 0, "11": 0, "3": 0, "7": 0, "9": 0, "2": 1, "8": 0, "1": 1, "10": 0, "5": 0 }, "HOME_SEARCH_TEXT": { "6": 1, "11": 1, "3": 1, "7": 1, "9": 1, "2": 0, "8": 1, "1": 1, "10": 1, "5": 1 }, "SUBLINK_SAL_CENTER": { "6": 1, "11": 1, "3": 0, "7": 1, "9": 1, "2": 1, "8": 1, "1": 1, "10": 1, "5": 0 }, "SUBLINK_RES_CENTER": { "6": 1, "11": 1, "3": 0, "7": 1, "9": 1, "2": 1, "8": 1, "1": 1, "10": 1, "5": 0 }, "SUBLINK_RIGHT_RESUME": { "6": 1, "11": 1, "3": 0, "7": 1, "9": 0, "2": 1, "8": 0, "1": 1, "10": 0, "5": 0 }, "GOVT_JOBS_LINK": { "6": 0, "11": 0, "3": 0, "7": 0, "9": 0, "2": 0, "8": 0, "1": 1, "10": 0, "5": 0 }, "SUBLINK_WALKINS_JOBS": { "6": 1, "11": 1, "3": 1, "7": 1, "9": 1, "2": 1, "8": 1, "1": 1, "10": 1, "5": 0 }, "SUBLINK_CAREER_CENTER": { "6": 1, "11": 1, "3": 1, "7": 1, "9": 1, "2": 1, "8": 1, "1": 1, "10": 1, "5": 1 }, "SUBLINK_SPECIAL_ABILITY": { "6": 0, "11": 0, "3": 0, "7": 0, "9": 0, "2": 0, "8": 0, "1": 1, "10": 0, "5": 0 }, "SUBLINK_XPRESS_RESUME": { "6": 1, "11": 0, "3": 0, "7": 0, "9": 0, "2": 1, "8": 0, "1": 1, "10": 0, "5": 0 }, "SUBLINK_LEARNING_ACADMY": { "6": 0, "11": 0, "3": 0, "7": 0, "9": 0, "2": 0, "8": 0, "1": 1, "10": 0, "5": 0 }, "ABOUT_24x7": { "6": 0, "11": 0, "3": 0, "7": 0, "9": 0, "2": 0, "8": 0, "1": 1, "10": 0, "5": 0 }, "MONSTER_US_LINK": { "6": 0, "11": 0, "3": 0, "7": 0, "9": 0, "2": 0, "8": 0, "1": 0, "10": 0, "5": 1 }, "COMPANIES_LINK": { "6": 1, "11": 1, "3": 0, "7": 0, "9": 0, "2": 1, "8": 0, "1": 1, "10": 0, "5": 1 }, "SUBLINK_CONTRACT_JOBS": { "6": 1, "11": 1, "3": 0, "7": 1, "9": 1, "2": 1, "8": 0, "1": 1, "10": 0, "5": 0 }, "SUBLINK_RESEARCH": { "6": 0, "11": 0, "3": 0, "7": 0, "9": 0, "2": 0, "8": 0, "1": 1, "10": 0, "5": 0 }, "SUBLINK_CAREER_SERVICES": { "6": 1, "11": 1, "3": 1, "7": 1, "9": 1, "2": 1, "8": 1, "1": 1, "10": 1, "5": 1 }, "SUBLINK_INSIGHTS_MSI": { "6": 0, "11": 0, "3": 0, "7": 0, "9": 0, "2": 0, "8": 0, "1": 1, "10": 0, "5": 0 }, "SUBLINK_PSYCHMETRIC_TEST": { "6": 1, "11": 0, "3": 0, "7": 0, "9": 0, "2": 1, "8": 0, "1": 1, "10": 0, "5": 0 }, "SUBLINK_CONTENT_RESUME": { "6": 0, "11": 0, "3": 0, "7": 0, "9": 0, "2": 0, "8": 0, "1": 1, "10": 0, "5": 0 }, "SUBLINK_INTERVIEW_CENTER": { "6": 1, "11": 1, "3": 0, "7": 1, "9": 1, "2": 1, "8": 1, "1": 1, "10": 1, "5": 0 }, "POWERED_BY_MAGIC_SEARCH": { "6": 1, "11": 1, "3": 1, "7": 1, "9": 1, "2": 0, "8": 1, "1": 1, "10": 1, "5": 1 }, "SUBLINK_LIFE_AT_WORK": { "6": 1, "11": 1, "3": 0, "7": 1, "9": 1, "2": 1, "8": 1, "1": 1, "10": 1, "5": 0 }, "About_XPRESSRESUMEPLUS": { "6": 1, "11": 0, "3": 0, "7": 0, "9": 0, "2": 1, "8": 0, "1": 1, "10": 0, "5": 0 }, "OTHER_COUNTRIES_LINK": { "6": 1, "11": 1, "3": 0, "7": 0, "9": 0, "2": 0, "8": 0, "1": 0, "10": 0, "5": 1 }, "SUBLINK_CAREER_BOOSTER": { "6": 1, "11": 0, "3": 0, "7": 0, "9": 0, "2": 1, "8": 0, "1": 1, "10": 0, "5": 0 }, "SUBLINK_GOVT_JOBS": { "6": 0, "11": 0, "3": 0, "7": 0, "9": 0, "2": 0, "8": 0, "1": 1, "10": 0, "5": 0 }, "INTERNATIONAL_JOBS_LINK": { "6": 0, "11": 0, "3": 0, "7": 0, "9": 0, "2": 1, "8": 0, "1": 1, "10": 0, "5": 0 }, "LOC_SEARCH": { "6": 0, "11": 0, "3": 0, "7": 0, "9": 0, "2": 0, "8": 0, "1": 1, "10": 0, "5": 0 } }, "LOGOUTLINK": "", "FNAME": "", "BASESERVERNAME": "JobPortal.com" }, 'SMALL', 0, 1, { "NOTI_CNT": 0, "NETWORK_DATA": "", "NOTI_DATA": "", "NET_CNT": 0, "INBOX_DATA": "", "INBOX_CNT": "0" }, '/create_account.html', '', '', '', 0, 1);</script><div id="fade_walkin"></div> <div class="overlay" ></div>
+	
+	<form NAME="CREATEACCTFORM" id="CREATEACCTFORM" action="create_account.html"  METHOD="POST" enctype='multipart/form-data' ONSUBMIT="return onSubmitJSChks(HINT);">
+		<input type="HIDDEN" name="uid" value="">
+		<input type="HIDDEN" name="ru" value="">
+		<input type="HIDDEN" name="job" value="">
+		<input type="HIDDEN" name="gd" value="">
+		<input type="HIDDEN" name="ajax_flag" value=""  id="ajax_flag">
+		<input type="HIDDEN" name="action" value="">
+		<input type="HIDDEN" name="from" value="">
+		<input type="hidden" name="redirect_flag" value="">
+		<input type="hidden" name="redirect_url" value="">
+		<input type="hidden" name="db_mobile" value="">
+		<input type="hidden" name="oauth_email" value="">
+                <input type="hidden" name="oauth_fname" value="">
+		<input type="hidden" name="oauth_lname" value="">
+		<input type="hidden" name="oauth_client" value="">
+		<input type="hidden" name="oauth_is_linked" value="">
+		<input type="hidden" name="mnst_uid" value="">
+		<input type="hidden" name="jobtitle" value="">
+		<input type="hidden" name="uid_mailer" value="">
+		<input type="hidden" name="refcomp" value="">
+		<input type="hidden" name="ref" value="">
+		<input type="hidden" name="mandatory" value="">
+		<input type="hidden" name="js_cid" value="1">
+		<input type="hidden" name="mode"   id="mode" value="">
+		<input type="hidden" name="verify_email" value="">
+		<input type="hidden" name="prevemail" value="">
+		<input type="hidden" name="dup_email" value="0">
+		<input type="hidden" name="fancyspc"  id="fancyspc" value="">
+		<input type="hidden" name="utype" value="">
+		<input type="hidden" name="pdf_email" value="0">
+
+  		<div class="reg_wrap">
+        	<div class="reg_wrapinnr" id = "main_form">
+            	<div class="reg_headbig">Get Started With Job Portal</div>
+				<div class="left">
+			<div class="formele_row">
+                        <div class="left" style="margin-right:15px">
+                            <div class="cminput_wrap1 req" style="width:240px;">
+                                 <input type="text"   class="cminput_txt placeholder" placeholder="First name" maxlength="50" name="firstName"  autocomplete="off" onFocus="hintEvent('FNAME');" onBlur="hintEvent('FNAME', 'HIDE');" tabindex="1"value="First name" id="firstName_id" value="">
+                                <div class="hovermsg" id="FNAME" ></div>
+
+				
+                            </div>
+			    <div class="error_txt" id="ERR_FNAME" style="display: none;"></div>
+                        </div>
+                        <div class="left">
+                            <div class="cminput_wrap1" style="width:240px;">
+
+                                <input type="text"   class="cminput_txt placeholder" placeholder="Last name" maxlength="24" name="lastName"  autocomplete="off" tabindex="2" onfocus="checkAllFields('lastName');" onBlur="checkAllFields('lastName','HIDE');"value = "Last name" id="lastName_id" value="">
+                            </div>
+                        </div>
+                        <div class="clear_both"></div>
+                    </div>
+                    <div class="formele_row">
+		        <div class="left" style="margin-right:15px">
+                            <div class="cminput_wrap1 req" style="width:240px;">
+                                <input type="text"   class="cminput_txt placeholder" placeholder="Email address" maxlength="255" id="email" name="email"  autocomplete="off" onFocus="hintEvent('EMAILID');" onBlur="hintEvent('EMAILID', 'HIDE');" monstab="3" tabindex="3"value ="Email address" value="">
+                                <div class="hovermsg" id="EMAILID" ></div>
+                            </div>
+			    <div class="error_txt" id="ERR_EMAIL" style="display: none;" wrap='wrap'></div>
+                        </div>
+			
+                        <div class="left">
+                            <div class="cminput_wrap1 req" style="width:240px;">
+				<input type="text"  class="cminput_txt pass_input pass_text placeholder" value="Choose a password"  data-val="Choose a password" monstab="4" tabindex="4" style="display: inline-block;" id="passwd_id">
+				<input type="password"  class="cminput_txt pass_input pass" name="passwd"  id="passwd" size="36" style="display: none;" value=""  data-val="Choose a password" maxlength="32" onFocus="hintEvent('PASS');" onBlur="hintEvent('PASS', 'HIDE');">
+                                <div class="hovermsg" id="PASS"></div>
+                            </div>
+			     <div class="error_txt" id="ERR_PASS" style="display: none;"></div>
+                        </div>
+			<div class="clear_both"></div>
+                    </div>
+			  <div class="formele_row emailmsg" style="display:none;" id="box1">
+                                    <div class="innr">
+                                          <div class="h1"><div class="icon"></div>Email address</div>
+                                          <div class="close" id="emailmsg_close"></div>
+                                          <span id="email_msg"></span>
+                                   </div>
+                                </div>
+                    <div class="form_spacer"></div>
+                    <div class="form_smallhead personal"><div class="icon"></div> Personal Details</div>
+			<script>
+			    jQuery(function () {
+			        jQuery(document).on('focus', '#PLACEHOLDER_combo_nationality', function () {
+			            jQuery('#s2id_nationality').show();
+			        });
+			    });
+			</script>
+                    <div class="left" style="width:507px;">
+			<div id="PLACEHOLDER_combo_nationality" monstab="5" tabindex="5">
+			</div>
+			<div id="CUR_NATIONALITY" style="display: none;"></div>
+			<div class="error_txt" id="ERR_NATIONALITY" style="display: none;"></div>
+                     </div>
+		     
+		     <div class="clear_both"></div>  
+                     <div class="formele_row"  style="width:507px;">
+			   <div id="PLACEHOLDER_combo_location" monstab="6" tabindex="6">
+			   </div>
+                                     	<div id="CLOCATION" style="display: none;"></div> 
+			<div class="error_txt" id="ERR_CURLOC" style="display: none;"></div>
+				 <div class="clear_both"></div>
+                     </div>
+		     <div class="formele_row" style="display:block;" id="otherLoc">
+                           <div style="width:500px;" class="cminput_wrap1">
+                                <input type="text"  placeholder="Other Location" class="cminput_txt placeholder" id="other_currentlocID" name="other_currentloc"  onfocus="checkAllFields('other_currentloc');" onblur="checkAllFields('other_currentloc','HIDE');"value = "Other Location" value="">
+                           
+                        </div>
+			<div id="OTHLOCATION" style="display: none;"></div> 
+			<div class="error_txt" id="ERR_OTH_CURLOC" style="display: none;"></div>
+                      </div>
+		     <div class="formele_row " id="resetPR" style="display:none;width:500px;" >
+			    <input type="hidden" name="setpr"  id="setpr" value="" >  
+				<div class="left" style="width:270px;margin-right:15px;line-height:34px;color:#686868;" id="wa_msg"></div>
+		            <div class="left" id="prstatus_container" style="display:none;">
+		                   <div class="left" id="visa1" style="display:none;">	</div>
+			   	<div class="left" id="visa2"  style="display:none;">
+				<div style="width:200px;" id="visa_container" >
+					<div class="dropdown_small_wrapper" >
+							<div class="left">Select</div>
+							<div class="right"><img width="25" height="34" src="../images/dropdown_ar_small.gif"></div>
+							<div class="clear_both"></div>
+						    </div>
+				</div>
+			   </div>
+			 
+                        <div class="clear_both"></div>
+                     </div>
+		      <div class="clear_both"></div>
+		     
+			<input type="hidden" name="prevprstatus" value=''>
+		      <div class="clear_both"></div>
+		     </div>
+			<div id="PR_STATUS" style="display: none;"></div>
+			 <div class="error_txt" id="ERR_PR_STATUS" style="display: none;"></div>
+                     <div class="formele_row">
+                        <div class="left" style="margin-right:10px">
+                            <div class="cminput_wrap1" style="width:60px;">
+			    <input maxlength="4" id="mobile_isd" name="mobile_isd" type="text"  class="cminput_txt" readonly  value="91"  placeholder="91" monstab="7" tabindex="7">
+			    </div>
+
+                        </div>
+                        <div class="left">
+                            <div class="cminput_wrap1 req" style="width:173px; margin-right:15px">
+                                <input type="text"   class="cminput_txt placeholder" placeholder="Mobile number" maxlength="24" size="30" id="mobile2" name="mobile"  autocomplete="off" onFocus="hintEvent('MOBILE_NO');" onBlur="hintEvent('MOBILE_NO', 'HIDE');"value="Mobile number" monstab="8" tabindex="8" value="">
+                                <div class="hovermsg" id="MOBILE_NO"></div>
+                            </div>
+			    <div class="error_txt" id="ERR_MOBILE" style="display: none;"></div>
+                        </div>
+                        <div class="left">
+                            <div class="cminput_wrap1 req" style="width:240px;">
+                                <input type="text"   class="cminput_txt date date_dob" placeholder="Date of Birth" readonly id="birthday" name="birthday"  onFocus="hintEvent('DOB');" onBlur="hintEvent('DOB', 'HIDE');"value = "Date of Birth" monstab="9" tabindex="9" value="">
+                            </div>
+			     <div id="DOB" style="display: none;"></div>
+			    <div class="error_txt" id="ERR_DOB" style="display: none;"></div>
+                        </div>
+                        <div class="clear_both"></div>
+                    </div>
+			
+			 <div class="formele_row" id="gender_container" style="width:300px;padding-left:2px;" monstab="9" tabindex="9">
+				<div style="margin:10px 0px 0px 0px;" class="radio_head rh_small">Gender<span style="color:#99140c">*</span></div><input type="radio" name="gender" value="m"  class="custom_radio" id="gender1"  onclick="womenstatus();">
+       				<div for="gender1" class="radiolabel " data-id="gender1" id="gender1_label" tabindex="1">Male</div>
+    				<input type="radio" name="gender"  class="custom_radio" id="gender2" value="f"  onclick="womenstatus();">
+       				<div for="gender2" id="gender2_label" tabindex="1" class="radiolabel " data-id="gender2">Female</div>
+     				<input type="radio" name="gender"  class="custom_radio" id="gender3" value="n"   onclick="womenstatus();">
+      				<div for="gender3" class="radiolabel " id="gender3_label" data-id="gender3" tabindex="1">Prefer not to specify</div> </div>
+		     <div id="Div1" style="display: none;"></div>
+                     <div class="error_txt" id="ERR_GENDER1" style="display: none;"></div>
+			
+                     <div class="reg_accord_main professional collapsed" data-id="professional" id = "professional_tab" tabindex = "1" ><div class="icon"></div>Professional Details<div class="ricon"></div><div class="clear_both"></div></div>
+                     <div class="accord_item" id="professional" style="display: none;">
+                        <div class="formele_row" style="margin-top:0">
+                        	<div class="left" style="margin-right:15px;width:245px;min-height:40px">
+                                      <div style="width:245px;" id="jobType_container">
+                                	<div class="dropdown_small_wrapper req" style="width:245px;">
+						<div class="left">Job Type</div>
+						<div class="right"><img width="25" height="34" src="../images/dropdown_ar_small.gif"></div>
+						<div class="clear_both"></div>
+					</div>
+                                     </div> 
+				     <div id="DJOBTYPE" style="display:none;"></div>
+                                 <div class="error_txt" id="ERR_DJOBTYPE" style="display: none;"></div>
+                                 </div>
+				 
+                                 <div class="left">
+                                    <div style="width:245px;" id="exp_in_years_container">
+                                	<div class="dropdown_small_wrapper req" style="width:245px;">
+						<div class="left">Total experience</div>
+						<div class="right"><img width="25" height="34" src="../images/dropdown_ar_small.gif"></div>
+						<div class="clear_both"></div>
+					</div>
+                                 </div>
+				 <div id="WORK_EXP" style="display: none;"></div>
+				 <div class="error_txt" id="ERR_WORK_EXP" style="display: none;"></div>
+				 <div class="clear_both"></div>
+                            </div>
+                            <div class="clear_both"></div>
+                     </div>
+
+		     <div class="formele_row" id="contractUsertype" name="contractUsertype" style="display:none;">
+                     	<div class="formele_row" style="margin-top:0px;margin-left:5px;">
+	                    <input type="radio" value="1" name="userType" value="Professional Contracting"   class="custom_radio" id="contract1">
+       	  		    <div for="contract1" class="radiolabel active" id="userType_label" tabindex="1" data-id="contract1">Professional Contracting</div>
+    					
+     			    <input type="radio" name="contract"   class="custom_radio" id="contract2" value="Others">
+      			    <div for="contract2" class="radiolabel nobrdr" id="contract_label" tabindex="1" data-id="contract2">Others</div>
+                        </div>
+                        <div class="formele_row" style="margin-top:8px;">
+                    		<div class="checkwrap">
+                            		<input type="checkbox" name="womenEmp" value="1"  id = "womenEmp_id" tabindex = "1"> Are you a Woman On the Go </div>
+                            <div class="checkwrap">
+                            	<input type="checkbox" name="retiredEmp" value="1"  id = "retiredEmp_id" tabindex = "1"> Are you looking for a Career After Career </div>
+                        </div>
+                     </div>
+                     <div class="formele_row">
+			<div style="width:507px;" id="industry_container" >
+			       <div class="dropdown_small_wrapper" style="width:507px;">
+                                        <div class="left">Industry</div>
+                                        <div class="right"><img width="25" height="34" src="../images/dropdown_ar_small.gif"></div>
+                                        <div class="clear_both"></div>
+                                </div>
+			 </div>                      
+                      <div class="clear_both"></div>
+                     </div>
+			<div id="CUR_INDUSTRY"  style="display: none;"></div>
+                        <div class="error_txt" id="ERR_INDUS" style="display: none;"></div>
+                     <div class="formele_row">
+                     <div style="width:507px;" id="jobCategory_container" >
+			       <div class="dropdown_small_wrapper req" style="width:507px;">
+                                        <div class="left">Function</div>
+                                        <div class="right"><img width="25" height="34" src="../images/dropdown_ar_small.gif"></div>
+                                        <div class="clear_both"></div>
+                                </div>
+		      </div>
+                      <div class="clear_both"></div>
+                     </div>
+		     <div id="CATEGORY" style="display: none;"></div>
+                     <div class="error_txt" id="ERR_JOBCAT" style="display: none;"></div>
+		    <div class="formele_row">
+                        <div class="cminput_wrap1 req" style="width:507px;" id="auto_key_wrap">
+                                <input type="text"   class="cminput_txt placeholder" placeholder="Key skills" size="30" maxlength="255"  id="skills" name="keySkills" type="text"   onFocus="hintEvent('SKILLS');" onBlur="hintEvent('SKILLS','HIDE');" tabindex='15' monstab="15" autocomplete="off"value = "Key skills"  value="">
+                                <input type="hidden"  id="skillsid" name="skillsid"  value="">
+                                <div class="hovermsg" id="Div2" ></div>
+                                <div class="clear_both"></div>
+                        </div>
+			<div class="error_txt" id="ERR_KEYSKILL" style="display: none;"></div>
+			<div class="form_items" id="showskills"></div>
+                        <div class="clear_both"></div>
+                      
+                     </div>
+		     <div class="formele_row">
+                     <div class="radio_head rh_small">Have a resume  ready? Upload it now</div>
+			<div id = "det_resume_container" style="width:510px;"  tabindex='16' monstab="16"  >
+                     		<div class="left" style="width:250px;margin-right:15px;">
+					<input type="file" name="wordresume"  id="wordresume"  tabindex="1" value=""   size="22" maxlength="24"  onFocus="hintEvent('WRESUME');" onBlur="hintEvent('WRESUME', 'HIDE');" style="width:100%;padding:4px 0px 4px 0px;border:1px #bfbfbf solid;background:#ffffff;">
+	                        	<div style="font-size:11px;color:#888888;">Upload microsoft word, pdf or txt file upto 200Kb</div>
+        	                </div>
+                	        <div id="spLink" class="left" style="font-size:16px;margin-right:15px;color:#252525;line-height:34px;">OR</div>
+                        	<div class="left"><a href="javascript:void(0)"  id = "copresume_id" tabindex = "1"  class="copresume_btn" style="line-height:34px;">Write or copy/paste your resume</a></div>
+	                         <div class="clear_both"></div>
+				<div class="formele_row copy_resume">
+                		        <textarea class="textarea" name="det_resume"  id="det_resume" cols="60" rows="10" onFocus="hintEvent('DRESUME');" onBlur="hintEvent('DRESUME', 'HIDE');" tabindex = "1"></textarea>
+				</div>
+        	        </div>
+			<div class="hovermsg" id="DRESUME" ></div>
+                        <div id="ERR_DRESUME" class="error_txt"  style="display: none;"></div>
+                     </div>
+                     <div class="formele_row">
+                     <div class="cminput_wrap1 " style="width:507px;">
+                                <input type="text"   class="cminput_txt placeholder" placeholder="Resume title" tabindex='17' monstab="17"  size="30" maxlength="255" name="resume_title"  autocomplete="off" onFocus="hintEvent('RTITLE');" onBlur="hintEvent('RTITLE', 'HIDE');" id="resume_title_id" value = "Resume title"  value="">
+				<div class="hovermsg" id="RTITLE" ></div>
+                            </div>
+			<div class="error_txt" id="ERR_RTITLE" style="display: none;"></div>
+                     </div>
+                     </div> 
+			 <div class="reg_accord_main preference collapsed" data-id="preference" id="preference_tab" tabindex="1"><div class="icon"></div>Preferences<div class="ricon"></div><div class="clear_both"></div></div>
+			<div class="accord_item" id="preference" style="display: none;">
+			<div class="radio_head" style="margin-bottom:0px;">Control your visibility with other job seekers who may try to network with you.</div>
+		<div class="formele_row" style="margin-top:0">
+				<div class="left">
+                     		   <input type="radio" name="preference" value="Public"   class="custom_radio" id="preference1" checked ="">
+       				   <div for="preference1"  id="preference1_label" tabindex="1" class="radiolabel active" data-id="preference1">Public</div>
+    				   <input type="radio" name="preference"   class="custom_radio" id="preference2" value="Limited">
+       				   <div for="preference2" class="radiolabel nobrdr" data-id="preference2" id="preference2_label" tabindex="1" >Limited</div>
+     				   <input type="radio" name="preference"   class="custom_radio" id="preference3" value="Private">
+      				   <div for="preference3" id="preference3_label" tabindex="1"   class="radiolabel nobrdr" data-id="preference3">Private</div>
+				</div>
+				   <div class="left" style="margin-left:10px">
+                        		<div class="info_tip">
+                            			<div class="tooltip_left"><div class="tarrw"></div><div class="tooltip_innr">
+                                                <div class="tiptxt"><strong>Social Profile Visibility:</strong> You can set your social profile visibility on three different categories.
+	                                           <ul>
+                                                	<li><strong>Public:</strong> Accessible to all for social activities. (Recommended)</li>
+                                                        <li><strong>Limited:</strong> Visibility restricted only to existing connections. This profile will not be searchable by others </li>
+                                                        <li><strong>Private:</strong> Not open to connections, profile not searchable for social activities</li>
+                                                   </ul>
+                                                </div>
+                                                </div></div> 
+                            		</div>
+                        	</div>
+				<div class="clear_both"></div>
+                        </div>
+                        <div class="formele_row">
+                        <div class="radio_head rh_small" style="margin:10px 0px 0px 0px;">Subscriptions</div>
+                         <div class="radio_head" style="margin-bottom:5px;">I would like to receive Emails/SMS/Voice Calls/Social Media updates for:</div>
+                        </div>
+			<div class="checkwrap"><input name="opt_ins" value="1" type="checkbox" checked id="opt_ins1_id" tabindex="1" >Important notifications on Job Portal products, job seeker services & career advice</div><div class="checkwrap"><input name="opt_ins" value="2" type="checkbox" checked id="opt_ins2_id" tabindex="1" >Promotions & special offers</div> <div class="agree_wrap">
+                           	<div class="checkwrap" id="accept_privacy_border">
+					<input type="checkbox" name="accept_privacy" checked =true   value="1"  id="accept_privacy_id" tabindex="1" onFocus="hintEvent('ACCPRIVACY');" onBlur="hintEvent('ACCPRIVACY', 'HIDE');"> 
+					I have read and agree to Job Portal's <a linkindex="1" href="http://www.monsterindia.com/privacy.html"  target="_blank">privacy statement </a> and <a linkindex="2" href="http://www.monsterindia.com/terms_of_use.html"  target="_blank"> terms of use</a>.
+					</div>
+			<div id="ACCPRIVACY" class="hovermsg"></div>
+                        <div id="ERR_ACCPRIVACY" style="display: none;" class="error_txt"></div>
+                       </div>
+			
+                            </div>
+                            <div class="clear_both"></div>
+                       <div class="formele_row">
+                       		<input type="submit"   class="submit_btn" name="submit1"  id="continue" tabindex="1" value="Submit">
+                       </div>
+                </div>
+
+                <div class="right right_box">
+                <div class="orstrike"></div>
+                	<div class="ortxt">OR</div>
+                    <div class="signup_head">Sign Up Using</div>
+
+                    <div class="signupsocial_wrap">
+                    	<a href="javascript:"   onclick="oauth2login('gm');"  class="signup_icons gplus"></a>
+                        <a href="javascript:"   onclick="oauth2login('fb');"  class="signup_icons fb"></a>
+                        <a href="javascript:"   onclick="oauth2login('ya');"  class="signup_icons yahoo"></a>
+                    <div class="clear_both"></div>
+                    </div>
+                    <div class="signup_txt">Register quickly and easily with your Facebook account. Don't worry, we will never spam your friends or post to your wall without your permission. </div>
+                    <div class="btm_bubbles_wrap">
+                    <div class="btm_bubbles"><span>20000+</span>employers</div>
+                     <div class="btm_bubbles" style="left:90px"><span>1000k+</span>live jobs</div>
+                     <div class="btm_bubbles" style="left:180px"><span>24X7</span>job agents</div>
+                     <div class="clear_both"></div>
+                     </div>
+                </div>
+                <div class="clear_both"></div>
+                <div class="alread_member_wrap">
+                	Already a member?<a href="Login.aspx">Sign In Here</a>
+                </div>
+                
+            </div>
+        </div>
+</FORM>
+
+<div class="pop_bg"></div>
+<div class="popup_wrap" id="mobilepopup">
+       		<div class="pop_main" style="width:600px;height:230px">
+                      	<div class="pop_main_inner">
+                	<div class="pop_head">
+                    	Dear Jobseeker
+                        <div class="right pop_close" data-popid="mobilepopup"></div>
+                    </div>
+                  <div class="pop_txt">
+Your number is currently registered with National Do Not Call Registry. As a member of Job Portal, you are eligible for various services related benefits on your job search.Please let us know if you would like to be contacted for such services.</div>
+<div class="btn_wrap">
+	<a href="#"   class="apply_btn">Accept</a> <a href="#"   class="apply_btn">Ignore</a> </div>
+    <div style="font-size:10px;padding:0px 20px;"><strong style="color:#F00;">*</strong> By agreeing you waive the right to complaint against Job Portal related to National Do Not Call Registry.</div>
+</div>
+                 
+            </div>
+       </div>
+
+<script>var Mons = {}; var MJS = {}; Mons.BASE_SERVER = 'google.com'; Mons.ALLIANCE_R2O = ''; AUTH = 'unknown'; Mons.LANG = 'en'; Mons.LANG_MEDIA_PATH = ''; Mons.EN_RIGHT_AR_LEFT = 'right'; Mons.EN_LEFT_AR_RIGHT = 'left'; try { document.execCommand("BackgroundImageCache", false, true); } catch (err) { }</script>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta charset="utf-8"><script src="../Scripts/basic-min_v5.js" language="javascript" ></script>
+<script src="../Scripts/seeker_alert-min_v3.js" language="javascript" ></script>
+<script src="../Scripts/combi-skr.js" language="javascript" ></script>
+<script src="../Scripts/seeker_utils-min_v4.js" language="javascript" ></script>
+<script src="../Scripts/vld-min_v5.js" language="javascript" ></script>
+<script src="../Scripts/ajax-min_v5.js" language="javascript" ></script>
+<script src="../Scripts/static_map_1-min_v25.js" language="javascript" ></script>
+<script src="../Scripts/animation-min.js" language="javascript" ></script>
+<script src="../Scripts/create_account-min_v40.js" language="javascript" ></script>
+<script src="../Scripts/seekercommon_new-min_v17.js" language="javascript" ></script>
+<script src="../Scripts/jquery-elements-min_v2.js" language="javascript" ></script>
+<script src="../Scripts/jqueryui.js"></script>
+<script src="../Scripts/suggest_index.js?20141104"></script>
+<script src="../Scripts/select.js" language="javascript" ></script>
+<script src="../Scripts/combo_keys.js?20141212" type="text/javascript"></script>
+<script>
+    $(document).ready(function () {
+        $(document).on('focus', '.date_dob', function () {
+            if (!$(this).hasClass('binded')) {
+                $(this).datepicker({
+                    dateFormat: 'dd/mm/yy',
+                    yearRange: '-74:+0',
+                    changeMonth: true,
+                    changeYear: true,
+                    onSelect: function (dates) { hintEvent('DOB', 'HIDE'); },
+                    beforeShow: function (input, inst) {
+                        $('#ui-datepicker-div').removeClass('onlydatemnth');
+                        $(input).after($(input).datepicker('widget'));
+                    }
+                });
+            }
+        });
+    });
+
+
+</script>
+
+
+<script>
+    var IdList = ["firstName_id", "lastName_id", "email", "passwd_id", "s2id_nationality", "s2id_location", "prstatus_id", "prstatus1_label", "prstatus2_label", "mobile_isd", "mobile2", "birthday", "gender1_label", "gender2_label", "gender3_label", "professional_tab", "jobType", "exp_in_years_id", "userType_label", "contract_label", "womenEmp_id", "retiredEmp_id", "ind", "cat", "skills", "wordresume", "copresume_id", "det_resume", "resume_title_id", "preference_tab", "preference1_label", "preference2_label", "preference3_label", "opt_ins1_id", "opt_ins2_id", "accept_privacy_id", "continue"];
+
+    var div_ID_1 = jQuery('#main_form');
+    var jPreTabindex_1 = 0;
+    var JPrevTDiv_1 = '';
+    var tab_counter = 0;
+    var currID = 0;
+
+    div_ID_1.keydown(function (e) {
+        var isShift = e.shiftKey ? true : false;
+        var jTabIndex_1 = 0;
+        var jTDiv_1 = '';
+        var focus_found = 0;
+        var isLabel = 0;
+        if (e.keyCode == 9) {
+
+        }
+        for (var i = 0 ; i < IdList.length ; i++) {
+            if (jQuery("#" + IdList[i]).is(":focus") || jQuery("#" + IdList[i] + "_typeahead").is(":focus") || jQuery("#" + IdList[i]).children().is(":focus")) {
+                currID = i;
+            }
+        }
+        JPrevTDiv_1 = jQuery("#" + IdList[currID]);
+
+        if (e.keyCode == 9 && isShift) {
+            currID = (currID > 0) ? currID - 1 : 0;
+            if (IdList[currID] == "preference_tab" && !jQuery("#" + IdList[currID]).attr("class").match(/collapsed/g)) {
+                currID--;
+            }
+            //console.log(IdList[currID] + " = " +jQuery("#"+IdList[currID]).parent().parent().parent().css("display"));
+            while (jQuery("#" + IdList[currID]).parent().css("display") == 'none' || jQuery("#" + IdList[currID]).parent().parent().css("display") == 'none' || jQuery("#" + IdList[currID]).parent().parent().parent().css("display") == 'none' || jQuery("#" + IdList[currID]).parent().parent().parent().parent().css("display") == 'none' || jQuery("#" + IdList[currID]).parent().parent().parent().parent().parent().css("display") == 'none' || jQuery("#" + IdList[currID]).parent().parent().parent().parent().parent().parent().css("display") == 'none' || !jQuery("#" + IdList[currID]).attr("id")) {
+                currID = (currID > 0) ? currID - 1 : 0;
+            }
+            jTDiv_1 = jQuery("#" + IdList[currID]);
+        }
+        else if (e.keyCode == 9 && !isShift) {
+            currID = (currID < IdList.length) ? (currID + 1) : 0;
+
+            while (jQuery("#" + IdList[currID]).parent().css("display") == 'none' || jQuery("#" + IdList[currID]).parent().parent().css("display") == 'none' || jQuery("#" + IdList[currID]).parent().parent().parent().css("display") == 'none' || jQuery("#" + IdList[currID]).parent().parent().parent().parent().css("display") == 'none' || jQuery("#" + IdList[currID]).parent().parent().parent().parent().parent().css("display") == 'none' || jQuery("#" + IdList[currID]).parent().parent().parent().parent().parent().parent().css("display") == 'none' || !jQuery("#" + IdList[currID]).attr("id")) {
+                currID = (currID < IdList.length) ? (currID + 1) : 0;
+            }
+            jTDiv_1 = jQuery("#" + IdList[currID]);
+
+        }
+        else {
+            jTDiv_1 = JPrevTDiv_1;
+        }
+
+        if ((jTDiv_1.attr("id") == "professional_tab" || jTDiv_1.attr("id") == "preference_tab") && !jTDiv_1.attr("class").match(/collapsed/g)) {
+            jTDiv_1 = (isShift) ? jQuery("#" + IdList[currID - 1]) : jQuery("#" + IdList[currID + 1]);
+        }
+        if (jTDiv_1.attr("id") == "s2id_nationality" || jTDiv_1.attr("id") == "s2id_location") {
+            return true;
+        }
+        if (e.keyCode == 9 || e.keyCode == 27 || e.which == 40 || e.which == 38) {
+            e.preventDefault();
+        }
+
+        if (e.keyCode == 9 || e.keyCode == 32 || e.keyCode == 27 || e.which == 40 || e.which == 38 || e.which == 37 || e.which == 39 || e.keyCode == 13) {
+            tabNav(e, div_ID_1, JPrevTDiv_1, jPreTabindex_1, jTDiv_1, jTabIndex_1)
+        }
+        else {
+            return true;
+        }
+    });
+
+    var typehead_ids = ["jobType_typeahead", "ind_typeahead", "cat_typeahead"];
+    var up_down_pressed = 0;
+    function tabNav(e, div_ID, JPrevTDiv, jPreTabindex, jTDiv, jTabIndex) {
+        var clss = JPrevTDiv.attr('class');
+        var id = JPrevTDiv.attr('id');
+
+        if (e.keyCode == 9) {
+
+            keyd = '';
+            keypopupid = '';
+            objs = '';
+            allObjs = '';
+            indexes = new Array();
+            currentIndex = 0;
+            up_down_pressed = 0;
+
+            var jTDivid = jTDiv.attr('id');
+            var jTDivclass = jTDiv.attr('class');
+
+            var jTDividPar = jTDiv.parent().attr('id');
+
+            if (typeof jTDivclass == 'undefined') {
+                jQuery('.overlay').click();
+                jTDiv.focus();
+            }
+            else if (jTDivclass != 'undefined' && jTDivclass.match(/collapsed/g)) {
+                jQuery('.overlay').click();
+                jTDiv.click();
+                jTDiv.focus();
+            }
+            else if (typeof jTDivclass != 'undefined' && (jTDivclass.match(/radiolabel/g) || jTDivclass.match(/copresume_btn/g) || jTDivclass.match(/submit_btn/g))) {
+                jQuery('.overlay').click();
+                jTDiv.focus();
+            }
+            else {
+                jQuery('.overlay').click();
+                JPrevTDiv.focus();
+                jTDiv.click();
+                if (typeof jTDivclass !== 'undefined' && jTDivclass.match(/open_multi_select/g) && jTDivid != 'salmax' && jTDivid != 'salmin') {
+                    if (jQuery("#" + jTDiv.attr("id") + "_typeahead")) {
+                        jQuery("#" + jTDiv.attr("id") + "_typeahead").focus();
+                    }
+                }
+                else {
+                    jTDiv.focus();
+                }
+            }
+        }
+        else if (e.keyCode == 32) {
+            if (up_down_pressed == 0) {
+                for (var kk = 0 ; kk < typehead_ids.length ; kk++) {
+                    if (jQuery("#" + typehead_ids[kk]).is(":focus")) {
+                        return false;
+                    }
+                }
+            }
+            if (typeof clss != 'undefined' && (clss.match(/radiolabel/g) || clss.match(/copresume_btn/g) || clss.match(/collapsed/g) || clss.match(/submit_btn/g))) {
+                e.preventDefault();
+                JPrevTDiv.click();
+                JPrevTDiv.focus();
+            }
+            else if (typeof clss == 'undefined') {
+                if (JPrevTDiv.attr("type") == "checkbox") {
+                    JPrevTDiv.focus();
+                }
+                else {
+                    e.preventDefault();
+                    JPrevTDiv.click();
+                    JPrevTDiv.focus();
+                }
+            }
+            else {
+                keyPressAfterOpen(e, id);
+            }
+
+        }
+        else if (e.keyCode == 27) {
+            if (jQuery('.single_select').css('display') == 'block') {
+                jQuery('.single_select').css({ 'display': 'none' });
+            }
+            else {
+                jQuery('.overlay').click();
+                JPrevTDiv.focus();
+            }
+        }
+        else if ((e.which >= 65 && e.which <= 90) || (e.which >= 97 && e.which <= 122) || (e.which == 40) || (e.which == 38) || (e.which == 37) || (e.which == 39) || e.keyCode == 13) {
+            keyPressAfterOpen(e, id);
+        }
+    }
+    function getNextLabel(label_id) {
+        var next_index;
+        for (var i = 0 ; i < IdList.length ; i++) {
+            if (IdList[i] == label_id) {
+                next_index = i + 1;
+            }
+        }
+        return IdList[next_index];
+    }
+
+    var keyd;
+    var keypopupid;
+
+    var objs;
+    var allObjs;
+    //var prevIndex;
+    var indexes = new Array();
+    var currentIndex = 0;
+    var up_down = 0;
+
+    function keyPressAfterOpen(event, jTDivid) {
+        var top = '';
+        var pos = '';
+        var PID = jQuery("#" + jTDivid).parent().parent().attr('id');
+        if (jQuery('#' + jTDivid + '_popup').css('display') == 'block' || (jQuery('#' + PID).find(".single_select").css('display') == 'block')) {
+
+            if (jQuery('#' + jTDivid + '_popup').css('display') == 'block') {
+                allObjs = jQuery('#' + popupid + '_popup').find(".traverseKeyboard:visible");
+                top = parseInt(jQuery("#" + popupid + "_popup").scrollTop());
+            }
+            else {
+                allObjs = jQuery("#" + PID).find(".options").parent().children().find("li").find('a');
+                top = parseInt(jQuery("#" + PID).find(".options").scrollTop());
+            }
+            allObjs.each(function () {
+            });
+            var pos = parseInt(allObjs.filter(':eq(' + currentIndex + ')').length > 0 ? allObjs.filter(':eq(' + currentIndex + ')').position().top : 0);
+            indexes = [];
+            allObjs.each(function () {
+                indexes.push(allObjs.index(jQuery(this)));
+            });
+            if ((event.which == 32 || event.keyCode == 13)) {
+                event.preventDefault();
+
+                if (event.which == 32 && allObjs.filter(':eq(' + currentIndex + ')').attr("class").match("select_accord")) {
+                    allObjs.filter(':eq(' + currentIndex + ')').children().first().click();
+                }
+                else {
+                    allObjs.filter(':eq(' + currentIndex + ')').click();
+                }
+
+            }
+            else if (event.which == 27) {
+                jQuery('.overlay').click();
+            }
+            if (event.which == 40) {
+                up_down_pressed++;
+                up_down = -1;
+                var class1 = '';
+                if (jQuery('#' + jTDivid + '_popup').css('display') == 'block') {
+                    jQuery("#" + jTDivid + "_popup").animate({ scrollTop: top + pos }, 0);
+                    class1 = 'selectitem_bg';
+                }
+                else {
+                    top = jQuery("div[data-id = 'parent_" + jTDivid.replace('_id', '') + "']").scrollTop();
+                    jQuery("div[data-id = 'parent_" + jTDivid.replace('_id', '') + "']").animate({ scrollTop: top + pos }, 0);
+                    class1 = 'single_hover';
+                }
+
+                currentIndex = newIndex(currentIndex, indexes, "next", up_down_pressed);
+                allObjs.each(function () {
+
+                    if (jQuery(this).attr("class").match("single_hover")) {
+                        currentIndex = newIndex(allObjs.index(jQuery(this)), indexes, 'next', up_down_pressed);
+                    }
+                });
+
+                if (class1 == 'single_hover') {
+                    allObjs.filter(':eq(' + currentIndex + ')').css({ color: "white" });
+                }
+                else if (class1 == 'selectitem_bg') {
+                    allObjs.filter(':eq(' + currentIndex + ')').css({ background: "" });
+                    allObjs.filter(':eq(' + currentIndex + ')').css({ "background-color": "#dedede" });
+
+                }
+                allObjs.filter(':eq(' + currentIndex + ')').addClass(class1);
+
+                var PreIndex = currentIndex - 1;
+                if (indexes[0] == currentIndex) {
+                    PreIndex = indexes.length - 1;
+                }
+                if (allObjs.length >= 2) {
+                    if (class1 == 'single_hover') {
+                        allObjs.filter(':eq(' + PreIndex + ')').css({ color: "" });
+                    }
+                    else if (class1 == 'selectitem_bg') {
+                        allObjs.filter(':eq(' + PreIndex + ')').css({ background: "none repeat scroll 0 0 rgba(0, 0, 0, 0)" });
+                        allObjs.filter(':eq(' + PreIndex + ')').css({ "background-color": "" });
+                    }
+                    allObjs.filter(':eq(' + PreIndex + ')').removeClass(class1);
+                }
+
+            }
+            else if (event.which == 38) {
+                up_down_pressed++;
+                up_down = 0;
+                indexes = [];
+                allObjs.each(function () {
+                    indexes.push(allObjs.index(jQuery(this)));
+                });
+                var class1 = '';
+                if (jQuery('#' + jTDivid + '_popup').css('display') == 'block') {
+                    jQuery("#" + jTDivid + "_popup").animate({ scrollTop: top - pos }, 0);
+                    class1 = 'selectitem_bg';
+                }
+                else {
+                    top = jQuery("div[data-id = 'parent_" + jTDivid.replace('_id', '') + "']").scrollTop();
+                    jQuery("div[data-id = 'parent_" + jTDivid.replace('_id', '') + "']").animate({ scrollTop: parseInt(top - pos) }, 0);
+                    class1 = 'single_hover';
+
+                }
+                currentIndex = newIndex(currentIndex, indexes, "prev", up_down_pressed);
+                allObjs.each(function () {
+                    if (jQuery(this).attr("class").match("single_hover")) {
+                        currentIndex = newIndex(allObjs.index(jQuery(this)), indexes, 'prev', up_down_pressed);
+                    }
+                });
+
+                if (currentIndex == allObjs.length - 1) {
+                    var PreIndex = 0;
+                }
+                else {
+                    var PreIndex = currentIndex + 1;
+                }
+                if (class1 == 'single_hover') {
+                    allObjs.filter(':eq(' + currentIndex + ')').css({ color: "white" });
+                }
+                else if (class1 == 'selectitem_bg') {
+                    allObjs.filter(':eq(' + currentIndex + ')').css({ background: "" });
+                    allObjs.filter(':eq(' + currentIndex + ')').css({ "background-color": "#dedede" });
+                }
+                allObjs.filter(':eq(' + currentIndex + ')').addClass(class1);
+                if (allObjs.length >= 2) {
+                    if (class1 == 'single_hover') {
+                        allObjs.filter(':eq(' + PreIndex + ')').css({ color: "" });
+                    }
+                    else if (class1 == 'selectitem_bg') {
+                        allObjs.filter(':eq(' + PreIndex + ')').css({ background: "none repeat scroll 0 0 rgba(0, 0, 0, 0)" });
+                        allObjs.filter(':eq(' + PreIndex + ')').css({ "background-color": "" });
+                    }
+                    allObjs.filter(':eq(' + PreIndex + ')').removeClass(class1);
+                }
+
+            }
+            //         keypopupid=popupid;
+        }
+    }
+
+    function newIndex(currIndex, objArray, next_prev) {
+        if (next_prev == 'next') {
+            if (currIndex >= allObjs.length - 1) {
+                return 0;
+            }
+            else {
+                if (up_down_pressed == 1 && currIndex == 0) {
+                    return currIndex;
+                }
+                else {
+                    return currIndex + 1;
+                }
+            }
+        }
+        else if (next_prev == 'prev') {
+            if (currIndex == 0 || currIndex >= objArray.length) {
+                return allObjs.length - 1;
+            }
+            else {
+                return currIndex - 1;
+            }
+        }
+    }
+
+</script>
+
+<style>
+.ui-autocomplete{top:34px;}
+</style>
+<script>var adSCPropVar = { "events.event8": "1" }</script>
+
+<!-- ######### WALKIN TEMPLATE CODE ################## -->
+<!-- ######### WALKIN TEMPLATE CODE ################## -->
+<!--<div class="ns_footer" style="background:#ffffff;margin-top:20px;"> comment by abhishek--> 
+<div class="footer_social">
+<!-- NEW SOCIAL FOOTER (BY: ABHISHEK) -->
+
+	<div class="footer_socical1">
+		<div class="footer_response">
+			<div class="ft_info_block left">
+				<div class="left infoico tell"></div>Toll free : 1-800-4196666, +91-40-66116611
+			</div>
+			<div class="ft_info_block left">
+				<div class="left infoico mail"></div>
+				<a href='mailto:kkothagundu@primetgi.com'  style="color:#999;text-decoration:none;">info@JobPortal.com</a>
+			</div>
+			
+			<div class="ft_info_block left nobr">Country : 
+				<span class="country_value">
+					<div class="ddcountry" style="width:auto;">
+						<span class="txt">India</span> 
+						<div class="right infoico dd"></div>
+						<div class="clr"></div>
+						
+					</div>
+				</span>
+			</div>
+		</div>
+	</div>
+	<div class="footer_socical2">
+		<div class="footer_response">
+			<div class="footer_table">
+				<div class="footer_column space_right">
+					<img width="177" height="25" src="../images/logo_footer.png">
+				</div>
+				<!--<div class="footer_column space_both">
+					<div class="heading">Job Seekers</div>
+					<a class="footer_link" href="../Default.aspx">Home</a>
+					<a class="footer_link" href="http://jobsearch.monsterindia.com/search.html">Search Jobs</a>
+					<a class="footer_link" href="http://jobs.monsterindia.com/">View All Jobs</a>
+					<a class="footer_link" href="http://www.monsterindia.com/monster-jobs.html">Monster Jobs</a>
+					<a class="footer_link" href="http://my.monsterindia.com/create_account.html">Resume at Monster</a>
+					<a class="footer_link" href="http://my.monsterindia.com/manageagents.html">Get Jobs in Email</a>
+					<a class="footer_link" href="http://company.monsterindia.com/index.html">Know About Companies</a>
+					<a class="footer_link" href="http://my.monsterindia.com/my_monster.html">My Monster</a>
+					<a class="footer_link" href="http://content.monsterindia.com/index.html">Career Center</a>
+					<a class="footer_link" href="http://www.monsterindia.com/help.html">Help</a>
+				</div>
+				<div class="footer_column space_both">
+					<div class="heading">Jobs By Functions</div>
+					<a class="footer_link" href="http://jobsearch.monsterindia.com/category/bank-jobs-vacancy.html">Banking Jobs in India</a>
+					<a class="footer_link" href="http://jobsearch.monsterindia.com/category/sales.html">Sales Jobs in India</a>
+					<a class="footer_link" href="http://jobsearch.monsterindia.com/category/it.html">IT Jobs in India</a>
+					<a class="footer_link" href="http://jobsearch.monsterindia.com/category/it.html">Software Jobs in India</a>
+					<a class="footer_link" href="http://jobsearch.monsterindia.com/category/finance.html">Finance Jobs in India</a>
+					<a class="footer_link" href="http://engineering.monsterindia.com/">Engineering Jobs in India</a>
+					<a class="footer_link" href="http://jobsearch.monsterindia.com/category/pharmacy-career-jobs.html">Pharmacy Jobs in India</a>
+					<a class="footer_link" href="http://jobsearch.monsterindia.com/category/bpo-jobs.html">BPO Jobs in India</a>
+					<a class="footer_link" href="http://pa.monsterindia.com/index.html">Placement Consultants</a>
+					<a class="footer_link" href="http://jobsearch.monsterindia.com/government-jobs/index.html">Government Jobs</a>
+					<a class="footer_link" href="http://jobsearch.monsterindia.com/industry/index.html">Jobs by Industry</a>
+					<a class="footer_link" href="http://jobsearch.monsterindia.com/category/rss_index.html">RSS Feed</a>
+				</div>
+				<div class="footer_column space_both">
+					<div class="heading">Jobs By Location</div>
+					<a class="footer_link" href="http://jobsearch.monsterindia.com/location/bangalore.html">Jobs in Bangalore </a>
+					<a class="footer_link" href="http://jobsearch.monsterindia.com/location/chandigarh.html">Jobs in Chandigarh</a>
+					<a class="footer_link" href="http://jobsearch.monsterindia.com/location/chennai.html">Jobs in Chennai</a>
+					<a class="footer_link" href="http://jobsearch.monsterindia.com/location/delhi.html">Jobs in Delhi</a>
+					<a class="footer_link" href="http://jobsearch.monsterindia.com/searchresult.html?loc=5">Jobs in Gurgaon</a>
+					<a class="footer_link" href="http://jobsearch.monsterindia.com/location/hyderabad.html">Jobs in Hyderabad</a>
+					<a class="footer_link" href="http://jobsearch.monsterindia.com/searchresult.html?loc=9">Jobs in Noida</a>
+					<a class="footer_link" href="http://jobsearch.monsterindia.com/location/mumbai.html">Jobs in Mumbai</a>
+					<a class="footer_link" href="http://jobsearch.monsterindia.com/location/pune.html">Jobs in Pune</a>
+					<a class="footer_link" href="http://ahmedabad.monsterindia.com/">Jobs in Ahmedabad</a>
+					<a class="footer_link" href="http://jobsearch.monsterindia.com/international_jobs.html">International Jobs</a>
+				</div>-->
+				<div class="footer_column">
+				<!--	<div class="footerrbox">
+						<div class="heading">About Our Site</div>
+						<a class="footer_link" href="http://www.monsterindia.com/contact_us.html">Contact Us </a>
+						<a class="footer_link" href="http://www.monsterindia.com/about_us.html">About Monster</a>
+						<a class="footer_link" href="http://www.monsterindia.com/career/">Career at Monster</a>
+						<a class="footer_link" href="http://www.monsterindia.com/privacy.html">Privacy Commitment</a>
+						<a class="footer_link" href="http://www.monsterindia.com/besafe.html">Be Safe</a>
+						<a class="footer_link" href="http://www.monsterindia.com/terms_of_use.html">Terms of Use</a>
+						<a class="footer_link" href="http://www.monsterindia.com/feedback.html">Report a Bug/Abuse</a>
+						<a class="footer_link" href="http://www.monsterindia.com/complaints.html">Complaint</a>
+						<a class="footer_link" href="http://jobsearch.monsterindia.com/download_searchbox.html">Add Job Search Box to Your Site</a>
+						<a class="footer_link" href="http://www.monsterindia.com/sitemap.html">Sitemap</a>
+						<a class="footer_link" href="http://www.monsterindia.com/security/security_center.html">Fraud/Security</a>
+						<a class="footer_link" href="http://www.monsterindia.com/testimonials/index.html"  target="_blank">Customer Speaks</a>
+						<div class="heading follow">Follow Us</div>
+						<div class="social_mon footer">
+							<a class="gplus left" target="_blank" href="https://plus.google.com/u/0/b/105215280255599273934/105215280255599273934/posts"></a>
+							<a class="youtube left" target="_blank" href="http://www.youtube.com/user/monsterindiavideos/MonsterTV"></a>
+							<a class="fb left" target="_blank" href="https://www.facebook.com/monsterindia"></a>
+							<a class="twit left" target="_blank" href="https://twitter.com/monster_india"></a>
+							<div class="clr"></div>
+						</div>
+					</div>-->
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer_socical2 bootm">
+		<div class="footer_response">
+			&copy; 2014 Job Portal - All Rights Reserved - <a href='../Default.aspx'  style="text-decoration:none;color:#ffffff;"></a>
+		</div>
+	</div>
+		                
+		<!-- Google Code for Smart Pixel List Remarketing List -->
+		<script>
+		    var google_tag_params = {
+		        Location: '',
+		        Keyword: '',
+		        Min_Exp: '',
+		        Max_Exp: '',
+		        Cat: '',
+		        Role: '',
+		        Company: '',
+		        Nationality: '',
+		        dynx_itemid: '',
+		        dynx_locid: '',
+		        dynx_pagetype: '',
+		        jobindustry: '',
+		        jobexplevel: ''
+		    };
+		</script>
+		<script type="text/javascript">
+		    /* <![CDATA[ */
+		    var google_conversion_id = 1067883687;
+		    var google_conversion_language = "en";
+		    var google_conversion_format = "3";
+		    var google_conversion_color = "666666";
+		    var google_conversion_label = "1FVUCNnKqAIQp7ma_QM";
+		    var google_conversion_value = 0;
+		    var google_custom_params = window.google_tag_params;
+		    var google_remarketing_only = true;
+		    /* ]]> */
+		</script>
+		<script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js">
+		</script>
+		<noscript>
+		<div style="display:inline;">
+		<img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/1067883687/?label=1FVUCNnKqAIQp7ma_QM&amp;guid=ON&amp;script=0"/>
+		</div>
+		</noscript>	<script>
+		           	    $(function () {
+		           	        $('.ddcountry').click(function () {
+		           	            $(this).children('.ddclevel1').stop(true, true).slideDown(100);
+		           	        }).mouseleave(function () {
+		           	            $(this).children('.ddclevel1').stop(true, true).hide();
+		           	        });
+
+		           	        $('.ddcitem').click(function () {
+		           	            $('.ddcountry .txt').text($(this).data('id'));
+		           	            $('.ddclevel1').hide();
+		           	        });
+		           	    });
+</script>
+
+<!-- NEW SOCIAL FOOTER (BY: ABHISHEK) -->
+
+</div>
+
+	<!-- Begin SiteCatalyst tag -->
+	<script src="http://media.newjobs.com/js/global/at_1.5.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	    var DYNAMIC_S_ACCOUNT = 'newjobsprodseekerindia';
+	    //<![CDATA[
+	    var amc = amc || {}; if (!amc.on) { amc.on = amc.call = function () { } };
+	    document.write("<scr" + "ipt type='text/javascript' src='//www.adobetag.com/d1/v2/ZDEtbW9uc3RlcmpvYnMtMTI4ODgtMjMzNy0=/amc.js'></sc" + "ript>");
+	    //]]>
+
+	    var adSCPgNm = 'Desktop|my|create_account';
+	    var adSCPropVarGlobal = { "prop1": "D=g", "eVar1": "D=g", "eVar2": "unrecognzied", "eVar4": "Unspecified", "pageName": "Desktop|my|create_account" };
+
+	    var adSCPropVar = adSCPropVar || {};
+	    for (var adScPropVarFl in adSCPropVar) {
+	        adSCPropVarGlobal[adScPropVarFl] = adSCPropVar[adScPropVarFl];
+	    }
+	    _m.ATM.properties = adSCPropVarGlobal || {};
+
+	    _m.ATM.pageName = adSCPgNm;
+	    window.load = _m.ATM.initFromOnReady();
+	    _m.ATM.appID = '';
+	    _m.ATM.runOnLoad = true;
+	</script>
+	<!-- End SiteCatalyst tag-->
+
+	
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-33916678-1']);
+    _gaq.push(['_setDomainName', 'monsterindia.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+<!-- Google Code for New Remarketing Tag -->
+<!-- Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. For instructions on adding this tag and more information on the above requirements, read the setup guide: google.com/ads/remarketingsetup -->
+<!--
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1067883687;
+var google_conversion_label = "qlUWCInzywMQp7ma_QM";
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1067883687/?value=0&amp;label=qlUWCInzywMQp7ma_QM&amp;guid=ON&amp;script=0" >
+</div>
+</noscript>
+--> 
+
+<style>
+#flyout_footer{
+	position:fixed;
+	right:0px;
+	bottom:-425px;
+	overflow:hidden;
+	width:540px;
+	z-index:1000000;
+	}
+	.scroll_container{
+		width:290px;
+		height:154px;
+		overflow:hidden;
+		
+		}
+		
+		.bxslider{
+			list-style:none;
+			margin:0px;
+			padding:0px;
+			}
+.bx-pager.bx-default-pager a {
+background: #999;
+text-indent: -9999px;
+display: block;
+margin: 5px 2px 0px 2px;
+outline: 0;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+}
+
+.bx-pager.bx-default-pager a.active {
+background: #000;
+}
+.bx-controls-direction{
+	display:none;
+}
+.bx-default-pager .bx-pager-item{
+	margin-top:5px;
+	float:left;
+	}
+</style>
+
+<!--<script src="images/js/jquery-1.9.1.min.js"></script>-->
+<script src="images/js/jquery.bxslider.js"></script>
+<div id="iediv"></div>
+        <!--[if lte IE 8]>
+                <script> 
+                        var cookieval=get_Cookie("IEWARN_COOKIE");
+                        if(cookieval != 1)
+                        {
+                                html = '<div class="warndiv" style="height:30px;"></div> <div class="warndiv" style="background:#fff1a8;height:30px;position:fixed;bottom:0;width:100%;z-index:99;"> <div style="width:980px;line-height:30px;text-align:center;background:#fff1a8;color:#222;font-size:13px; margin: 0 auto;">Attention! Some features of our site are not supported by your browser. Please <a href="http://windows.microsoft.com/en-IN/internet-explorer/download-ie"  target="_blank">upgrade your browser</a>. <a href="javascript:void(0);"  style="cursor:pointer;" onclick="hide_Div();">Dismiss</a></div> </div>';
+
+                                jQuery('#iediv').html(html);
+                        }
+
+                        function hide_Div()
+                        {
+                                set_Cookie();
+                                jQuery(".warndiv").remove();
+                        
+                                return false;
+                        }
+                        
+                        function set_Cookie()
+                        {
+                                var c_name = 'IEWARN_COOKIE';
+                                var value = 1;
+                                var exdays = 1;
+                                var exdate=new Date();
+                                exdate.setDate(exdate.getDate() + exdays);
+                                var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
+                                document.cookie=c_name + "=" + c_value + ";domain=.monsterindia.com;path=/";
+                        }
+                        
+                        function get_Cookie(c_name)
+                        {
+                                var i,x,y,ARRcookies=document.cookie.split(";");
+                                for (i=0;i<ARRcookies.length;i++)
+                                {
+                                        x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+                                        y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+                                        x=x.replace(/^\s+|\s+$/g,"");
+                                        if (x==c_name)
+                                        {
+                                                return unescape(y);
+                                        }
+                                }
+                        }
+                </script>
+        <![endif]-->	
+
+
+ 
+<!-- Google Code for Creat Account Page Remarketing List -->
+<script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = 1067883687;
+    var google_conversion_language = "en";
+    var google_conversion_format = "3";
+    var google_conversion_color = "666666";
+    var google_conversion_label = "I4-DCKHCigIQp7ma_QM";
+    var google_conversion_value = 0;
+    /* ]]> */
+</script>
+<script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/1067883687/?label=I4-DCKHCigIQp7ma_QM&amp;guid=ON&amp;script=0" >
+</div>
+</noscript>
+
+<script type="text/javascript">
+    var fb_param = {};
+    fb_param.pixel_id = '6006784411905';
+    fb_param.value = '0.00';
+    (function () {
+        var fpw = document.createElement('script');
+        fpw.async = true;
+        fpw.src = (location.protocol == 'http:' ? 'http' : 'https') + '://connect.facebook.net/en_US/fp.js';
+        var ref = document.getElementsByTagName('script')[0];
+        ref.parentNode.insertBefore(fpw, ref);
+    })();
+</script>
+<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/offsite_event.php?id=6006784411905&amp;value=0" ></noscript>
+
+
+<!-- Google Tag Manager -->
+
+<script>
+    dataLayer = [{
+        'AdvId': 'ADVMR194',
+        'ADVMR194_PageType': 'Visit',
+
+    }];
+	</script>
+
+<noscript><iframe src="http://www.googletagmanager.com/ns.html?id=GTM-N5BRJG" 
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function (w, d, s, l, i) {
+w[l] = w[l] || []; w[l].push({
+'gtm.start':
+new Date().getTime(), event: 'gtm.js'
+}); var f = d.getElementsByTagName(s)[0],
+j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+'http://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-N5BRJG');</script>
+
+<!-- End Google Tag Manager -->
+
+
+
+</body> 
+</html>
+

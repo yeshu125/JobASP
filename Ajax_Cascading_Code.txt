@@ -1,0 +1,19 @@
+<%@ Register TagPrefix="ajax" Namespace="AjaxControlToolkit" Assembly="AjaxControlToolkit" %>
+
+
+ <ajax:CascadingDropDown ID="CountryCascading" runat="server" Category="Country"
+                            TargetControlID="ddlCountry" LoadingText="Loading Countries..." PromptText="Select Country"
+                            ServiceMethod="BindCountry" ServicePath="../CCDDLWebService.asmx">
+                        </ajax:CascadingDropDown>
+
+
+<ajax:CascadingDropDown ID="StateCascading" runat="server" Category="State" TargetControlID="ddlState"
+                            ParentControlID="ddlCountry" LoadingText="Loading States..." PromptText="Select State"
+                            ServiceMethod="BindState" ServicePath="../CCDDLWebService.asmx">
+                        </ajax:CascadingDropDown>
+
+                        
+ <ajax:CascadingDropDown ID="CityCascading" runat="server" Category="City"
+                            TargetControlID="ddlCity" ParentControlID="ddlState" LoadingText="Loading Cities..."
+                            PromptText="Select City" ServiceMethod="BindCity" ServicePath="~/CCDDLWebService.asmx">
+                        </ajax:CascadingDropDown>

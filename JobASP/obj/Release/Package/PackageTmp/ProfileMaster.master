@@ -1,0 +1,86 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ProfileMaster.master.cs" Inherits="JobASP.ProfileMaster" %>
+
+<%@ Register TagPrefix="ajax" Namespace="AjaxControlToolkit" Assembly="AjaxControlToolkit" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+
+    <%-- JS Links --%>
+    <script type="text/javascript" src="../Scripts/jquery-1.9.0.js"></script>
+    <script type="text/javascript" src="../Scripts/jquery-ui.js"></script>
+    <script type="text/javascript" src="../Scripts/moment.js"></script>
+    <script type="text/javascript" src="../Scripts/bootstrap-3.2.0.min.js"></script>
+    <script type="text/javascript" src="../Scripts/bootstrap-datetimepicker.js"></script>
+    <script type="text/javascript" src="../Scripts/bootstrap-tagmanager.js"></script>
+    <script type="text/javascript" src="../Scripts/bootstrap-multiselect.js"></script>
+    <script type="text/javascript" src="../Scripts/index.js"></script>
+    <script type="text/javascript" src="../Scripts/jquery.magnific-popup.js"></script>
+    <script type="text/javascript" src="../Scripts/jquery.smartWizard.js"></script>
+    <%-- CSS Links --%>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/bootstrap-theme.css" rel="stylesheet" />
+    <link href="Content/global_styles.css" rel="stylesheet" />
+    <link href="Content/magnific-popup.css" rel="stylesheet" />
+    <link href="Content/smart_wizard.css" rel="stylesheet" />
+    <link href="Content/demo_style.css" rel="stylesheet" />
+
+    <script type="text/javascript">
+        $(document).ready(function myfunction() {
+
+        });
+    </script>
+    <asp:ContentPlaceHolder ID="ProHeadContent" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+
+    <form id="form1" runat="server">
+        <ajax:ToolkitScriptManager runat="server"></ajax:ToolkitScriptManager>
+        <asp:UpdateProgress runat="server" ID="PageUpdateProgress">
+            <ProgressTemplate>
+                <div class="loading">
+                    Loading...
+                </div>
+            </ProgressTemplate>
+        </asp:UpdateProgress>
+
+        <%--/header--%>
+        <div class="navigation">
+            <div class="container">
+                <div class="row">
+                    <div class="logo">
+                        <a href="#">
+                            <img src="../images/job_p-logo-w(30).png" alt="Job Portal" /></a>
+                    </div>
+                    <div class="nav f-r">
+                        <ul>
+                            <li><a href="<%= Page.ResolveUrl("~/Account/Default.aspx")%>">Home</a></li>
+                            <li><a href="#">Registration</a>
+                                <ul class="sub-menu">
+                                    <li><a href="../Account/RegSeeker.aspx">Seeker</a></li>
+                                    <li><a href="../Account/Register.aspx">Employer</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="../Account/Login.aspx">Login</a></li>
+                            <li><a href="../Account/FindJob.aspx">FindJob</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <%--/container--%>
+        </div>
+        <%--/header--%>
+        <div style="min-height: 570px;">
+            <div class="wrapper cf">
+                <asp:ContentPlaceHolder ID="ProMainContent" runat="server"></asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <%-- footer --%>
+        <div class="footer">
+            <p>&copy; <%: DateTime.Now.Year %> - Prime ASP.NET Application</p>
+        </div>
+    </form>
+</body>
+</html>

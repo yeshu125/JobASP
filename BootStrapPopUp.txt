@@ -1,0 +1,64 @@
+BootStrap Modal Popup
+
+
+
+
+
+ <div class="modal fade" id="AddCompanyDiv">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title">Add Company Details</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container">
+                                <div class="wrapper cf">
+
+
+
+
+
+
+ </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                           <asp:Button Text="Add" OnClick="AddCompany_Click" CssClass="btn btn-primary"  ValidationGroup="AddCompanyGroup"  ID="AddCompany" runat="server" />
+                            <asp:Button Text="Cancel" runat="server" class="btn btn-secondary" CausesValidation="false" data-dismiss="modal" ID="Button2" ValidationGroup="AddCompanyGroup" OnClientClick="Page_ValidationSummariesReset();" />
+                        </div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+            <!-- /.modal -->
+
+
+
+
+
+
+
+
+
+ $('#AddVenueDiv').on('shown.bs.modal', function () {
+            });
+
+
+
+
+
+
+
+
+
+
+<div class="imgL">
+<h2 class="f16"></h2><h2 class="_title">Top Employers</h2>
+                                
+<table border="0" cellpadding="0" cellspacing="14">
+<tbody><tr><td><a href="http://w28.naukri.com/advertiser/bms_hits.php?banner=3159453&amp;othersrcp=" target="_blank"><img src="http://bms.naukimg.com/banner/banners2014/TEL/ti-panel-120x45.gif" border="0"></a></td></tr><tr><td><a href="http://w28.naukri.com/advertiser/bms_hits.php?banner=3149497&amp;othersrcp=" target="_blank"><img src="http://bms.naukimg.com/banner/banners2014/srp_banners/eric-120X45-3.gif" border="0"></a></td></tr><tr><td><a href="http://w28.naukri.com/advertiser/bms_hits.php?banner=3147513&amp;othersrcp=" target="_blank"><img src="http://bms.naukimg.com/banner/banners2014/TRHS/techm-120x45-07012015.gif" border="0"></a></td></tr><tr><td><a href="http://w28.naukri.com/advertiser/bms_hits.php?banner=3147473&amp;othersrcp=" target="_blank"><img src="http://bms.naukimg.com/banner/banners2014/TEB/lnt-120X45.gif" border="0"></a></td></tr><tr><td><a href="http://w28.naukri.com/advertiser/bms_hits.php?banner=3147495&amp;othersrcp=" target="_blank"><img src="http://bms.naukimg.com/banner/banners2014/TEB/novartis-120X45.gif" border="0"></a></td></tr><tr><td><a href="http://w28.naukri.com/advertiser/bms_hits.php?banner=3148835&amp;othersrcp=" target="_blank"><img src="http://bms.naukimg.com/banner/banners2014/srp_banners/ibm-120X45-12.gif" border="0"></a></td></tr><tr><td><a href="http://w28.naukri.com/advertiser/bms_hits.php?banner=3147543&amp;othersrcp=" target="_blank"><img src="http://bms.naukimg.com/banner/banners2014/TEB/deloittepanel-120X45.gif" border="0"></a></td></tr><tr><td><a href="http://w28.naukri.com/advertiser/bms_hits.php?banner=3147497&amp;othersrcp=" target="_blank"><img src="http://bms.naukimg.com/banner/banners2014/TEB/ltinfotech-120X45.gif" border="0"></a></td></tr><tr><td><a href="http://w28.naukri.com/advertiser/bms_hits.php?banner=3147523&amp;othersrcp=" target="_blank"><img src="http://bms.naukimg.com/banner/banners2014/TEB/wipro-pk-120x45.gif" border="0"></a></td></tr><tr><td><a href="http://w28.naukri.com/advertiser/bms_hits.php?banner=3147533&amp;othersrcp=" target="_blank"><img src="http://bms.naukimg.com/banner/banners2014/srp_banners/utc-120X45-31122014.gif" border="0"></a></td></tr><tr><td><a href="http://w28.naukri.com/advertiser/bms_hits.php?banner=3147553&amp;othersrcp=" target="_blank"><img src="http://bms.naukimg.com/banner/banners2014/TEB/xerox-120X45.gif" border="0"></a></td></tr><tr><td><a href="http://w28.naukri.com/advertiser/bms_hits.php?banner=3146961&amp;othersrcp=" target="_blank"><img src="http://bms.naukimg.com/banner/banners2014/TEB/cisco1-sk-120x45.gif" border="0"></a></td></tr><tr><td><a href="http://w28.naukri.com/advertiser/bms_hits.php?banner=3147517&amp;othersrcp=" target="_blank"><img src="http://bms.naukimg.com/banner/banners2014/TEB/aricent-120X45.gif" border="0"></a></td></tr><tr><td><a href="http://w28.naukri.com/advertiser/bms_hits.php?banner=3147509&amp;othersrcp=" target="_blank"><img src="http://bms.naukimg.com/banner/banners2014/TEB/broadcom-120X45.gif" border="0"></a></td></tr><tr><td><a href="http://w28.naukri.com/advertiser/bms_hits.php?banner=3147545&amp;othersrcp=" target="_blank"><img src="http://bms.naukimg.com/banner/banners2014/TEB/airtel-120X45.gif" border="0"></a></td></tr><tr><td><a href="http://w28.naukri.com/advertiser/bms_hits.php?banner=3147511&amp;othersrcp=" target="_blank"><img src="http://bms.naukimg.com/banner/banners2014/srp_banners/mindtree-120X45-05012015-1.gif" border="0"></a></td></tr><tr><td><a href="http://w28.naukri.com/advertiser/bms_hits.php?banner=3147507&amp;othersrcp=" target="_blank"><img src="http://bms.naukimg.com/banner/banners2014/TEB/capco-120X45.gif" border="0"></a></td></tr><tr><td><a href="http://w28.naukri.com/advertiser/bms_hits.php?banner=3147521&amp;othersrcp=" target="_blank"><img src="http://bms.naukimg.com/banner/banners2014/TEB/aditya-120X45.gif" border="0"></a></td></tr><tr><td><a href="http://w28.naukri.com/advertiser/bms_hits.php?banner=3147535&amp;othersrcp=" target="_blank"><img src="http://bms.naukimg.com/banner/banners2014/TEB/tata-technologies-120X45.gif" border="0"></a></td></tr><tr><td><a href="http://w28.naukri.com/advertiser/bms_hits.php?banner=3147491&amp;othersrcp=" target="_blank"><img src="http://bms.naukimg.com/banner/banners2014/TEB/ustglobal27_201202_120x45.gif" border="0"></a></td></tr><tr><td><a href="http://w28.naukri.com/advertiser/bms_hits.php?banner=3147471&amp;othersrcp=" target="_blank"><img src="http://bms.naukimg.com/banner/banners2014/TEB/ion08012915.gif" border="0"></a></td></tr><tr><td><a href="http://w28.naukri.com/advertiser/bms_hits.php?banner=3145173&amp;othersrcp=" target="_blank"><img src="http://bms.naukimg.com/banner/banners2014/TEB/fis120x45.gif" border="0"></a></td></tr><tr><td><a href="http://w28.naukri.com/advertiser/bms_hits.php?banner=3151823&amp;othersrcp=" target="_blank"><img src="http://bms.naukimg.com/banner/banners2014/srp_banners/gi-120X45.gif" border="0"></a></td></tr><tr><td><a href="http://w28.naukri.com/advertiser/bms_hits.php?banner=3147559&amp;othersrcp=" target="_blank"><img src="http://bms.naukimg.com/banner/banners2014/TEB/tuv-30sept13_120x45.gif" border="0"></a></td></tr><tr><td><a href="http://w28.naukri.com/advertiser/bms_hits.php?banner=3147541&amp;othersrcp=" target="_blank"><img src="http://bms.naukimg.com/banner/banners2014/TEB/bapco_120x45.gif" border="0"></a></td></tr><tr><td><a href="http://w28.naukri.com/advertiser/bms_hits.php?banner=3106421&amp;othersrcp=" target="_blank"><img src="http://bms.naukimg.com/banner/banners2014/TEB/wns-pk-120x45.gif" border="0"></a></td></tr><tr><td><a href="http://w28.naukri.com/advertiser/bms_hits.php?banner=3147499&amp;othersrcp=" target="_blank"><img src="http://bms.naukimg.com/banner/banners2014/TEB/akcgroup_120x45.gif" border="0"></a></td></tr><tr><td><a href="http://w28.naukri.com/advertiser/bms_hits.php?banner=3147501&amp;othersrcp=" target="_blank"><img src="http://bms.naukimg.com/banner/banners2014/TEB/biocon-120X45.gif" border="0"></a></td></tr><tr><td><a href="http://w28.naukri.com/advertiser/bms_hits.php?banner=3147519&amp;othersrcp=" target="_blank"><img src="http://bms.naukimg.com/banner/banners2014/TEB/mphasis-120X45.gif" border="0"></a></td></tr><tr><td><a href="http://w28.naukri.com/advertiser/bms_hits.php?banner=3147527&amp;othersrcp=" target="_blank"><img src="http://bms.naukimg.com/banner/banners2014/srp_banners/meil-120X45.gif" border="0"></a></td></tr><tr><td><a href="http://w28.naukri.com/advertiser/bms_hits.php?banner=3147531&amp;othersrcp=" target="_blank"><img src="http://bms.naukimg.com/banner/banners2014/TEB/msnlabs120x45-080612-01.gif" border="0"></a></td></tr><tr><td><a href="http://w28.naukri.com/advertiser/bms_hits.php?banner=3147539&amp;othersrcp=" target="_blank"><img src="http://bms.naukimg.com/banner/banners2014/TEB/oracle-india-120X45.gif" border="0"></a></td></tr><tr><td><a href="http://w28.naukri.com/advertiser/bms_hits.php?banner=3147547&amp;othersrcp=" target="_blank"><img src="http://bms.naukimg.com/banner/banners2014/TEB/escort-120X45.gif" border="0"></a></td></tr><tr><td><a href="http://w28.naukri.com/advertiser/bms_hits.php?banner=3158229&amp;othersrcp=" target="_blank"><img src="http://bms.naukimg.com/banner/banners2014/TEB/virtusa-120X45.gif" border="0"></a></td></tr><tr><td><a href="http://w28.naukri.com/advertiser/bms_hits.php?banner=3146949&amp;othersrcp=" target="_blank"><img src="http://bms.naukimg.com/banner/banners2014/srp_banners/xchangingX120X45.gif" border="0"></a></td></tr><tr><td><a href="http://w28.naukri.com/advertiser/bms_hits.php?banner=3147493&amp;othersrcp=" target="_blank"><img src="http://bms.naukimg.com/banner/banners2014/TEB/altisource_120X45.gif" border="0"></a></td></tr><tr><td><a href="http://w28.naukri.com/advertiser/bms_hits.php?banner=3147525&amp;othersrcp=" target="_blank"><img src="http://bms.naukimg.com/banner/banners2014/TEB/infinite-india-120X45.gif" border="0"></a></td></tr><tr><td><a href="http://w28.naukri.com/advertiser/bms_hits.php?banner=3147549&amp;othersrcp=" target="_blank"><img src="http://bms.naukimg.com/banner/banners2014/TEB/flsmidth-120X45-1.gif" border="0"></a></td></tr><tr><td><a href="http://w28.naukri.com/advertiser/bms_hits.php?banner=3147503&amp;othersrcp=" target="_blank"><img src="http://bms.naukimg.com/banner/banners2014/TEB/jda-120X45.gif" border="0"></a></td></tr><tr><td><a href="http://w28.naukri.com/advertiser/bms_hits.php?banner=3147557&amp;othersrcp=" target="_blank"><img src="http://bms.naukimg.com/banner/banners2014/TEB/idc-sk-120X45.gif" border="0"></a></td></tr><tr><td><a href="http://w28.naukri.com/advertiser/bms_hits.php?banner=3151413&amp;othersrcp=" target="_blank"><img src="http://bms.naukimg.com/banner/banners2014/TEB/amazon-120X45.gif" border="0"></a></td></tr><tr><td><a href="http://w28.naukri.com/advertiser/bms_hits.php?banner=3147537&amp;othersrcp=" target="_blank"><img src="http://bms.naukimg.com/banner/banners2014/TEB/prokarma-120X45.gif" border="0"></a></td></tr><tr><td><a href="http://w28.naukri.com/advertiser/bms_hits.php?banner=3147657&amp;othersrcp=" target="_blank"><img src="http://bms.naukimg.com/banner/banners2014/bartronics_120x45.gif" border="0"></a></td></tr><tr><td><a href="http://w28.naukri.com/advertiser/bms_hits.php?banner=3151463&amp;othersrcp=" target="_blank"><img src="http://bms.naukimg.com/banner/banners2014/TEL/sierra-panel-120x45-1.gif" border="0"></a></td></tr><tr><td><a href="http://w28.naukri.com/advertiser/bms_hits.php?banner=3147529&amp;othersrcp=" target="_blank"><img src="http://bms.naukimg.com/banner/banners2014/srp_banners/lifestyle-120X45-30122014.gif" border="0"></a></td></tr><tr><td><a href="http://w28.naukri.com/advertiser/bms_hits.php?banner=3147505&amp;othersrcp=" target="_blank"><img src="http://bms.naukimg.com/banner/banners2014/TEB/indus-towers-120X45.gif" border="0"></a></td></tr><tr><td><a href="http://w28.naukri.com/advertiser/bms_hits.php?banner=3151423&amp;othersrcp=" target="_blank"><img src=" http://bms.naukimg.com/banner/banners2014/srp_banners/tech120X45.gif" border="0"></a></td></tr><tr><td><a href="http://w28.naukri.com/advertiser/bms_hits.php?banner=3148483&amp;othersrcp=" target="_blank"><img src="http://bms.naukimg.com/banner/banners2014/TRHS/dtdc-120x45.gif" border="0"></a></td></tr></tbody></table><img style="display:none;" class="" src="http://w28.naukri.com/advertiser/bms_logimpressions.php?banlist=3159453,3149497,3147513,3147473,3147495,3148835,3147543,3147497,3147523,3147533,3147553,3146961,3147517,3147509,3147545,3147511,3147507,3147521,3147535,3147491,3147471,3145173,3151823,3147559,3147541,3106421,3147499,3147501,3147519,3147527,3147531,3147539,3147547,3158229,3146949,3147493,3147525,3147549,3147503,3147557,3151413,3147537,3147657,3151463,3147529,3147505,3151423,3148483" width="0" height="0">
+                            </div>
+
+

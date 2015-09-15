@@ -1,0 +1,9 @@
+E:\UsersProfiles\kkothagundu\Documents\Visual Studio 2012\Projects\JobASP\DataModel\bin\Debug\DataModel.dll
+E:\UsersProfiles\kkothagundu\Documents\Visual Studio 2012\Projects\JobASP\DataModel\bin\Debug\DataModel.pdb
+E:\UsersProfiles\kkothagundu\Documents\Visual Studio 2012\Projects\JobASP\DataModel\bin\Debug\JobASP.DataModels.dll
+E:\UsersProfiles\kkothagundu\Documents\Visual Studio 2012\Projects\JobASP\DataModel\bin\Debug\EntityFramework.dll
+E:\UsersProfiles\kkothagundu\Documents\Visual Studio 2012\Projects\JobASP\DataModel\bin\Debug\JobASP.DataModels.pdb
+E:\UsersProfiles\kkothagundu\Documents\Visual Studio 2012\Projects\JobASP\DataModel\bin\Debug\EntityFramework.xml
+E:\UsersProfiles\kkothagundu\Documents\Visual Studio 2012\Projects\JobASP\DataModel\obj\Debug\JobASP.ViewModels.csprojResolveAssemblyReference.cache
+E:\UsersProfiles\kkothagundu\Documents\Visual Studio 2012\Projects\JobASP\DataModel\obj\Debug\DataModel.dll
+E:\UsersProfiles\kkothagundu\Documents\Visual Studio 2012\Projects\JobASP\DataModel\obj\Debug\DataModel.pdb

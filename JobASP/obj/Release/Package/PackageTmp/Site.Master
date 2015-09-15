@@ -1,0 +1,86 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="JobASP.SiteMaster2" %>
+
+<%@ Register TagPrefix="ajax" Namespace="AjaxControlToolkit" Assembly="AjaxControlToolkit" %>
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <title></title>
+    <meta charset="utf-8" />
+
+    <%-- JS Links --%>
+    <script type="text/javascript" src="../Scripts/jquery-1.9.0.js"></script>
+    <script type="text/javascript" src="../Scripts/jquery-ui.js"></script>
+    <script type="text/javascript" src="../Scripts/jquery-ui-timepicker-addon.js"></script>
+    <script type="text/javascript" src="../Scripts/bootstrap-3.2.0.min.js"></script>
+    <script type="text/javascript" src="../Scripts/bootstrap-multiselect.js"></script>
+    <script type="text/javascript" src="../Scripts/index.js"></script>
+    <script type="text/javascript" src="../Scripts/jquery.magnific-popup.js"></script>
+    <script type="text/javascript" src="../Scripts/jquery.smartWizard.js"></script>
+
+    <%-- CSS Links --%>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/bootstrap-theme.css" rel="stylesheet" />
+    <link href="Content/global_styles.css" rel="stylesheet" />
+    <link href="Content/magnific-popup.css" rel="stylesheet" />
+    <link href="Content/smart_wizard.css" rel="stylesheet" />
+    <link href="Content/demo_style.css" rel="stylesheet" />
+    <link href="Content/ui-lightness/jquery-ui-1.10.4.custom.css" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+</head>
+<body style="">
+    <form runat="server">
+
+        <ajax:ToolkitScriptManager runat="server">
+        </ajax:ToolkitScriptManager>
+        <asp:UpdateProgress runat="server" ID="PageUpdateProgress">
+            <ProgressTemplate>
+                <div class="loading">
+                    <b>Loading... </b>
+                </div>
+
+            </ProgressTemplate>
+        </asp:UpdateProgress>
+        <%--/header--%>
+        <div class="navigation">
+            <div class="container">
+                <div class="row">
+                    <div class="logo">
+                        <a href="#">
+                            <img src="../images/job_p-logo-w(30).png" alt="Job Portal" /></a>
+                    </div>
+                    <div class="nav f-r">
+                        <ul>
+                            <li><a href="ProfileSeeker.aspx">Home</a></li>
+                            <li>
+                                <asp:LinkButton Text="LogOut" ID="LnkLog" CssClass="" OnClick="LnkLog_Click" runat="server" /></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <%--/container--%>
+        </div>
+        <%--/header--%>
+        <div style="min-height: 570px;">
+            <div id="Container">
+                <table width="100%">
+                    <tr>
+                        <td colspan="2" width="100%">
+                            <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <%-- footer --%>
+        <div class="footer">
+            <p>&copy; <%: DateTime.Now.Year %> - Prime ASP.NET Application</p>
+        </div>
+    </form>
+</body>
+</html>

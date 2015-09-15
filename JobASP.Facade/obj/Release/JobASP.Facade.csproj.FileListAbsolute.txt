@@ -1,0 +1,16 @@
+E:\UsersProfiles\kkothagundu\Documents\Visual Studio 2012\Projects\JobASP\JobASP.Facade\bin\Release\JobASP.Facade.dll.config
+E:\UsersProfiles\kkothagundu\Documents\Visual Studio 2012\Projects\JobASP\JobASP.Facade\bin\Release\JobASP.Facade.dll
+E:\UsersProfiles\kkothagundu\Documents\Visual Studio 2012\Projects\JobASP\JobASP.Facade\bin\Release\JobASP.Facade.pdb
+E:\UsersProfiles\kkothagundu\Documents\Visual Studio 2012\Projects\JobASP\JobASP.Facade\bin\Release\DataModel.dll
+E:\UsersProfiles\kkothagundu\Documents\Visual Studio 2012\Projects\JobASP\JobASP.Facade\bin\Release\EntityFramework.dll
+E:\UsersProfiles\kkothagundu\Documents\Visual Studio 2012\Projects\JobASP\JobASP.Facade\bin\Release\EntityFramework.SqlServer.dll
+E:\UsersProfiles\kkothagundu\Documents\Visual Studio 2012\Projects\JobASP\JobASP.Facade\bin\Release\JobASP.DataLayer.dll
+E:\UsersProfiles\kkothagundu\Documents\Visual Studio 2012\Projects\JobASP\JobASP.Facade\bin\Release\JobASP.DataModels.dll
+E:\UsersProfiles\kkothagundu\Documents\Visual Studio 2012\Projects\JobASP\JobASP.Facade\bin\Release\DataModel.pdb
+E:\UsersProfiles\kkothagundu\Documents\Visual Studio 2012\Projects\JobASP\JobASP.Facade\bin\Release\JobASP.DataLayer.pdb
+E:\UsersProfiles\kkothagundu\Documents\Visual Studio 2012\Projects\JobASP\JobASP.Facade\bin\Release\JobASP.DataModels.pdb
+E:\UsersProfiles\kkothagundu\Documents\Visual Studio 2012\Projects\JobASP\JobASP.Facade\bin\Release\EntityFramework.xml
+E:\UsersProfiles\kkothagundu\Documents\Visual Studio 2012\Projects\JobASP\JobASP.Facade\bin\Release\EntityFramework.SqlServer.xml
+E:\UsersProfiles\kkothagundu\Documents\Visual Studio 2012\Projects\JobASP\JobASP.Facade\obj\Release\JobASP.Facade.csprojResolveAssemblyReference.cache
+E:\UsersProfiles\kkothagundu\Documents\Visual Studio 2012\Projects\JobASP\JobASP.Facade\obj\Release\JobASP.Facade.dll
+E:\UsersProfiles\kkothagundu\Documents\Visual Studio 2012\Projects\JobASP\JobASP.Facade\obj\Release\JobASP.Facade.pdb

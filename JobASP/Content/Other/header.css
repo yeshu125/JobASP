@@ -1,0 +1,230 @@
+body, html{padding:0;margin:0;}
+body{background:url(http://media.monsterindia.com/v2/recruiter/2.1/new_search/body-bg.gif) repeat;}
+/*new header style */
+.ns_header{width:100%;height:46px;background:#72469b;position:fixed;z-index:10;text-align:center;font-family:Arial, Helvetica, sans-serif;z-index:999;}
+.ns_header.top_banner{height:136px;}
+.ns_header_inner{width:100%;margin:0 auto;text-align:left;}
+.ns_logo_wrap{display:block;width:210px;height:46px;border:0;border-right:1px #5b387c solid;outline:0;text-decoration:none;background:url(http://media.monsterindia.com/seeker_2014/logo.jpg) center center no-repeat;}
+.ns_menu_item_wrap{position:relative;}
+.ns_menu_item{display:block;padding:0px 15px;line-height:46px;border:0;outline:0;text-decoration:none;border-left:1px #8e6ab0 solid; border-right:1px #5b387c solid;font-size:14px;color:#ffffff;cursor:pointer;}
+.ns_menu_item.mpowericon{width:80px;height:46px;background: url(http://media.monsterindia.com/seeker_2014/ns_combined.png) no-repeat -172px 6px;}
+.ns_menu_item_wrap:hover, .ns_menu_item_wrap.active{background: #ffffff; }
+.ns_menu_item_wrap:hover .ns_menu_item, .ns_menu_item_wrap.active .ns_menu_item{color:#660099;}
+.ns_menu_item_wrap:hover .ns_menu_item.mpowericon, .ns_menu_item_wrap.active .ns_menu_item.mpowericon{background: url(http://media.monsterindia.com/seeker_2014/ns_combined.png) no-repeat -172px -33px;}
+.ns_menu_item_wrap .ns_dropdown{position:absolute;display:none;top:46px;left:-2px;cursor:default;width:510px;z-index:999;}
+.ns_menu_item_wrap .ns_dropdown_inner{border:3px #72469b solid; border-top:0;width:auto;background: #ffffff; -webkit-box-shadow: 1px 1px 3px 0px rgba(154, 67, 237, 1);
+-moz-box-shadow:1px 1px 3px 0px rgba(154, 67, 237, 1);box-shadow:1px 1px 3px 0px rgba(154, 67, 237, 1);display:table;}
+.ns_dd_link_wrap{width:220px;display:table-cell;}
+.ns_dd_link{display:block;color:#660099;text-decoration:none;font-size:13px;text-align:left;line-height:28px;padding-left:10px;}
+
+.ns_dd_link:hover{background:#72469b;color:#ffffff;}
+.ns_dd_seperator{display:table-cell;width:1px;background: rgb(139,93,181); /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzhiNWRiNSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjM1JSIgc3RvcC1jb2xvcj0iI2QyYWRkNiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjY4JSIgc3RvcC1jb2xvcj0iI2QyYWRkNiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM2MjJhOTUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top,  rgba(139,93,181,1) 0%, rgba(210,173,214,1) 35%, rgba(210,173,214,1) 68%, rgba(98,42,149,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(139,93,181,1)), color-stop(35%,rgba(210,173,214,1)), color-stop(68%,rgba(210,173,214,1)), color-stop(100%,rgba(98,42,149,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(139,93,181,1) 0%,rgba(210,173,214,1) 35%,rgba(210,173,214,1) 68%,rgba(98,42,149,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(139,93,181,1) 0%,rgba(210,173,214,1) 35%,rgba(210,173,214,1) 68%,rgba(98,42,149,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(139,93,181,1) 0%,rgba(210,173,214,1) 35%,rgba(210,173,214,1) 68%,rgba(98,42,149,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(139,93,181,1) 0%,rgba(210,173,214,1) 35%,rgba(210,173,214,1) 68%,rgba(98,42,149,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8b5db5', endColorstr='#622a95',GradientType=0 ); /* IE6-8 */
+}
+.ns_dd_othertxt{width:279px;display:table-cell;padding:10px;background:#f3f3f3;}
+.ns_other_h{font-size:13px;color:#252525;margin-bottom:10px;font-weight:bold;margin-left:10px;}
+ul.ns_other_link{color:#660099;list-style:none;margin:0px 5px;padding:0px;}
+ul.ns_other_link li{display:block;}
+ul.ns_other_link li a{text-decoration:none;color:#252525;font-size:13px;display:block;line-height:26px;}
+ul.ns_other_link li a:hover{font-weight:bold;}
+.ns_dd_other_txt{font-size:12px;color:#252525;margin-bottom:10px;}
+.ns_dd_other_txt a{font-weight:bold;color:#000000;text-decoration:none;}
+.ns_dd_other_txt a:hover{text-decoration:underline;}
+.ns_dd_golink{color:#666666;text-decoration:none;font-size:13px;font-weight:bold;}
+.ns_dd_golink:hover{text-decoration:underline;}
+.ns_access_btn{width:162px;height:36px;background:#8e6baf;margin-top:5px;margin-right:10px;}
+.ns_access_btn .ns_btn{display:block;text-align:center;line-height:36px;border:0;outline:0;text-decoration:none;font-size:14px;color:#ffffff;float:left;width:80px;}
+.ns_access_btn .ns_btn.ns_joinus{border-right:1px #5b387c solid;}
+.ns_access_btn .ns_btn.ns_signin{border-left:1px #a689bf solid;}
+.ns_access_btn.ns_loggedin{width:80px;}
+.ns_topbanner_wrap{width:100%;background:#000000;height:90px;text-align:center;}
+.ns_topbanner{width:100%;background:#000000;height:90px;text-align:center;margin:0 auto;}
+.ns_topbanner_space{width:728px;margin:0 auto;height:90px;}
+.ns_lt, .left{float:left;}
+.ns_rt{float:right;}
+.ns_clr{clear:both;}
+.bodyspace_fix{height:46px;}
+.bodyspace_fix.top_banner{height:136px;}
+.ns_profile_wrap{width:162px;height:46px;margin-right:10px;cursor:pointer;position:relative;}
+.ns_profile_wrap:hover{background:#ffffff;}
+.ns_login_icon_wrap{overflow:hidden;}
+.ns_login_icon{background:url(http://media.monsterindia.com/seeker_2014/ns_combined.png) no-repeat -103px -22px;width:18px;height:18px;margin-top:14px;margin-right:5px;}
+.ns_username_wrap{margin-top:10px;margin-left:5px;}
+.ns_username{line-height:24px;color: #b692cc;font-weight: bold;width: 130px;border-bottom: 1px #a880c0 solid;display:block;white-space:nowrap;text-overflow:ellipsis;}
+.ns_profile_wrap:hover .ns_username{border-bottom:none;}
+.ns_userinfo{cursor:default;position: absolute;top: 46px;right: -3px;width: 350px;background: #ffffff;display: none;
+z-index: 100;-webkit-box-shadow: 1px 1px 3px 0px rgba(154, 67, 237, 1);-moz-box-shadow:1px 1px 3px 0px rgba(154, 67, 237, 1);box-shadow:1px 1px 3px 0px rgba(154, 67, 237, 1);font-family: Arial, Helvetica, sans-serif;border: 3px #72469b solid;border-top:0;}
+.ns_userinfo_inner{padding:10px;height:100px;border-bottom:1px #dddddd solid;}
+.ns_user_recentactivity{height:40px;background:#f3f3f3;box-shadow: inset 0 4px 5px -4px rgba(0,0,0,0.4);}
+.ns_avatar_wrap{width:46px;height:53px;border:5px #f3f3f3 solid;margin-right:10px;}
+.ns_avatar_wrap img{width:46px;height:53px;border:0;outline:0;}
+.ns_uinfo_wrap{width:260px;overflow:hidden;}
+.ns_uname{display:block;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;font-size:18px;color:#252525;line-height:26px;margin-bottom:5px;}
+.ns_contacticon{width:20px;height:22px;overflow:hidden;}
+.ns_contacticon.ns_email{background:url(http://media.monsterindia.com/seeker_2014/ns_combined.png) no-repeat -176px -77px;}
+.ns_contacticon.ns_cellphone{background:url(http://media.monsterindia.com/seeker_2014/ns_combined.png) no-repeat -176px -101px;}
+.ns_emailid_wrap{margin-bottom:5px;margin-left:6px;}
+.ns_emailid{display:block;overflow:hidden;text-overflow:ellipsis;margin-bottom:5px;color:#4574b6;font-size:13px;}
+.ns_cellnumber_wrap{margin-bottom:5px;margin-left:6px;}
+.ns_cellnumber{display:block;overflow:hidden;margin-bottom:5px;color:#252525;font-size:13px;line-height:20px;}
+.ns_recentactivity_h{font-weight:bold;font-size:13px;line-height:40px;color:#660099;margin-right:5px;margin-left:5px;}
+.ns_recentactivity_btn{outline:0;cursor:pointer;text-decoration:none;margin-right:10px;font-size:12px;color:#333333;display:block;line-height:24px;padding:0px 10px;background:#e5e5e5;border:1px #cecece solid;margin-top:8px;margin-bottom:10px;}
+.ns_recentactivity_btn:hover{-webkit-box-shadow:0px 0px 4px rgba(0,0,0,.5);-moz-box-shadow:0px 0px 4px rgba(0,0,0,.5);box-shadow:0px 0px 4px rgba(0,0,0,.5);}
+.ns_recentactivity_btn.ns_logout{background:#635a93;color:#ffffff;}
+.ns_recruiterlogin{width:250px;background:#fef9c2;height:46px;box-shadow: inset 4px 0 6px -4px rgba(0,0,0,0.6);-webkit-box-shadow: inset 4px 0 6px -4px rgba(0,0,0,0.6);-moz-box-shadow: inset 4px 0 6px -4px rgba(0,0,0,0.6);}
+.ns_rec_link{text-align:center;position:relative;height:46px;color:#7761ad;line-height:46px;width:100%;}
+.ns_main_link{color:#7761ad;font-size:14px;margin-right:5px;text-decoration:underline;}
+.ns_main_link.ns_changemargin{margin-right:0;margin-left:5px;cursor:pointer;position:relative;}
+.ns_main_link.ns_changemargin:hover{text-decoration:none;}
+.ns_reclogin_box{position:absolute;top:16px;right:0px;width:160px;background:#ffffff;border:3px #72469b solid; padding:10px 0px;background: #ffffff; -webkit-box-shadow: 1px 1px 3px 0px rgba(154, 67, 237, 1);
+-moz-box-shadow:1px 1px 3px 0px rgba(154, 67, 237, 1);box-shadow:1px 1px 3px 0px rgba(154, 67, 237, 1);display:none;}
+.ns_reclogin_box .ns_reclinks{display: block;color: #660099;text-decoration: none;font-size: 13px;text-align: left;
+line-height: 28px;padding-left:10px;}
+.ns_reclogin_box .ns_reclinks:hover{background:#72469b;color:#ffffff;}
+@media all and (min-width:1350px)
+{
+	.ns_header_inner{width:1350px;}
+	
+}
+@media all and (max-width:1100px)
+{
+	.ns_recruiterlogin{width:175px;font-size:13px;}
+	.ns_main_link{font-size:13px;margin:0px 0px 0px 5px;}
+	.ns_main_link.ns_changemargin{margin:0px 5px 0px 0px;}
+}
+@media all and (max-width:1024px)
+{
+	.ns_header_inner, .ns_topbanner{width:1000px;}
+}
+
+@media \0screen
+{
+	.ns_header_inner, .ns_topbanner{width:1000px;}
+	.ns_recruiterlogin{width:175px;font-size:13px;}
+	.ns_main_link{font-size:13px;margin:0px 0px 0px 5px;}
+	.ns_main_link.ns_changemargin{margin:0px 5px 0px 0px;}
+}
+
+/*dropdowns*/
+.left{float:left;}
+.right{float:right;}
+.clear_both {clear: both;}
+.select_popup{height: 250px;width: 279px;overflow:auto;border:1px #cecece solid;background:#ffffff;z-index:100000;top:33px;left:0px;position:absolute;display:none;font-size:12px;zoom:1;}
+.select_popup_inner{width:259px;height:auto;}
+.select_popup_header{padding:5px;border-bottom:1px #d3d3d3 solid;}
+.select_popup_header .left{font-size:9px;color:#666666;font-weight:bold;line-height:11px;height:11px;}
+.select_popup_header .right{height:11px;width:12px;}
+.select_popup_header .right img{width:12px;height:11px;height:11px;}
+.select_item{width:249px;display:block;padding:5px;cursor:pointer;}
+.select_item:hover, .selectitem_bg{background:#dedede;}
+.select_item .left{padding:0px 5px;margin:0;line-height:12px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;height:14px;color:#4F4F4F;}
+.select_item .right{width:225px;height:12px;font-size:11px;line-height:12px;color:#00000;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.selected_items{width:250px; border:1px #cdcdcd solid; border-top:0px; margin-top:0px;display:none; min-height:19px;margin-bottom:10px;}
+.selected_items .main_header{border-bottom:0px #cdcdcd solid;background:#eeeeee;color:#000000;padding:2px 3px;font-weight:bold;font-size:11px; height:15px;}
+.selected_items_inner{width:250px; max-height:0px; overflow:hidden; overflow-y:auto;}
+.selected_item{width:99%;padding:3px 5px;}
+.selected_item:hover{background:#dddddd;}
+.selected_item .left{width:170px;font-size:11px;height:11px;line-height:11px;color:#555555;font-weight:normal;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.selected_item .right, .selected_items_inner .right img{width:11px;height:11px;}
+.selected_item .right{padding:0px 5px;margin:0;line-height:11px;}
+.select_item  .check_container {height: 12px;position: relative;width: 12px;overflow:hidden;}
+.select_item  .plus_minus{width: 12px;overflow:hidden;}
+.plus_minus {height: 12px;position: relative;width: 12px;overflow:hidden;background: url(http://media.monsterindia.com/seeker_2014/ns_combined.png) no-repeat -189px -174px;}
+.plus_minus.minus{background: url(http://media.monsterindia.com/seeker_2014/ns_combined.png) no-repeat -201px -174px;}
+.close_select{cursor:pointer;}
+.multiselect_close, .open_singleselect{position:relative;}
+.single_select{position:absolute;top:33px;border:1px #626262 solid;border-top:none;width:80px;z-index:100;background:#ffffff;display:none;}
+.select_large{left:0;width:215px;}
+.single_select ul.options{padding:0;margin:0;width:100%;list-style:none;}
+.single_select ul.options li{padding:0px 1px;}
+.single_select ul.options li a{display:block;padding:3px;text-decoration:none;font-size:11px;color:#555555;line-height:15px;}
+.single_select ul.options li a:hover{background:#663399;color:#ffffff;}
+.dropdown_small_wrapper{border:1px #626262 solid;width:254px;outline:0;font-size:12px;height:30px;cursor:pointer;background:#ffffff;}
+.dropdown_small_wrapper .left{width:175px;height:30px;padding:0px 5px;font-size:12px;line-height:31px;color:#4f4f4f;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.dropdown_small_wrapper .right{ height: 30px;position: relative;width: 24px;overflow:hidden;}
+.dropdown_small_wrapper .right.clip_image{background: url(http://media.monsterindia.com/seeker_2014/ns_combined.png) 0px 0px no-repeat;width: 24px;height: 30px;}
+.dropdown_small_wrapper .right.clip_image.closedropdown{background: url(http://media.monsterindia.com/seeker_2014/ns_combined.png) -308px -150px no-repeat;}
+.dropdown_small_active{-webkit-box-shadow: 3px 4px 5px rgba(0,0,0,.1);-moz-box-shadow: 3px 4px 5px rgba(0,0,0,.1);box-shadow: 3px 4px 5px rgba(0,0,0,.1);}
+.select_item .left.check, .check{padding:0;margin-left:5px;height:12px;width:12px;overflow:hidden;cursor:pointer;background: url(http://media.monsterindia.com/seeker_2014/ns_combined.png) no-repeat -30px -1px;}
+.select_item .left.check.selected, .check.selected{background: url(http://media.monsterindia.com/seeker_2014/ns_combined.png) no-repeat -30px -18px;}
+.separator {margin-top: 10px;position: relative;height: 435px;width: 20px;background: url(http://media.monsterindia.com/v2/recruiter/2.1/new_search/seprarator.gif) repeat-y center;}
+.separator .or_container {height: 20px;margin-top: -10px;position: absolute;top: 50%;width: 20px;overflow: hidden;background:url(http://media.monsterindia.com/seeker_2014/ns_combined.png) no-repeat -308px -57px;}
+.iconclose{background:url(http://media.monsterindia.com/seeker_2014/ns_combined.png) no-repeat -169px -176px;overflow:hidden;}
+.jq1{width:99%;padding-top:4px; padding-bottom:3px;}
+.clear_left{clear:left;}
+.select_item .left input[type="radio"] {margin:0;}
+.jq2{display:table; width:99%;padding-top:4px; padding-bottom:3px;}
+.jq3{display:table; width:99%; background:none; font-weight:bold; cursor:default;border-bottom:dotted 1px #bfbfbf;}
+.jq4{border-bottom:dotted 1px #bfbfbf;}
+#show_result_form_id{background:#ffffff;}
+.dropdown_smaller_wrapper{border:1px #626262 solid;width:254px;outline:0;font-size:12px;height:31px;cursor:pointer;background:#ffffff;}
+.dropdown_smaller_wrapper .left{width:220px;height:31px;padding:0px 5px;font-size:12px;line-height:31px;color:#4f4f4f;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.dropdown_smaller_wrapper .right{width:25px;height:31px;}
+.dropdown_smaller_active{-webkit-box-shadow: 3px 4px 5px rgba(0,0,0,.1);-moz-box-shadow: 3px 4px 5px rgba(0,0,0,.1);box-shadow: 3px 4px 5px rgba(0,0,0,.1);}
+.dropdown_smaller_wrapper .right{ height: 30px;position: relative;width: 24px;overflow:hidden;}
+.dropdown_smaller_wrapper .right.clip_image{background: url(http://media.monsterindia.com/seeker_2014/ns_combined.png) 0px 0px no-repeat;width: 24px;height: 30px;}
+.dropdown_smaller_wrapper .right.clip_image.closedropdown{background: url(http://media.monsterindia.com/seeker_2014/ns_combined.png) -308px -150px no-repeat;}
+.ns_popup_fade{background: rgb(0,0,0);background: transparent\9;background: rgba(0,0,0,0.5);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4c000000,endColorstr=#4c000000);zoom: 1;
+position: fixed;width: 100%;height: 100%;left:0;top:0;z-index: 9999;display:none;}
+.ns_popup_wrapper{position:fixed;left:50%;top:100px;z-index:10000;display:none;}
+.ns_popup_main{background: #ffffff;position: relative;height: auto;border:1px #bfbfbf solid;padding-bottom: 10px;text-align:left;border:5px solid #3d1365;left:-50%;min-width:200px;width:auto;min-height:50px;height:auto;}
+.np_popup_header {
+height: 40px;
+position: relative;
+background: #8259a8;
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top, #8259a8 0%, #8259a8 51%, #632f93 51%, #632f93 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#8259a8), color-stop(51%,#8259a8), color-stop(51%,#632f93), color-stop(100%,#632f93));
+background: -webkit-linear-gradient(top, #8259a8 0%,#8259a8 51%,#632f93 51%,#632f93 100%);
+background: -o-linear-gradient(top, #8259a8 0%,#8259a8 51%,#632f93 51%,#632f93 100%);
+background: -ms-linear-gradient(top, #8259a8 0%,#8259a8 51%,#632f93 51%,#632f93 100%);
+background: linear-gradient(to bottom, #8259a8 0%,#8259a8 51%,#632f93 51%,#632f93 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8259a8', endColorstr='#632f93',GradientType=0 );
+}
+.np_pop_heading{
+font-size: 18px;
+line-height: 40px;
+color: #ffffff;
+margin-left: 10px;
+text-align: left;
+}
+.mn_popclose_btn{
+margin-right:5px;margin-top:5px;
+width: 30px;
+height: 30px;
+background: url(http://media.monsterindia.com/seeker_2014/ns_combined.png) no-repeat -73px -120px;
+cursor: pointer;
+}
+.mn_popupmain_text{padding:10px;text-align:left;font-size:13px;color:#252525;}
+.input_style {
+					border: 1px solid #626262;
+					color: #4F4F4F;
+					font-size: 12px;
+					margin-right: 5px;
+					outline: 0 none;
+					padding: 6px 5px;
+					text-align: left;
+					width: 93px;
+				}
+				.new_input_style{
+					border: 1px solid #626262;
+					color: #4F4F4F;
+					font-size: 16px;
+					margin-left: 7px;
+					outline: 0 none;
+					padding: 8px;
+					text-align: left;
+					width: 98%;
+				}
+				.overlay{width:100%;height:100%;top:0;left:0;position:fixed;background:#000000;opacity:.5;filter:alpha(opacity=50);z-index:9998;display:none;}
+				.ns_popup_fade_new{width:100%;height:100%;top:0;left:0;position:fixed;background:#000000;opacity:.5;filter:alpha(opacity=50);z-index:9998;display:none;}
+

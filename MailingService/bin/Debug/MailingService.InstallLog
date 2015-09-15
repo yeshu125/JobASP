@@ -1,0 +1,32 @@
+﻿Installing assembly 'E:\UsersProfiles\kkothagundu\Documents\Visual Studio 2012\Projects\JobASP\MailingService\bin\Debug\MailingService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = E:\UsersProfiles\kkothagundu\Documents\Visual Studio 2012\Projects\JobASP\MailingService\bin\Debug\MailingService.exe
+   logfile = E:\UsersProfiles\kkothagundu\Documents\Visual Studio 2012\Projects\JobASP\MailingService\bin\Debug\MailingService.InstallLog
+No public installers with the RunInstallerAttribute.Yes attribute could be found in the E:\UsersProfiles\kkothagundu\Documents\Visual Studio 2012\Projects\JobASP\MailingService\bin\Debug\MailingService.exe assembly.
+Committing assembly 'E:\UsersProfiles\kkothagundu\Documents\Visual Studio 2012\Projects\JobASP\MailingService\bin\Debug\MailingService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = E:\UsersProfiles\kkothagundu\Documents\Visual Studio 2012\Projects\JobASP\MailingService\bin\Debug\MailingService.exe
+   logfile = E:\UsersProfiles\kkothagundu\Documents\Visual Studio 2012\Projects\JobASP\MailingService\bin\Debug\MailingService.InstallLog
+No public installers with the RunInstallerAttribute.Yes attribute could be found in the E:\UsersProfiles\kkothagundu\Documents\Visual Studio 2012\Projects\JobASP\MailingService\bin\Debug\MailingService.exe assembly.
+Remove InstallState file because there are no installers.
+Uninstalling assembly 'E:\UsersProfiles\kkothagundu\Documents\Visual Studio 2012\Projects\JobASP\MailingService\bin\Debug\MailingService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = E:\UsersProfiles\kkothagundu\Documents\Visual Studio 2012\Projects\JobASP\MailingService\bin\Debug\MailingService.exe
+   logfile = E:\UsersProfiles\kkothagundu\Documents\Visual Studio 2012\Projects\JobASP\MailingService\bin\Debug\MailingService.InstallLog
+No public installers with the RunInstallerAttribute.Yes attribute could be found in the E:\UsersProfiles\kkothagundu\Documents\Visual Studio 2012\Projects\JobASP\MailingService\bin\Debug\MailingService.exe assembly.
+Installing assembly 'E:\UsersProfiles\kkothagundu\Documents\Visual Studio 2012\Projects\JobASP\MailingService\bin\Debug\MailingService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = E:\UsersProfiles\kkothagundu\Documents\Visual Studio 2012\Projects\JobASP\MailingService\bin\Debug\MailingService.exe
+   logfile = E:\UsersProfiles\kkothagundu\Documents\Visual Studio 2012\Projects\JobASP\MailingService\bin\Debug\MailingService.InstallLog
+No public installers with the RunInstallerAttribute.Yes attribute could be found in the E:\UsersProfiles\kkothagundu\Documents\Visual Studio 2012\Projects\JobASP\MailingService\bin\Debug\MailingService.exe assembly.
+Committing assembly 'E:\UsersProfiles\kkothagundu\Documents\Visual Studio 2012\Projects\JobASP\MailingService\bin\Debug\MailingService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = E:\UsersProfiles\kkothagundu\Documents\Visual Studio 2012\Projects\JobASP\MailingService\bin\Debug\MailingService.exe
+   logfile = E:\UsersProfiles\kkothagundu\Documents\Visual Studio 2012\Projects\JobASP\MailingService\bin\Debug\MailingService.InstallLog
+No public installers with the RunInstallerAttribute.Yes attribute could be found in the E:\UsersProfiles\kkothagundu\Documents\Visual Studio 2012\Projects\JobASP\MailingService\bin\Debug\MailingService.exe assembly.
+Remove InstallState file because there are no installers.

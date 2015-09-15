@@ -1,0 +1,72 @@
+  <script type="text/javascript">
+        var SelectedTags = [];
+        function start() {
+            try {
+                //PageMethods.AutoCompleteData(SuccessTestService);
+                $.ajax({
+                    type: "POST",
+                    url: "SearchBox.aspx/getAutoCompleteData",
+                    contentType: "application/json; charset=utf-8",
+                    success: SuccessTestService,
+                    dataType: "json",
+                    failure: ajaxCallFailed
+                });
+            }
+            catch (e) {
+                alert('failed to call web service. Error: ' + e);
+            }
+        }
+        var prm = Sys.WebForms.PageRequestManager.getInstance();
+
+        prm.add_endRequest(function () {
+            start();
+        });
+        function SuccessTestService(responce) {
+
+            $('#' + '<%=tags.ClientID%>')
+                // don't navigate away from the field on tab when selecting an item
+                .bind("keydown", function (event) {
+                    if (event.keyCode === $.ui.keyCode.TAB &&
+                        $(this).autocomplete("instance").menu.active) {
+                        event.preventDefault();
+                    }
+                })
+                .autocomplete({
+                    minLength: 0,
+                    source: function (request, response) {
+                        // delegate back to autocomplete, but extract the last term
+                        response($.ui.autocomplete.filter(
+                          responce.d, extractLast(request.term)));
+                    },
+                    focus: function () {
+                        // prevent value inserted on focus
+                        return false;
+                    },
+                    select: function (event, ui) {
+                        var terms = split(this.value);
+                        // remove the current input
+
+                        SelectedTags[SelectedTags.length] = ui.item;
+                        terms.pop();
+                        // add the selected item
+                        terms.push(ui.item.value);
+                        // add placeholder to get the comma-and-space at the end
+                        terms.push("");
+                        this.value = terms.join(", ");
+                        return false;
+                    }
+                });
+        }
+        function ajaxCallFailed(error) {
+            alert('error: ' + error);
+        }
+        start();
+        function split(val) {
+            return val.split(/,\s*/);
+        }
+        function extractLast(term) {
+            return split(term).pop();
+        }
+
+        start();
+    </script>

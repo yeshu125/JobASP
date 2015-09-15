@@ -1,0 +1,346 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="JobMaster.master.cs" Inherits="JobASP.JobMaster" %>
+
+<%@ Register TagPrefix="ajax" Namespace="AjaxControlToolkit" Assembly="AjaxControlToolkit" %>
+<%@ Register TagPrefix="uc" TagName="Log" Src="~/Account/UCLog.ascx" %>
+<%@ Register TagPrefix="uc" Src="~/Account/QuickEnquiryControl.ascx" TagName="QuickEnquiry" %>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+
+    <%-- CSS Links --%>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/bootstrap-theme.css" rel="stylesheet" />
+    <link href="Content/global_styles.css" rel="stylesheet" />
+    <link href="Content/smart_wizard.css" rel="stylesheet" />
+    <link href="Content/demo_style.css" rel="stylesheet" />
+    <link href="Content/ui-lightness/jquery-ui-1.10.4.custom.css" rel="stylesheet" />
+    <link href="Content/jquery.bxslider.css" rel="stylesheet" />
+    <%--<link href="Content/Common.css" rel="stylesheet" />--%>
+    <%-- JS Links --%>
+    <script type="text/javascript" src="../Scripts/jquery-2.1.3.js"></script>
+    <script type="text/javascript" src="../Scripts/jquery-ui-1.11.2.js"></script>
+    <script type="text/javascript" src="../Scripts/modernizr-2.8.3.js"></script>
+    <script type="text/javascript" src="../Scripts/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="../Scripts/jquery-ui-timepicker-addon.js"></script>
+    <script type="text/javascript" src="../Scripts/bootstrap-3.2.0.min.js"></script>
+    <script type="text/javascript" src="../Scripts/bootstrap-multiselect.js"></script>
+    <script type="text/javascript" src="../Scripts/index.js"></script>
+    <script type="text/javascript" src="../Scripts/jquery.smartWizard.js"></script>
+    <script type="text/javascript" src="../Scripts/jquery.bxslider.js"></script>
+    <%--<script type="text/javascript" src="../Scripts/jquery.bpopup.min.js"></script>--%>
+    <script type="text/javascript">
+        $(function () {
+
+            $('#MainContent_txtCalender').datepicker({
+                changeMonth: true,
+                changeYear: true,
+                autoSize: true,
+                minDate: 3
+            });
+           
+        });
+
+    </script>
+</head>
+<body>
+
+    <form id="form1" runat="server" autocomplete="off">
+
+        <ajax:ToolkitScriptManager runat="server"></ajax:ToolkitScriptManager>
+        <asp:UpdateProgress runat="server" ID="PageUpdateProgress">
+            <ProgressTemplate>
+                <div class="loading-ani">
+                    <div class="">
+                        <h4>Loading...</h4>
+                    </div>
+                    <div class="loading loading-0"></div>
+                    <div class="loading loading-1"></div>
+                    <div class="loading loading-2"></div>
+                </div>
+            </ProgressTemplate>
+        </asp:UpdateProgress>
+        <%--/header--%>
+        <div class="navigation">
+            <div class="container">
+                <div class="row">
+                    <div class="logo">
+                        <a href="/Default.aspx">
+                            <img src="../images/job_p-logo-w(30).png" alt="Job Portal" /></a>
+                    </div>
+                    <div class="nav f-r">
+                        <ul>
+                            <li><a href="<%= Page.ResolveUrl("~/Account/Default.aspx")%>">Home</a></li>
+                            <li><a href="#">Registration</a>
+                                <ul class="sub-menu">
+                                    <li><a href="RegSeeker.aspx">Seeker</a></li>
+                                    <li><a href="Register.aspx">Employer</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="../Account/Login.aspx">Login</a></li>
+                            <%--<li><a href="../Account/FindJob.aspx">FindJob</a></li>--%>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <%--/container--%>
+        </div>
+        <%--/header--%>
+
+        <section>
+            <div class="container no-pl no-pr">
+                <div class="col-lg-12 no-pl no-pr">
+                    <marquee class="slideStories" style="padding: 10px 0;" onmouseover="this.stop()" onmouseout="this.start()">
+									<a href="http://www.indiabix.com/placement-papers/companies/">Placement Papers</a>
+									<span class="glyphicon glyphicon-asterisk" style="font-size:0.8em;"></span>
+									<a href="http://www.bu.edu/careers/files/2012/08/Resume-Guide-2012.pdf">Resume Guide</a>
+									<span class="glyphicon glyphicon-asterisk" style="font-size:0.8em;"></span>  
+									<a href="CompanyProfile.aspx">Company Profiles</a>
+									<span class="glyphicon glyphicon-asterisk" style="font-size:0.8em;"></span>						
+									<a href="#">Interview Experience</a> 
+								</marquee>
+
+                </div>
+            </div>
+        </section>
+
+        <section>
+        	<div class="container cf">
+        		<div class="row cf">
+        			<div class="col-md-9">
+                        <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+
+        			</div>
+        			<div class="col-md-3 no-pl no-pr">
+                         <ajax:Accordion runat="server" ID="Accord2" Style=" text-align: left;" FadeTransitions="true" SelectedTab="1" HeaderCssClass="accordionHeader" EnableTheming="true" HeaderSelectedCssClass="accordionHeaderSelected" ContentCssClass="accordionContent" Height="100px">
+                                <Panes>
+                                    <ajax:AccordionPane ID="pane1" runat="server" ContentCssClass="" HeaderCssClass="">
+                                        <Header>
+                                            News About Job Portal
+                                        </Header>
+                                        <Content>
+                                            Job Portal has been recognized as the best classified website at the 2nd edition of the India Digital Awards organized by the Internet and Mobile Association of India(IAMAI).
+                                        </Content>
+                                    </ajax:AccordionPane>
+                                    <ajax:AccordionPane ID="pane2" runat="server" ContentCssClass="" HeaderCssClass="">
+                                        <Header>
+                                            About Us
+                                        </Header>
+                                        <Content>
+                                            Prime is a global leader in consulting, technology, and outsourcing solutions. As a proven partner focused on building tomorrow's enterprise, Prime enables clients in more than 50 countries to outperform the competition and stay ahead of the innovation curve.
+                                        </Content>
+                                    </ajax:AccordionPane>
+                                    <ajax:AccordionPane ID="pane3" runat="server" ContentCssClass="" HeaderCssClass="">
+                                        <Header>
+                                            Contact Us
+                                        </Header>
+                                        <Content>
+                                            <div class="">
+                                                <b>Prime KI Software Solutions Pvt Ltd. </b>
+                                                <br />
+                                                KRISHE SAPPHIRE,
+                                                        <br />
+                                                4th and 5th Floor,<br />
+                                                Survey No.88,
+                                                        <br />
+                                                Opposite Mitsubishi Showroom,
+                                                        <br />
+                                                Madhapur,<br />
+                                                Serilingampali, 
+                                                    Hyderabad - 500081
+                                                        <br />
+                                                <br />
+                                                E-mail: <b>info@PrimeTGI.com<br />
+                                                </b>
+                                                Phone:<b> 91-404-032-7469<br />
+                                                </b>
+                                                Fax:<b> 91-402-360-7469<br />
+                                                </b>
+                                            </div>
+                                        </Content>
+                                    </ajax:AccordionPane>
+                                    <ajax:AccordionPane ID="pane4" runat="server" ContentCssClass="" HeaderCssClass="">
+                                        <Header>
+                                            Quick Enquiry
+                                        </Header>
+                                        <Content>
+                                            <uc:QuickEnquiry ID="ucQuickEnquiry" runat="server" />
+                                        </Content>
+                                    </ajax:AccordionPane>
+                                </Panes>
+                                <ContentTemplate>
+                                </ContentTemplate>
+                            </ajax:Accordion>
+        			</div>
+        		</div>
+        	</div>
+        </section>
+        <%--     <table width="100%" class="col-xs-pull-9 table-condensed" style="border: 0;">
+                            <tr>
+                                <td width="75%">
+                                   
+                                </td>
+                                <td width="25%">
+                                    
+                                </td>
+                            </tr>
+                        </table>--%>
+
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="navimg">
+                            <h3>Browse Jobs by Companies</h3>
+                            <ul>
+                                <li><a href="http://localhost:65503/Account/CompanyProfile.aspx?ComName=TCS">
+                                    <img src="http://localhost:65503/images/892542.gif" />
+                                    TCS</a>
+                                </li>
+                                <li>
+                                    <a href="http://localhost:65503/Account/CompanyProfile.aspx?ComName=Wipro">
+                                        <img src="http://localhost:65503/images/1384.gif">
+                                        Wipro</a>
+                                </li>
+                                <li>
+                                    <a href="http://localhost:65503/Account/CompanyProfile.aspx?ComName=ICICI">
+                                        <img src="http://localhost:65503/images/10081.gif">
+                                        ICICI Bank
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://localhost:65503/Account/CompanyProfile.aspx?ComName=IBM">
+                                        <img src="http://localhost:65503/images/16987.gif">
+                                        IBM </a>
+                                </li>
+                                <li>
+                                    <a href="http://localhost:65503/Account/CompanyProfile.aspx?ComName=Intel">
+                                        <img src="http://localhost:65503/images/11014.gif">
+                                        Intel</a>
+                                </li>
+                                <li>
+                                    <a href="http://localhost:65503/Account/CompanyProfile.aspx?ComName=Prime">
+                                        <img src="http://localhost:65503/images/prime.gif" />
+                                        Prime</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <%--Height--%>
+
+
+        <section class="footer-anchor">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="anchor">
+                            <div class="wrap">
+                                <div class="col-md-3">
+                                    <ul>
+                                        <li class="header"><a href="#" target="_blank">Information</a> </li>
+                                        <li><a href="#" target="_blank" title="About Us">About Us</a> </li>
+                                        <li><a href="#" target="_blank"
+                                            title="Terms &amp; Conditions">Terms &amp; Conditions</a> </li>
+                                        <li><a href="#" target="_blank"
+                                            title="Privacy Policy">Privacy Policy</a> </li>
+                                        <li><a href="#" target="_blank"
+                                            title="Resources">Resources</a> </li>
+                                        <li><a href="#" target="_blank" title="Careers with Us">Careers with Us</a> </li>
+                                        <li><a href="#" target="_blank" title="Sitemap">Sitemap</a> </li>
+                                        <li><a href="#" target="_blank"
+                                            title="Contact Us">Contact Us</a> </li>
+                                        <li><a href="#" target="_blank" title="Grievances">Grievances</a> </li>
+                                        <li><a href="#" target="_blank"
+                                            title="Fraud Alert">Fraud Alert</a> </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-3">
+                                    <ul>
+                                        <li class="header"><a href="#" target="_blank">Jobseekers</a> </li>
+
+                                        <li><a data-domain="" href="#"
+                                            target="_blank" title="Search Jobs">Search Jobs</a></li>
+                                        <li><a href="#" target="_blank" title="Login">Login</a> </li>
+                                        <li><a href="#" target="_blank"
+                                            title="Report a Problem">Report a Problem</a> </li>
+                                        <li><a href="#" target="_blank" title="Blogs">Blogs</a> </li>
+                                        <li><a href="#" target="_blank" title="Security Advice">Security Advice</a> </li>
+                                        <li class="header"><a href="#" target="_blank">Fast Forward</a> </li>
+                                        <li><a href="#"
+                                            target="_blank" title="Resume Writing">Resume Writing</a> </li>
+                                        <li><a href="#"
+                                            target="_blank" title="Profile Enhancement">Profile Enhancement</a> </li>
+                                        <li><a href="#"
+                                            target="_blank" title="Recruiter Reach">Recruiter Reach</a> </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-3">
+                                    <ul>
+                                        <li class="header"><a href="#" target="_blank">Browse Jobs</a> </li>
+                                        <li><a href="#" target="_blank" title="Browse All Jobs">Browse
+                        All Jobs</a> </li>
+                                        <li><a href="#" target="_blank"
+                                            title="Premium MBA Jobs for IIM Graduates">Premium MBA Jobs</a> </li>
+                                        <li><a href="#"
+                                            target="_blank" title="Premium Engineering Jobsi for IIT Graduates">Premium Engineering
+                        Jobs</a> </li>
+                                        <li><a href="#" target="_blank" title="Govt. Jobs">Govt. Jobs</a> </li>
+
+                                        <li><a href="#" target="_blank" title="Jobs by Company">Jobs by Company</a> </li>
+                                        <li><a href="#" target="_blank" title="Jobs by Category">Jobs by Category</a> </li>
+                                        <li><a href="#" target="_blank"
+                                            title="Jobs by Designation">Jobs by Designation</a> </li>
+                                        <li><a href="#" target="_blank" title="Jobs by Location">Jobs by Location</a> </li>
+                                        <li><a href="#" target="_blank" title="Jobs by Skill">Jobs by Skill</a> </li>
+                                    </ul>
+                                </div>
+                                <div class="fl col-md-3 last-child">
+                                    <div class="">
+                                        <ul>
+                                            <li class="header"><a href="#" target="_blank">Employers</a> </li>
+                                            <li><a href="#" target="_blank" title="Post Jobs">Post Jobs</a> </li>
+                                            <li><a href="#" target="_blank" title="Access Database">Access Database</a> </li>
+                                            <li><a href="#" target="_blank" title="Manage Responses">Manage
+                            Responses</a> </li>
+                                            <li><a href="#" target="_blank" title="Buy Online">Buy Online</a> </li>
+                                            <li><a href="#" target="_blank"
+                                                title="Report a Problem">Report a Problem</a> </li>
+                                            <li class="textual"><a>Recruiters from USA, call</a> </li>
+                                            <li class="textual"><a target="_blank">Toll Free # 1866-557-3340</a> </li>
+                                        </ul>
+                                    </div>
+                                    <br />
+                                    <div class="followus" style="padding-bottom:5px;">
+                                        <a style="display: block; padding-bottom: 5px;" target="_blank">Follow Us</a> <a
+                                            class="icons fb" target="_blank" href="https://www.facebook.com/JobPortal" title="Follow JobPortal.com on Facebook">&nbsp;</a> <a class="icons twitter" target="_blank" href="https://twitter.com/jobportal"
+                                                title="Follow JobPortal.com on Twitter">&nbsp;</a> <a class="icons ln" target="_blank"
+                                                    href="http://www.linkedin.com/company/JobPortal.com" title="Follow JobPortal.com on LinkedIn">&nbsp;</a> <a class="icons gplus" target="_blank" href="https://plus.google.com/+JobPortal"
+                                                        title="Follow JobPortal.com on Google+">&nbsp;</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <%--/section--%>
+        <%-- footer --%>
+        <div class="footer" style="max-height: 35px; margin-bottom: 0px">
+            <div class="container">
+                <div class="row">
+                    <p>&copy; <%: DateTime.Now.Year %> - Prime ASP.NET Application</p>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</body>
+</html>

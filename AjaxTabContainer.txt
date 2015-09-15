@@ -1,0 +1,326 @@
+
+<%@ Register TagPrefix="ajax" Namespace="AjaxControlToolkit" Assembly="AjaxControlToolkit" %>
+ <%--    <script type="text/javascript" src="../Scripts/jquery-1.9.0.js"></script>
+    <script type="text/javascript" src="../Scripts/jquery-ui.js"></script>
+    <link href="../Content/main.css" rel="stylesheet" />
+    <link href="../Content/normalize.css" rel="stylesheet" />
+    <link href="../Content/sumoselect.css" rel="stylesheet" />
+    <link href="../Content/ui-lightness/jquery-ui-1.10.4.custom.css" rel="stylesheet" />
+    <script type="text/javascript" src="../Scripts/modernizr-2.6.2.min.js"></script>
+    <script type="text/javascript" src="../Scripts/jquery.autocomplete.multiselect.js"></script>
+    <script type="text/javascript" src="../Scripts/jquery.sumoselect.js"></script>
+    <script type="text/javascript" >
+        $(document).ready(function () {
+         $('#' + '<%=ddlSkillSetHtml.ClientID%>').SumoSelect({
+                csvDispCount: 3
+            });
+            //window.test = $('.testsel').SumoSelect({ okCancelInMulti: true });
+        });
+    </script>--%>
+
+
+
+
+ <asp:UpdatePanel runat="server">
+        <ContentTemplate>
+            <table width="100%">
+                <tr>
+                    <td align="center">
+                        <ajax:TabContainer ID="TabContainer1" runat="server" Width="90%" Height="80%" CssClass="MyTabStyle">
+                            <ajaxToolkit:TabPanel TabIndex="1" runat="server" HeaderText="Part-1" ID="Tab1" ScriptPath="">
+                                <ContentTemplate>
+                                    <asp:Label Text="" runat="server" ID="lblRegError" />
+                                    <table width="100%" align="center" cellpadding="2" class="table table-striped"  cellspacing="10" border="0">
+                                        <tr>
+                                            <td colspan="4">
+                                                <asp:ValidationSummary ID="ValidationSummary1" runat="server" ValidationGroup="RegGroup1" DisplayMode="BulletList" ForeColor="Red" ShowSummary="false" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="15%"></td>
+                                            <td width="20%">Name</td>
+                                            <td width="30%">
+                                                <asp:TextBox runat="server" ID="txtName" Width="90%" /></td>
+                                            <td width="35%">
+                                                <asp:RequiredFieldValidator ValidationGroup="RegGroup1" ForeColor="red" ID="RequiredFieldValidator1" ErrorMessage="Name  is Required " ControlToValidate="txtName" runat="server" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>Last Name</td>
+                                            <td>
+                                                <asp:TextBox runat="server" ID="txtLName" Width="90%" />
+                                            </td>
+                                            <td>
+                                                <asp:RequiredFieldValidator ForeColor="red" ValidationGroup="RegGroup1" ID="RequiredFieldValidator2" ErrorMessage="Last Name is Required" ControlToValidate="txtLName" runat="server" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>Gender</td>
+                                            <td>
+                                                <asp:DropDownList runat="server" ID="ddlGender" Width="91%" CssClass="CssDDL" align="center">
+                                                    <asp:ListItem Text="Male" Enabled="true" Value="0" />
+                                                    <asp:ListItem Text="Female" Value="1" />
+                                                </asp:DropDownList></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>Date Of Birth
+                                            </td>
+                                            <td>
+                                                <asp:TextBox runat="server" ReadOnly="false" onkeypress="return false;" onpaste="return false;" ViewStateMode="Enabled" ID="txtDOB" ValidationGroup="RegGroup1" AutoCompleteType="None" Width="90%" />
+                                                <ajax:CalendarExtender ID="AjaxCalDOB" DefaultView="Years" runat="server" PopupButtonID="txtDOB" TargetControlID="txtDOB" />
+                                            </td>
+                                            <td>
+                                                <asp:RequiredFieldValidator Display="Dynamic" ValidationGroup="RegGroup1" ForeColor="Red" ErrorMessage="Please Select Your Date of Birth" ControlToValidate="txtDOB" runat="server" />
+                                                <asp:RangeValidator ErrorMessage="Age should be Greaterthan 14 and Lessthan 60" ControlToValidate="txtDOB" runat="server" ForeColor="Red" Display="Dynamic" Type="Date" ID="rngValDOB"/>
+                                             </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>Country</td>
+                                            <td>
+                                                <asp:DropDownList ID="ddlCountry" ValidationGroup="RegGroup1" CssClass="CssDDL" Width="92%" runat="server" />
+                                                <ajax:CascadingDropDown ID="CountryCascading" runat="server" Category="Country" TargetControlID="ddlCountry" LoadingText="Loading Countries..." PromptText="Select Country" ServiceMethod="BindCountry" ServicePath="~/CCDDLWebService.asmx" />
+                                            </td>
+                                            <td>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" ForeColor="red" ValidationGroup="RegGroup1" ErrorMessage="Please Select Country" ControlToValidate="ddlCountry" runat="server" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>State</td>
+                                            <td>
+                                                <asp:DropDownList ID="ddlState" Style="text-align: center" Width="92%" CssClass="CssDDL" runat="server" ValidationGroup="RegGroup1" />
+                                                <ajax:CascadingDropDown ID="StateCascading" runat="server" Category="State" TargetControlID="ddlState" ParentControlID="ddlCountry" LoadingText="Loading States..." PromptText="Select State" ServiceMethod="BindState" ServicePath="~/CCDDLWebService.asmx" />
+                                            </td>
+                                            <td>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" ForeColor="red" ValidationGroup="RegGroup1" ErrorMessage="Please Select State" ControlToValidate="ddlState" runat="server" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>City</td>
+                                            <td>
+                                                <asp:DropDownList ID="ddlCity" Style="text-align: center" CssClass="CssDDL" Width="92%" runat="server" ValidationGroup="RegGroup1" />
+                                                <ajax:CascadingDropDown ID="CityCascading" runat="server" Category="Region" TargetControlID="ddlCity" ParentControlID="ddlState" LoadingText="Loading Cities..." PromptText="Select City" ServiceMethod="BindCity" ServicePath="~/CCDDLWebService.asmx" />
+                                            </td>
+                                            <td>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator6" ForeColor="red" ValidationGroup="RegGroup1" ErrorMessage="Please Select City" ControlToValidate="ddlCity" runat="server" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td align="center">
+                                                <asp:Button ID="btnTab1Next" Text="Next" runat="server" ValidationGroup="RegGroup1" OnClick="btnTab1Next_Click" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </ContentTemplate>
+                            </ajaxToolkit:TabPanel>
+                            <ajaxToolkit:TabPanel TabIndex="2" runat="server" ID="Tab2" HeaderText="Part-2">
+                                <ContentTemplate>
+                                    <table width="100%" align="center" cellpadding="0"  class="table table-striped"  cellspacing="10" border="0">
+                                        <tr>
+                                            <td colspan="4">
+                                                <asp:ValidationSummary ID="ValidationSummary2" runat="server" ValidationGroup="RegGroup2" DisplayMode="BulletList" ForeColor="Red" ShowSummary="false" />
+                                            </td>
+                                        </tr>
+                                        <tr align="center">
+                                            <td width="15%"></td>
+                                            <td width="20%">SkillSet
+                                            </td>
+                                            <td width="35%">
+                                                <select runat="server" id="ddlSkillSetHtml" multiple="true" aria-multiselectable="true" placeholder="Please select appropriate options" class="SlectBox"/>
+                                                <%--<asp:DropDownList runat="server" ID="ddlSkillSet" CssClass="CssDDL" Width="92%" ValidationGroup="RegGroup2" />--%>
+                                            </td>
+                                            <td width="30%">
+                                                <asp:Label Text="" ID="lblSkillErr" runat="server" />
+                                            </td>
+                                        </tr>
+                                        <tr align="center">
+                                            <td></td>
+                                            <td>Designation</td>
+                                            <td>
+                                                <asp:TextBox runat="server" ID="txtDesignation" Width="90%" ValidationGroup="RegGroup2" /></td>
+                                            <td>
+                                                <asp:RequiredFieldValidator ForeColor="Red" ValidationGroup="RegGroup2" ID="RequiredFieldValidator3" ErrorMessage=" Designation to be entered" ControlToValidate="txtDesignation" runat="server" /></td>
+                                        </tr>
+                                        <tr align="center">
+                                            <td></td>
+                                            <td>Company</td>
+                                            <td>
+                                                <asp:TextBox runat="server" ID="txtCompany" Width="90%" ValidationGroup="RegGroup2" />
+                                            </td>
+                                            <td>
+                                                <asp:RequiredFieldValidator ForeColor="red" ValidationGroup="RegGroup2" ErrorMessage="Please enter your Company Name" ID="rfvCompanyName" ControlToValidate="txtCompany" runat="server" />
+                                            </td>
+                                        </tr>
+                                        <tr align="center">
+                                            <td>
+                                                <asp:Button ID="btnTab2Previous" Text="Previous" runat="server" CausesValidation="false" ValidationGroup="RegGroup2" OnClick="btnTab2Previous_Click" />
+                                            </td>
+                                            <td colspan="2"></td>
+                                            <td align="center">
+                                                <asp:Button ID="btnTab2Next" Text="Next" runat="server" ValidationGroup="RegGroup2" OnClick="btnTab2Next_Click" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </ContentTemplate>
+                            </ajaxToolkit:TabPanel>
+                            <ajaxToolkit:TabPanel TabIndex="3" runat="server" ID="Tab3">
+                                <HeaderTemplate>
+                                    <h3>Educational Details</h3>
+                                </HeaderTemplate>
+                                <ContentTemplate>
+                                    <table width="100%" align="center" cellpadding="0" class="table table-striped"  cellspacing="10" border="0">
+                                        <tr>
+                                            <td width="15%"></td>
+                                            <td width="30%">10<sup>th</sup> Percentage:</td>
+                                            <td width="25%">
+                                                <asp:TextBox runat="server" MaxLength="3"  onkeypress="return blockNonNumbers(this,event)" Width="80%" ID="txt10thPercent" />%
+                                            </td>
+                                            <td width="30%">
+                                                <asp:RequiredFieldValidator Display="Dynamic" ValidationGroup="RegGroup3" ErrorMessage="Please enter your 10th Percentage" ControlToValidate="txt10thPercent" runat="server" ForeColor="Red" />
+                                                <asp:RangeValidator Display="Dynamic" ValidationGroup="RegGroup3" ErrorMessage="Entered values are out of Range" ControlToValidate="txt10thPercent" runat="server" MinimumValue="1" MaximumValue="100" Type="Integer" ForeColor="Red" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>Inter Percentage:</td>
+                                            <td>
+                                                <asp:TextBox runat="server" MaxLength="3" onkeypress="return blockNonNumbers(this,event)" Width="80%" ID="txtInterPercent" />%
+                                            </td>
+                                            <td>
+                                                <asp:RequiredFieldValidator Display="Dynamic" ValidationGroup="RegGroup3" ErrorMessage="Please enter your Inter marks" ControlToValidate="txtInterPercent" runat="server" ForeColor="Red" />
+                                                <asp:RangeValidator ID="RangeValidator1" Display="Dynamic" ValidationGroup="RegGroup3" ErrorMessage="Entered values are out of Range" ControlToValidate="txtInterPercent" runat="server" MinimumValue="1" Type="Integer" MaximumValue="100" ForeColor="Red" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>Graduation :</td>
+                                            <td>
+                                                <asp:RadioButtonList runat="server" ID="rdoLstSelect" RepeatDirection="Horizontal">
+                                                    <asp:ListItem Text="Degree" Value="0" Selected="False" />
+                                                    <asp:ListItem Text="B.tect" Value="1" />
+                                                </asp:RadioButtonList>
+                                            </td>
+                                            <td>
+                                                <asp:RequiredFieldValidator ErrorMessage="Please select one option" ValidationGroup="RegGroup3" ForeColor="Red" ControlToValidate="rdoLstSelect" runat="server" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>Graduation Percentage :
+                                            </td>
+                                            <td>
+                                                <asp:TextBox runat="server" MaxLength="3" onkeypress="return blockNonNumbers(this,event)" ID="txtGradPercent" ValidationGroup="RegGroup3" Width="80%" />%
+                                            </td>
+                                            <td>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator7" Display="Dynamic" ValidationGroup="RegGroup3" ErrorMessage="Please enter your Graduation marks" ControlToValidate="txtGradPercent" runat="server" ForeColor="Red" />
+                                                <asp:RangeValidator ID="RangeValidator2" Display="Dynamic" ValidationGroup="RegGroup3" ErrorMessage="Entered values are out of Range" ControlToValidate="txtGradPercent" runat="server" MinimumValue="1" Type="Integer" MaximumValue="100" ForeColor="Red" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                P.G. Percentage :
+                                            </td>
+                                            <td>
+                                                <asp:TextBox runat="server"  onkeypress="return blockNonNumbers(this,event)" MaxLength="3" id="txtPGPercent" Width="80%" ValidationGroup="RegGroup3"/>%
+                                            </td>
+                                            <td>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator8" Display="Dynamic" ValidationGroup="RegGroup3" ErrorMessage="Please enter your Graduation marks" ControlToValidate="txtPGPercent" runat="server" ForeColor="Red" />
+                                                <asp:RangeValidator ID="RangeValidator3" Display="Dynamic" ValidationGroup="RegGroup3" ErrorMessage="Entered values are out of Range" ControlToValidate="txtPGPercent" runat="server" MinimumValue="1" Type="Integer" MaximumValue="100" ForeColor="Red" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr align="center">
+                                            <td>
+                                                <asp:Button Text="Previous" runat="server" ID="btnTab3Previous" CausesValidation="false" ValidationGroup="RegGroup3" OnClick="btnTab3Previous_Click" />
+                                            </td>
+                                            <td colspan="2"></td>
+                                            <td align="center">
+                                                <asp:Button Text="Next" ID="btnTab3Next" ValidationGroup="RegGroup3" CausesValidation="true" OnClick="btnTab3Next_Click" runat="server" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </ContentTemplate>
+                            </ajaxToolkit:TabPanel>
+                            <ajaxToolkit:TabPanel runat="server" ID="Tab4" TabIndex="4">
+                                <ContentTemplate>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <asp:Button Text="Previous" runat="server" ID="btnTab4Previous" CausesValidation="false" OnClick="btnTab4Previous_Click" ValidationGroup="RegGroup4" />
+                                            </td>
+                                            <td colspan="2"></td>
+                                            <td>
+                                                <asp:Button Text="Next" ID="btnTab4Next" OnClick="btnTab4Next_Click" ValidationGroup="RegGroup4" runat="server" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </ContentTemplate>
+                            </ajaxToolkit:TabPanel>
+                        </ajax:TabContainer>
+                    </td>
+                </tr>
+            </table>
+        </ContentTemplate>
+    </asp:UpdatePanel>
+
+
+
+
+
+
+
+
+
+
+
+////////////////////////.cs///////////////////////////////////////////
+
+
+
+  protected void btnTab1Next_Click(object sender, EventArgs e)
+        {
+            TabContainer1.ActiveTab = Tab2;
+        }
+        protected void btnTab2Previous_Click(object sender, EventArgs e)
+        {
+            TabContainer1.ActiveTab = Tab1;
+        }
+
+        protected void btnTab2Next_Click(object sender, EventArgs e)
+        {
+            TabContainer1.ActiveTab = Tab3;
+        }
+
+        protected void btnTab3Previous_Click(object sender, EventArgs e)
+        {
+            TabContainer1.ActiveTab = Tab2;
+        }
+
+        protected void btnTab3Next_Click(object sender, EventArgs e)
+        {
+            TabContainer1.ActiveTab = Tab4;
+        }
+
+        protected void btnTab4Previous_Click(object sender, EventArgs e)
+        {
+            TabContainer1.ActiveTab = Tab3;
+        }
+
+        protected void btnTab4Next_Click(object sender, EventArgs e)
+        {
+
+        }

@@ -1,0 +1,91 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="EmpMaster.master.cs" Inherits="JobASP.EmpMaster" %>
+
+<%@ Register TagPrefix="ajax" Namespace="AjaxControlToolkit" Assembly="AjaxControlToolkit" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+
+    <%-- CSS Links --%>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/bootstrap-theme.css" rel="stylesheet" />
+    <link href="Content/global_styles.css" rel="stylesheet" />
+    <link href="Content/smart_wizard.css" rel="stylesheet" />
+    <link href="Content/demo_style.css" rel="stylesheet" />
+    <link href="Content/ui-lightness/jquery-ui-1.10.4.custom.css" rel="stylesheet" />
+    <link href="Content/mbExtruder.css" rel="stylesheet" />
+
+    <%-- JS Links --%>
+    <script type="text/javascript" src="../Scripts/jquery-2.1.3.js"></script>
+    <script type="text/javascript" src="../Scripts/jquery-ui-1.11.2.js"></script>
+    <script type="text/javascript" src="../Scripts/modernizr-2.8.3.js"></script>
+    <script type="text/javascript" src="../Scripts/jquery-ui-timepicker-addon.js"></script>
+    <script type="text/javascript" src="../Scripts/bootstrap-3.2.0.min.js"></script>
+    <script type="text/javascript" src="../Scripts/bootstrap-multiselect.js"></script>
+    <script type="text/javascript" src="../Scripts/index.js"></script>
+    <script type="text/javascript" src="../Scripts/jquery.smartWizard.js"></script>
+    <script type="text/javascript" src="../Scripts/jquery.hoverIntent.min.js"></script>
+    <script type="text/javascript" src="../Scripts/jquery.mb.flipText.js"></script>
+    <script type="text/javascript" src="../Scripts/mbExtruder.js"></script>
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+</head>
+<body>
+    <form id="form1" runat="server" autocomplete="off">
+        <ajax:ToolkitScriptManager runat="server">
+        </ajax:ToolkitScriptManager>
+        <asp:UpdateProgress runat="server" ID="PageUpdateProgress">
+            <ProgressTemplate>
+                <div class="loading-ani">
+                    <div class="">
+                        <h4>Loading...</h4>
+                    </div>
+                    <div class="loading loading-0"></div>
+                    <div class="loading loading-1"></div>
+                    <div class="loading loading-2"></div>
+                </div>
+            </ProgressTemplate>
+        </asp:UpdateProgress>
+        <%--/header--%>
+        <div class="navigation">
+            <div class="container">
+                <div class="row">
+                    <div class="logo">
+                        <a href="#">
+                            <img src="../images/job_p-logo-w(30).png" alt="Job Portal" /></a>
+                    </div>
+                    <div class="nav f-r">
+                        <ul>
+                            <li><a href="ProfileEmployer.aspx">Home</a></li>
+                            <li><a href="SearchCV.aspx">Search Seekers</a></li>
+                            <li><a href="MyProfile.aspx">My Profile</a> </li>
+                            <li>
+                                <asp:LinkButton Text="LogOut" ID="LnkLog" CssClass="" OnClick="LnkLog_Click" runat="server" /></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <%--/container--%>
+        </div>
+        <%--/header--%>
+        <div class="container" style="min-height: 570px;">
+            <div class="row">
+                <div>
+                    <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
+                </div>
+                <div>
+                    <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+                </div>
+            </div>
+            <%--/row--%>
+        </div>
+        <%--/container--%>
+
+        <%-- footer --%>
+        <div class="footer">
+            &copy; <%: DateTime.Now.Year %> - Prime ASP.NET Application
+        </div>
+    </form>
+</body>
+</html>
